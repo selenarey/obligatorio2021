@@ -14,7 +14,7 @@
  $fila = mysqli_num_rows($query);
  if($fila == 1)
  {
-     echo "Bienvenido $doc a ";
+    echo "<script>alert('buenas $doc');</script>";
  }
  else if ($fila == 0)
  {
