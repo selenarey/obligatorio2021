@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+*{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    align-items: right; 
+}
+
+
+html {
+    background: url(../Vista/img/lowerlogo.png) no-repeat left fixed; 
+    background-size: 850px 850px;
+    background-color: #e4e4e4;
+    -webkit-background-size: fixed left;
+    -moz-background-size: fixed left;
+    -o-background-size: fixed left;
+    background-size: fixed left;
+  
+}
+
+.container {   
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    padding: 25px;   
+    background-color: rgba(255, 255, 255, 0.700); 
+    box-shadow: 10px 10px 10px #00000015;
+    border-radius: 15px;
+    height: 500px;
+    width: 900px;
+}
+
+.col-7{
+    background-color: #c3a0db;
+}
+
+.col-5{
+    background-color: #4b9cdf;
+}
+
+h1{
+    background-color: rgba(0, 0, 0, 0); 
+    color: #444444;
+
+}
+
+#documento, #password {
+    border-width: 0px;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    height: 35px;
+    width: 280px;
+    
+}
+
+#boton {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#boton:hover {
+    background-color: #c3a0db;
+}
+
