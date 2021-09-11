@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/datos.css"/>
+    
 </head>
 <body>
     <header class="bienvenido">
@@ -29,7 +29,7 @@
             }
             else if ($fila == 0)
             {
-                echo "<script> alert('Error');window.location='index.html'</script>";
+                echo "<script> alert('Error');window.location='login.html'</script>";
             }        
         ?>
     </header>
