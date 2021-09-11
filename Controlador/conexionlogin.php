@@ -9,19 +9,27 @@
 </head>
 <body>
     <header class="bienvenido">
-        <?php  
-         $conexion = mysqli_connect("localhost", "root", "", "obligatorio") or die("Problemas con la conexión");
-           $documento = $_POST["documento"];
-            $pass = $_POST["password"];
-            $query = mysqli_query($conectar,"SELECT * FROM laboratorista WHERE documento = '".$documento."' and password = '".$pass."'");
+    <?php
+    $bdhost = "localhost";
+            $bdusuario = "root";
+            $bdpass = "";
+            $bdnombre = "obligatorio";
+            $conectar = mysqli_connect($bdhost, $bdusuario, $bdpass, $bdnombre);
+            if (!$conectar)
+            {   
+                die("No hay conexión: ".mysqli_connect_error());
+            }
+            $nombre = $_POST["txtuser"];
+            $pass = $_POST["txtpass"];
+            $query = mysqli_query($conectar,"SELECT * FROM usuarios WHERE usuario = '".$nombre."' and password = '".$pass."'");
             $fila = mysqli_num_rows($query);
             if($fila == 1)
             {
-                echo "<script>alert('Bienvenido/a $documento');</script>";
+                echo "Bienvenido $nombre a ";
             }
             else if ($fila == 0)
             {
-                echo "<script>alert('Documento o Contraseña incorrecta');</script>";
+                echo "<script> alert('Error');window.location='index.html'</script>";
             }        
         ?>
     </header>
