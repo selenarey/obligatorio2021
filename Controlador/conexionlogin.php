@@ -25,7 +25,7 @@
             $fila = mysqli_num_rows($query);
             if($fila == 1)
             {
-                echo "Bienvenido $d a ";
+                echo "<script>alert('Bienvenido/a $documento');</script>";
             }
             else if ($fila == 0)
             {
