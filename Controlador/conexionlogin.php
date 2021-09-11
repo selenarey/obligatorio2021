@@ -19,13 +19,13 @@
             {   
                 die("No hay conexión: ".mysqli_connect_error());
             }
-            $nombre = $_POST["txtuser"];
-            $pass = $_POST["txtpass"];
-            $query = mysqli_query($conectar,"SELECT * FROM usuarios WHERE usuario = '".$nombre."' and password = '".$pass."'");
+            $documento = $_POST["documento"];
+            $pass = $_POST["password"];
+            $query = mysqli_query($conectar,"SELECT * FROM laboratorista WHERE documento = '".$nombre."' and password = '".$pass."'");
             $fila = mysqli_num_rows($query);
             if($fila == 1)
             {
-                echo "Bienvenido $nombre a ";
+                echo "Bienvenido $documento a ";
             }
             else if ($fila == 0)
             {
