@@ -14,7 +14,7 @@
  $fila = mysqli_num_rows($query);
  if($fila == 1)
  {
-    echo "<script>alert('buenas $doc');</script>";
+    echo "<script> alert('Bienvenido/a $doc');window.location='login.html'</script>";
  }
  else if ($fila == 0)
  {
