@@ -10,16 +10,8 @@
 <body>
     <header class="bienvenido">
         <?php  
-            $bdhost = "localhost";
-            $bdusuario = "root";
-            $bdpass = "";
-            $bdnombre = "obligatorio";
-            $conectar = mysqli_connect($bdhost, $bdusuario, $bdpass, $bddocu);
-            if (!$conectar)
-            {   
-                die("No hay conexión: ".mysqli_connect_error());
-            }
-            $documento = $_POST["documento"];
+         $conexion = mysqli_connect("localhost", "root", "", "obligatorio") or die("Problemas con la conexión");
+           $documento = $_POST["documento"];
             $pass = $_POST["password"];
             $query = mysqli_query($conectar,"SELECT * FROM laboratorista WHERE documento = '".$documento."' and password = '".$pass."'");
             $fila = mysqli_num_rows($query);
