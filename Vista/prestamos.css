@@ -23,13 +23,13 @@ nav  .logo {
 }
 
 nav .logo p {
-    float: left;
+    float: right;
     color: #fff;
     
 }
 
 nav ul {
-    float: right;
+    float: left;
 }
 
 nav ul li {
