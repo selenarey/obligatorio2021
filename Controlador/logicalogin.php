@@ -12,15 +12,15 @@ $pass = $_POST["txtpass"];
     $fila = mysqli_num_rows($query);
 
 
-   if ($fila == 1){
+   if ($fila == true){
 
-    echo "hola";
+    header("Location: ../Modelo/prestamo.html");
   
 }
-else if ($fila==0)
+else if ($fila== false)
 {
 
-    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../login.html';</script>";
+    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Modelo/login.html';</script>";
 
 }
 ?>
