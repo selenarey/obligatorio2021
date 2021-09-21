@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-
 *{
     font-family: 'Raleway', sans-serif;
     text-align: center;
     text-decoration: none;
 }
 
-
 html {
-    background: url(../Vista/img/fondo2.png) no-repeat left fixed; 
+    background: url(../Vista/img/fondo3.png) no-repeat bottom fixed; 
     background-size: 400px 400px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
+    
   
 }
 
@@ -44,7 +43,7 @@ h1 {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 40%;
-    left: 61%;
+    left: 58%;
     height: 350px;
     width: 670px;
 }
@@ -57,16 +56,47 @@ h1 {
 table {
     border-collapse: collapse;
     font-family: 'Raleway', sans-serif;
-    height: 50px;
     width: 620px;
     font-size: 15px;
     table-layout: fixed;
-    background-color: rgba(255, 255, 255, 0.575); 
+    background-color: rgba(255, 255, 255, 0.842); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
-    
+}
+td {
+    height: 40px;
+}
+.columnas-2:hover {
+    background-color: rgb(209, 208, 208);
 }
 
-td {
-    height: 30px;
+#aa, #aa-2, #aa-3 {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    bottom: 80%;
+    left: 70%;
+    position: relative;
+    height: 35px;
+    width: 110px;
+}
+
+#aa-2 {
+    background-color: #c3a0db;
+}
+#aa-3 {
+    background-color: #ebd576;
+}
+#aa:hover {
+    background-color: #6da896;
+}
+#aa-2:hover {
+    background-color: #ba98d1; 
+}
+#aa-3:hover {
+    background-color: rgb(223, 204, 119);
 }

@@ -16,8 +16,8 @@
         </div>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Préstamos</a></li>
+                <li><a href="../Controlador/usuarios.php">Usuarios</a></li>
+                <li><a href="../Modelo/prestamo.html">Préstamos</a></li>
                 <li><a href="#">Elementos</a></li>
             </ul>
         </nav> 
@@ -30,7 +30,7 @@
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>
-                    <br>
+        <form action="../Controlador/logicaprestamo.php" method="post">
                     <br>
                     <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
                     <br>
@@ -38,12 +38,15 @@
                     <input type="text" name="txtele" class="ele" id="elemento" placeholder="Elemento" required>
                     <br> 
                     <br>
-                    <input type="date" name="date" class="fecha" id="fecha" required>
+                    <input type="date" name="fecha" class="fecha" id="fecha" required>
                     <br>
                     <h5>Fecha</h5>
                     <input type="time" name="hora" class="hora" id="hora" required> 
                     <br>
                     <h5>Hora</h5>
+                    <input type="date" name="fechapres" class="fecha" id="fecha" required>
+                    <br>
+                    <h5>Fecha del prestamo</h5>
                     <input type="text" name="plazo" class="plazo" id="plzao" placeholder="Plazo" required>
                     <br>
                     <br>
@@ -52,7 +55,7 @@
                     <br>
                     <h5>Fecha de devolución</h5>
                     <br>
-                    <button input type="submit" value="guardar" name="aa" id=aa> Guardar        
+                    <button input type="submit" value="Guardar" name="aa" id=aa> Guardar        
                 </div>
 </body>
 </html>
