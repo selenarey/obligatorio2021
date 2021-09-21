@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+html {
+    background: url(../Vista/img/fondo2.png) no-repeat left fixed; 
+    background-size: 400px 400px;
+    background-color: #F0F0F0;
+    -webkit-background-size: fixed left;
+    -moz-background-size: fixed left;
+    -o-background-size: fixed left;
+    background-size: fixed left;
+  
+}
+
+.container-1{   
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    right: 65%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 25px;   
+    background-color: rgba(255, 255, 255, 0.575); 
+    box-shadow: 10px 10px 10px #00000015;
+    border-radius: 15px;
+    height: 350px;
+    width: 250px;
+}
+
+h1 {
+    font-size: 15px;
+    color: #444444; 
+}
+.container-3{   
+    margin: 0;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 25px; 
+    top: 40%;
+    left: 61%;
+    height: 350px;
+    width: 670px;
+}
+
+.columnas {
+    background-color:#333;
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: 'Raleway', sans-serif;
+    height: 50px;
+    width: 620px;
+    font-size: 15px;
+    table-layout: fixed;
+    background-color: rgba(255, 255, 255, 0.575); 
+    box-shadow: 10px 10px 10px #00000015;
+    border-radius: 15px; 
+    
+}
+
+td {
+    height: 30px;
+}

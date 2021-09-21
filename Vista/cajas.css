@@ -3,6 +3,7 @@
 *{
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    text-decoration: none;
 }
 
 html {
@@ -15,7 +16,7 @@ html {
     background-size: fixed left;
   
 }
-.container {   
+.container, .container-2 {   
     margin: 0;
     position: absolute;
     top: 35%;
@@ -29,19 +30,10 @@ html {
     height: 220px;
     width: 450px;
 }
+
 .container-2 {   
-    margin: 0;
-    position: absolute;
     top: 75%;
-    right: 45%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: 25px;   
-    background-color: rgba(255, 255, 255, 0.575); 
-    box-shadow: 10px 10px 10px #00000015;
-    border-radius: 15px;
-    height: 220px;
-    width: 450px;
+    right: 45%;  
 }
 .prestamo {
     margin: 20px;
@@ -55,15 +47,13 @@ html {
     border-radius: 15px;
 }
 
-h1 {
+h1, h2 {
     font-size: 15px;
-    color: #444444;
+    color: #444444; 
 }
-
 
 h2 {
     font-size: 35px;
-    color: #444444;
 }
 
 h5 {
