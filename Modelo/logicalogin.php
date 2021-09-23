@@ -14,7 +14,7 @@ $pass = $_POST["txtpass"];
 
    if ($fila == true){
 
-    header("Location: ../Controlador/prestamos.html");
+    header("Location: ../Controlador/prestamo.html");
   
 }
 else if ($fila== false)

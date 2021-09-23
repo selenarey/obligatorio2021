@@ -15,10 +15,10 @@
     $ejecutar = mysqli_query($conectar, $insertar);
 
     if ($ejecutar == true) {
-        echo "<script>alert('Préstamo ingresado correctamente');window.location='../Controlador/prestamos.html';</script>";
+        echo "<script>alert('Préstamo ingresado correctamente');window.location='../Controlador/prestamo.html';</script>";
     }
     else if ($ejecutar == false) {
-        echo "<script>alert('error');window.location='../Controlador/prestamos.html';</script>";
+        echo "<script>alert('error');window.location='../Controlador/prestamo.html';</script>";
     }
  }
  ?>
