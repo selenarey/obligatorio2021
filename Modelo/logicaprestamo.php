@@ -1,6 +1,7 @@
 <?php 
- include "conexion.php";
-
+    include "../Modelo/conexion.php";
+    require ("../Controlador/usuarios.php");
+    
  if (isset ($_POST ["aa"])){
  $cedula = $_POST["txtci"];
  $elemento = $_POST["txtele"];
@@ -14,10 +15,10 @@
     $ejecutar = mysqli_query($conectar, $insertar);
 
     if ($ejecutar == true) {
-        echo "<script>alert('Préstamo ingresado correctamente');window.location='../Modelo/prestamo.html';</script>";
+        echo "<script>alert('Préstamo ingresado correctamente');window.location='../Controlador/prestamo.html';</script>";
     }
     else if ($ejecutar == false) {
-        echo "<script>alert('error');window.location='../Modelo/prestamo.html';</script>";
+        echo "<script>alert('error');window.location='../Controlador/prestamo.html';</script>";
     }
  }
  ?>

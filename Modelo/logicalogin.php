@@ -4,7 +4,7 @@ $doc = $_POST["txtdoc"];
 $pass = $_POST["txtpass"];
 
 
-    require("conexion.php");
+    require("../Modelo/conexion.php");
 
     
 
@@ -14,13 +14,13 @@ $pass = $_POST["txtpass"];
 
    if ($fila == true){
 
-    header("Location: ../Modelo/prestamo.html");
+    header("Location: ../Controlador/prestamo.html");
   
 }
 else if ($fila== false)
 {
 
-    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Modelo/login.html';</script>";
+    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Controlador/login.html';</script>";
 
 }
 ?>
