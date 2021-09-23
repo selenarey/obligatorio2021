@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/prestamo.css">
-    <link rel="stylesheet" href="../Vista/cajas.css">
+    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/cajas2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -17,7 +17,11 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php">Usuarios</a></li>
-                <li><a href="../Modelo/prestamo.html">Préstamos</a></li>
+                <li><a href="../Modelo/prestamo.html">Préstamos</a>
+                    <ul>
+                        <li><a href="#">Ingresados</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Elementos</a></li>
             </ul>
         </nav> 
@@ -36,19 +40,19 @@
                     <br>
                     <br>
                     <input type="text" name="txtele" class="ele" id="elemento" placeholder="Elemento" required>
-                    <br> 
+                    <br>
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
                     <br>
                     <h5>Hora</h5>
                     <input type="time" name="hora" class="hora" id="hora" required> 
                     <br>
-                    <h5>Fecha del prestamo</h5>
+                    <h5>Fecha del préstamo</h5>
                     <input type="date" name="fechapres" class="fecha" id="fecha" required>
                     <br>
                     <br>
                     <input type="text" name="plazo" class="plazo" id="plzao" placeholder="Plazo" required>
-                    <br>
+                    
                     <br>
                     <br>
                     <h5>Fecha de devolución</h5>
