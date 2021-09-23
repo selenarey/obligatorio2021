@@ -63,10 +63,10 @@ h5 {
 }
 #documento, #elemento, #fecha, #hora, #plzao, #fechadevo {
     border-width: 0px;
-    background-color: hsl(0, 100%, 55%);
+    background-color: #e4e4e4;
     border-radius: 10px;
     height: 35px;
-    width: 380px;
+    width: 400px;
     
 }
 
@@ -84,4 +84,3 @@ h5 {
     background-color: #c3a0db;
     text-align: center;
 }
-
