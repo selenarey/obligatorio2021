@@ -4,6 +4,7 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     text-decoration: none;
+    transition: 1s linear;
 }
 
 html {
