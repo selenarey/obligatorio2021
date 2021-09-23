@@ -29,6 +29,7 @@ html {
     border-radius: 15px;
     height: 220px;
     width: 450px;
+    font-size: 10px;
 }
 
 .container-2 {   
@@ -82,4 +83,12 @@ h5 {
 #aa:hover {
     background-color: #c3a0db;
     text-align: center;
+}
+
+#cedula, #nombre, #apellido, #grupo, #telefono {
+    background-color: #00000000;
+    border-width: 0ch;
+    border-radius: 10px;
+    text-align: left;
+
 }

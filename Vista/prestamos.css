@@ -31,6 +31,7 @@ nav .logo p{
 nav ul{
 	float: left;
 }
+
 nav ul li{
 	display: inline-block;
 	list-style: none;
@@ -42,4 +43,5 @@ nav ul li a{
 }
 nav ul li a:hover{
 	color:rgb(231, 229, 229);
+    font-weight: 600;
 }

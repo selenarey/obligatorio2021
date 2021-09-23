@@ -1,6 +1,6 @@
 <?php 
     include "../Modelo/conexion.php";
-    require ("../Controlador/usuarios.php");
+    include "../Controlador/prestamo.html";
     
  if (isset ($_POST ["aa"])){
  $cedula = $_POST["txtci"];
@@ -18,9 +18,9 @@
         echo "<script>alert('Préstamo ingresado correctamente');window.location='../Controlador/prestamo.html';</script>";
     }
     else if ($ejecutar == false) {
-        echo "<script>alert('error');window.location='../Controlador/prestamo.html';</script>";
+        echo "<script>alert('Error');window.location='../Controlador/prestamo.html';</script>";
     }
  }
  ?>
+<?php 
 
- 

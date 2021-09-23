@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/prestamo.css">
+    <link rel="stylesheet" href="../Vista/prestamos.css">
     <link rel="stylesheet" href="../Vista/usuario.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php">Usuarios</a></li>
-                <li><a href="../Controlador/prestamos.html">Préstamos</a>
+                <li><a href="../Controlador/prestamo.php">Préstamos</a>
         </li>
                 <li><a href="#">Elementos</a></li>
             </ul>
