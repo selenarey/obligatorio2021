@@ -76,20 +76,23 @@ td {
     border-radius: 10px;
     padding: 10px 30px;
     cursor: pointer;
-    color: white;
+    color: #fff;
     text-align: center;
-    bottom: 80%;
-    left: 70%;
     position: relative;
     height: 35px;
     width: 110px;
+    font-family: 'Raleway', sans-serif;
+    
+    box-shadow: 10px 10px 10px #00000017;
 }
 
 #aa-2 {
     background-color: #c3a0db;
+    
 }
 #aa-3 {
     background-color: #ebd576;
+   
 }
 #aa:hover {
     background-color: #6da896;
