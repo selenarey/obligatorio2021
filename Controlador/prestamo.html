@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/prestamos.css">
-    <link rel="stylesheet" href="../Vista/cajas.css">
+    <link rel="stylesheet" href="../Vista/cajas2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -24,19 +24,28 @@
     <div class="container">
         <h1>Información del usuario</h1>
             <br>
-            Cédula de identidad<input type="text" name="txtci" class="cedula" id="cedula">
+            <h3>Cédula de identidad: <input type="text" name="txtci" class="cedula" id="cedula"></h3>
             <br>
-            Nombre<input type="text" name="txtnombre" class="nombre" id="nombre">
+            <h3>Nombre: <input type="text" name="txtnombre" class="nombre" id="nombre"></h3>
             <br>
-            Apellido<input type="text" name="txtape" class="apellido" id="apellido">
+            <h3>Apellido: <input type="text" name="txtape" class="apellido" id="apellido"></h3>
             <br>
-           Grupo <input type="text" name="txtgrupo" class="grupo" id="grupo">
+            <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
             <br>
-            Telefono<input type="text" name="telefono" class="telefono" id="telefono">
-            <br>
+            <h3> Telefono: <input type="text" name="telefono" class="telefono" id="telefono"></h3>
+           
     </div>
     <div class="container-2">
         <h1>Información del elemento</h1>
+        <br>
+        <h3>ID del elemento:<input type="text" name="idele" class="cedula" id="cedula"></h3>
+        <br>
+        <h3>Estado: <input type="text" name="txtnombre" class="nombre" id="nombre"></h3>
+        <br>
+        <h3>Descripción: <input type="text" name="txtape" class="apellido" id="apellido"></h3>
+        <br>
+        <h3>Nro_serie: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
+        <br>
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>
@@ -45,7 +54,7 @@
                     <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
                     <br>
                     <br>
-                    <input type="text" name="txtele" class="ele" id="elemento" placeholder="Elemento" required>
+                    <input type="text" name="idele" class="ele" id="elemento" placeholder="ID del elemento" required>
                     <br> 
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>

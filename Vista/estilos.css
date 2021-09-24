@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 *{
     font-family: 'Raleway', sans-serif;
     text-align: center;
@@ -27,7 +27,7 @@ html {
     transform: translate(-50%, -50%);
 
     padding: 25px;   
-    background-color: rgba(255, 255, 255, 0.700); 
+    background-color: rgba(255, 255, 255, 0.774); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px;
     height: 500px;
@@ -43,10 +43,11 @@ h1{
 
 #documento, #password {
     border-width: 0px;
-    background-color: #e4e4e4;
+    background-color: #cecccc;
     border-radius: 10px;
     height: 35px;
     width: 280px;
+    font-family: 'Raleway', sans-serif;
     
 }
 
@@ -57,6 +58,7 @@ h1{
     padding: 10px 30px;
     cursor: pointer;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 #boton:hover {
