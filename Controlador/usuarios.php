@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/prestamos.css">
-    <link rel="stylesheet" href="../Vista/usuario.css">
+    <link rel="stylesheet" href="../Vista/usuarios.css">
+    <link rel="stylesheet" href="../Vista/popup.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
 </head>
@@ -17,7 +18,7 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php">Préstamos</a>
+                <li><a href="../Controlador/prestamo.html">Préstamos</a>
         </li>
                 <li><a href="#">Elementos</a></li>
             </ul>
@@ -55,12 +56,38 @@
                  }
                 ?>
               </table>
-              <button input type="submit" value="guardar" name="aa" id=aa> Editar </button>
+        <form action="#popup">
+            <p> <input type="submit" value="Editar" name="aa" id="aa" /></p>
+                <div id="popup" class="overlay">
+                    <div id="popupBody">
+                        <h2>Título de la ventana</h2>
+                            <a id="cerrar" href="#">&times;</a>
+                                <div class="popupContent">
+                                     <p>Este es el contenido</p>
+                                </div>
+                    </div>
+                </div>
                   <br>
-                  <br>
-              <button input type="submit" value="guardar" name="aa-2" id=aa-2> Borrar </button>
-                 <br>
-                 <br>
-              <button input type="submit" value="guardar" name="aa-3" id=aa-3> Agregar </button>
-        </div>
-                    
+        <form action="#popup">
+            <p> <input type="submit" value="Borrar" name="aa-2" id="aa-2" /></p>
+                <div id="popup" class="overlay">
+                    <div id="popupBody">
+                        <h2>Título de la ventana</h2>
+                            <a id="cerrar" href="#">&times;</a>
+                                <div class="popupContent">
+                                     <p>Este es el contenido</p>
+                                </div>
+                    </div>           
+                </div>
+                    <br>
+        <form action="#popup">
+            <p> <input type="submit" value="Agregar" name="aa-3" id="aa-3" /></p>
+                <div id="popup" class="overlay">
+                    <div id="popupBody">
+                        <h2>Título de la ventana</h2>
+                            <a id="cerrar" href="#">&times;</a>
+                                <div class="popupContent">
+                                     <p>Este es el contenido</p>
+                                </div>
+                    </div>           
+                </div>                   

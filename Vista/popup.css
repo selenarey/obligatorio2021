@@ -5,10 +5,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.911); 
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    border-radius: 15px;
 }
 .overlay:target {
     visibility: visible;
@@ -17,20 +18,16 @@
 #popupBody{
     width: 46%;
     padding: 2%;
-    border-radius: 15px;
-    box-shadow: 0 0 5px #CCC;
-    background: #FFF;
     position: relative;
-    transition: all 5s ease-in-out;
     margin: 20% auto;    
 }
 #cerrar{
     position: absolute;
     top: 20px;
     right: 30px;
-    transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #F00;
+    color: #ebd576;
+    transition: all 200ms;
 }
