@@ -66,7 +66,7 @@
                     </div>
                 </div>
                   <br>
-        <form action="#popup">
+        <form action="#popup2">
             <p> <input type="submit" value="Borrar" name="aa-2" id="aa-2" /></p>
                 <div id="popup" class="overlay">
                     <div id="popupBody">
@@ -78,7 +78,7 @@
                     </div>           
                 </div>
                     <br>
-        <form action="#popup">
+        <form action="#popup3">
             <p> <input type="submit" value="Agregar" name="aa-3" id="aa-3" /></p>
                 <div id="popup" class="overlay">
                     <div id="popupBody">
@@ -89,3 +89,9 @@
                                 </div>
                     </div>           
                 </div>                   
+        </form>
+        </form>
+        </form>
+        </div>
+</body>
+</html>

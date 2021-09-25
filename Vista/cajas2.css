@@ -82,6 +82,7 @@ h5 {
     color: white;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px 5px #0000001c;
 }
 
 #aa:hover {

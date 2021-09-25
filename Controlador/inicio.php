@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
+    <link rel="stylesheet" href="../Vista/popup3.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     
     <title>Inicio</title>
@@ -13,6 +14,7 @@
 <nav>
         <div class="logo">
             <p>Cuenta</p>
+          
         </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
@@ -55,7 +57,27 @@
                  }
                 ?>
               </table>
-        </div>
-        
+              <form action="#popup">
+            <p> <input type="submit" value="Editar" name="aa" id="aa" /></p>
+                <div id="popup" class="overlay">
+                    <a id="cerrar-2" href="#">&times;</a> 
+                    <div id="popupBody">
+                                <div class="popupContent">   
+                                </div>
+                    </div>
+                </div>
+              </form>  
+              <br>  
+              <form action="#popup">
+            <p> <input type="submit" value="Borrar" name="aa-2" id="aa-2" /></p>
+                <div id="popup" class="overlay">
+                    <a id="cerrar-2" href="#">&times;</a> 
+                    <div id="popupBody">
+                                <div class="popupContent">   
+                                </div>
+                    </div>
+                </div>
+              </form>
+      </div>   
 </body>
 </html>

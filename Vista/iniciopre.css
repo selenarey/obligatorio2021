@@ -28,16 +28,17 @@ html {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 25px; 
-    top: 40%;
-    left: 52%;
+    top: 28%;
+    left: 49%;
     width: 870px;
+
 }
 
 .columnas {
     background-color:#333;
     color: #fff;
+    
 }
-
 table {
     border-collapse: collapse;
     font-family: 'Raleway', sans-serif;
@@ -47,7 +48,6 @@ table {
     background-color: rgba(255, 255, 255, 0.842); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
-    
     height: 100px;
 }
 td {
@@ -112,21 +112,23 @@ nav ul li .inicio {
     height: 35px;
     width: 110px;
     font-family: 'Raleway', sans-serif;
-    box-shadow: 10px 10px 10px #00000017;
-    left: 60%;
-    top: 20%;
+    box-shadow: 5px 5px 5px #0000001c;
+    left: 68%;
+    top: 40%;
+    font-weight: 600;
 }
 
 #aa-2 {
     background-color: #c3a0db;
-    
 }
 
 #aa:hover {
     background-color: #6da896;
+   
 }
 #aa-2:hover {
     background-color: #ba98d1; 
+    
 }
 
 

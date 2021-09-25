@@ -1,15 +1,14 @@
 @charset "utf-8";
 .overlay {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background-color: rgba(255, 255, 255, 0.911); 
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
     border-radius: 15px;
+    width: 700px;
+    height: 400px;
+    top: 10%;
 }
 .overlay:target {
     visibility: visible;
@@ -21,12 +20,13 @@
     position: relative;
     margin: 20% auto;    
 }
-#cerrar{
+
+#cerrar-2{
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #ebd576;
+    color: #444444;
     transition: all 200ms;
-}
 
+}
 

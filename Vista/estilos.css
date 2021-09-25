@@ -59,6 +59,7 @@ h1{
     cursor: pointer;
     color: white;
     font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px 5px #0000001c;
 }
 
 #boton:hover {
