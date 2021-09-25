@@ -13,14 +13,15 @@ $pass = $_POST["txtpass"];
 
 
    if ($fila == true){
-
+    session_start();
+    $_SESSION['documento']= $doc;
     header("Location: ../Controlador/prestamo.php");
   
 }
 else if ($fila== false)
 {
 
-    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Controlador/login.php';</script>";
+    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Controlador/login.html';</script>";
 
 }
 ?>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,17 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
-    <link rel="stylesheet" href="../Vista/popup3.css">
+    <link rel="stylesheet" href="../Vista/popup2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
-    
     <title>Inicio</title>
 </head>
 <body>
 <nav>
-        <div class="logo">
-            <p>Cuenta</p>
-          
-        </div>
+    <div class="logo">
+        <p><?php echo $_SESSION ['documento']?></p>
+    </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>

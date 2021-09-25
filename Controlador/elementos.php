@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,8 +14,8 @@
 </head>
 <body>
 <nav>
-        <div class="logo">
-            <p>Cuenta</p>
+<div class="logo">
+            <p><?php echo $_SESSION ['documento']?></p>
         </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>

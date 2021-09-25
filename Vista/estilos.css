@@ -51,6 +51,10 @@ h1{
     
 }
 
+p {
+    color: #00000000;
+}
+
 #boton {
     background-color:  #7cbfab;
     border-width: 0ch;
