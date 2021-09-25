@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/usuarios.css">
+    <link rel="stylesheet" href="../Vista/elementos.css">
     <link rel="stylesheet" href="../Vista/popup.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
-    <title>Usuarios</title>
+    <title>Elementos</title>
 </head>
 <body>
 <nav>
@@ -22,21 +22,21 @@
             </ul>
         </nav> 
         <div class="container-1">
-            <h1>Información del usuario</h1>
+            <h1>img</h1>
         </div>
         <div class="container-3">
             <table class="default">
                 <tr class="columnas">
-                  <td>Documento</td>
-                  <td>Nombre</td>
-                  <td>Apellido</td>
-                  <td>Grupo</td>
-                  <td>Teléfono</th>
+                  <td>ID</td>
+                  <td>Estado</td>
+                  <td>Descripción</td>
+                  <td>Nro de serie</td>
+                 
                 </tr>
 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from usuarios";
+                    $sql = "SELECT * from elemento";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -44,11 +44,10 @@
                 ?>
 
                 <tr class="columnas-2"> 
-                  <td><?php echo $mostrar['cedula']?></td>
-                  <td><?php echo $mostrar['nombre']?></td>
-                  <td><?php echo $mostrar['apellido']?></td>
-                  <td><?php echo $mostrar['grupo']?></td>
-                  <td><?php echo $mostrar['telefono']?></td> 
+                  <td><?php echo $mostrar['id']?></td>
+                  <td><?php echo $mostrar['estado']?></td>
+                  <td><?php echo $mostrar['descripcion']?></td>
+                  <td><?php echo $mostrar['nro_serie']?></td>
                 </tr>
                 <?php 
                  }

@@ -15,10 +15,10 @@
             <p>Cuenta</p>
         </div>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="../Controlador/usuarios.php">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.html">Préstamos</a></li>
-                <li><a href="#">Elementos</a></li>
+                <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
+                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
+                <li><a href="../Controlador/prestamo.php" class="prestamos">Préstamos</a></li>
+                <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
             </ul>
         </nav> 
     <div class="container">

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-*{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
     margin:0px;
 	padding:0px;
 	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
-
-
+	
 html {
     background: url(../Vista/img/fondo3.png) no-repeat bottom fixed; 
     background-size: 400px 400px;
@@ -17,27 +17,11 @@ html {
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
+    text-align: center;
+  
 }
 
-.container-1{   
-    margin: 0;
-    position: absolute;
-    top: 45%;
-    right: 65%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: 25px;   
-    background-color: rgba(255, 255, 255, 0.575); 
-    box-shadow: 10px 10px 10px #00000015;
-    border-radius: 15px;
-    height: 350px;
-    width: 250px;
-}
 
-h1 {
-    font-size: 15px;
-    color: #444444; 
-}
 .container-3{   
     margin: 0;
     position: absolute;
@@ -45,9 +29,8 @@ h1 {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 40%;
-    left: 58%;
-    height: 350px;
-    width: 670px;
+    left: 52%;
+    width: 870px;
 }
 
 .columnas {
@@ -58,12 +41,14 @@ h1 {
 table {
     border-collapse: collapse;
     font-family: 'Raleway', sans-serif;
-    width: 620px;
+    width: 820px;
     font-size: 15px;
     table-layout: fixed;
     background-color: rgba(255, 255, 255, 0.842); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
+    
+    height: 100px;
 }
 td {
     height: 40px;
@@ -111,11 +96,11 @@ nav ul li a:hover{
     
 }
 
-nav ul li .usuarios {
+nav ul li .inicio {
     font-weight: 600;
 }
 
-#aa, #aa-2, #aa-3 {
+#aa, #aa-2 {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
@@ -128,25 +113,20 @@ nav ul li .usuarios {
     width: 110px;
     font-family: 'Raleway', sans-serif;
     box-shadow: 10px 10px 10px #00000017;
-    left: 70%;
-    top: 40%;
+    left: 60%;
+    top: 20%;
 }
 
 #aa-2 {
     background-color: #c3a0db;
     
 }
-#aa-3 {
-    background-color: #ebd576;
-   
-}
+
 #aa:hover {
     background-color: #6da896;
 }
 #aa-2:hover {
     background-color: #ba98d1; 
 }
-#aa-3:hover {
-    background-color: rgb(223, 204, 119);
-}
+
 

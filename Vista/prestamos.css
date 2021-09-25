@@ -40,8 +40,14 @@ nav ul li a{
     color:#fff;
     font-size: 18px;
     padding: 0px 30px;
+    
 }
 nav ul li a:hover{
 	color:rgb(231, 229, 229);
+    font-weight: 600;
+    
+}
+
+nav ul li .prestamos {
     font-weight: 600;
 }

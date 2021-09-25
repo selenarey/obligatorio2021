@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-*{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
     margin:0px;
 	padding:0px;
 	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
-
-
+	
 html {
     background: url(../Vista/img/fondo3.png) no-repeat bottom fixed; 
     background-size: 400px 400px;
@@ -17,6 +17,8 @@ html {
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
+    text-align: center;
+  
 }
 
 .container-1{   
@@ -111,7 +113,7 @@ nav ul li a:hover{
     
 }
 
-nav ul li .usuarios {
+nav ul li .elementos {
     font-weight: 600;
 }
 
