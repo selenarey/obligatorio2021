@@ -1,0 +1,42 @@
+create database obligatorio
+
+create table elemento (
+id int (10) primary key,
+estado varchar (30) not null,
+descripcion varchar (50) not null,
+nro_serie int(15)
+);
+
+create table usuarios (
+cedula int(8) primary key,
+nombre varchar(30) not null,
+apellido varchar(30) not null, 
+grupo varchar(10) not null,
+telefono int(10) not null
+);
+
+create table prestamos (
+ci_usuario int(8),
+id_elemento int(10) not null,
+fecha date not null,
+hora time not null,
+fecha_prestamo date not null,
+plazo varchar(20),
+fecha_devolucion date,
+primary key (ci_usuario, id_elemento),
+FOREIGN KEY (ci_usuario) REFERENCES usuarios(cedula),
+FOREIGN KEY (id_elemento) REFERENCES elemento(id)
+);
+
+create table laboratorista (
+documento int(8) primary key,
+password int(20) NOT NULL
+);
+
+INSERT INTO `usuarios` (`cedula`, `nombre`, `apellido`, `grupo`, `telefono`) VALUES ('40425602', 'Julia', 'Sosa', '1ºBG', '098458753'),
+('10224782', Juan', 'Torres', '2ºBL', '099951654');
+
+INSERT INTO `laboratorista` (`documento`, `password`) VALUES ('53606479', '1212);
+
+INSERT INTO `elemento` (`id`, `estado`,`descripcion`, `nro_serie`) VALUES 
+('4578', 'nuevo', 'mouse nuevo', '00001');
