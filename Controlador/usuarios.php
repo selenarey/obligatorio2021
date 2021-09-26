@@ -7,7 +7,6 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/usuario.css">
-    <link rel="stylesheet" href="../Vista/popup.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
 </head>
@@ -24,7 +23,7 @@ session_start();
             </ul>
         </nav> 
         <div class="container-1">
-        <h1>Información del usuario</h1>
+        <h1>Agregar usuario</h1>
         <form action="../Controlador/usuarios.php" method="post">
             <br>
             <h3>Documento:<input type="text" name="txtci" class="cedula" id="cedula"></h3>
@@ -37,7 +36,9 @@ session_start();
             <br>
             <h3>Telefono:<input type="text" name="telefono" class="telefono" id="telefono"></h3>
             <br>
-            <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar
+            <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
+        </form>
+           
         </div>
         <div class="container-3">
             <table class="default">
@@ -46,7 +47,9 @@ session_start();
                   <td>Nombre</td>
                   <td>Apellido</td>
                   <td>Grupo</td>
-                  <td>Teléfono</th>
+                  <td>Teléfono</td>
+                  <td></td>
+                  <td></td>
                 </tr>
 
                 <?php  
@@ -64,6 +67,19 @@ session_start();
                   <td><?php echo $mostrar['apellido']?></td>
                   <td><?php echo $mostrar['grupo']?></td>
                   <td><?php echo $mostrar['telefono']?></td> 
+                  <td>
+                    <form method="post" action="../Modelo/editareliminar.php">
+                      <?php 
+                       ?>
+                      <input type="submit" value="Editar" class="editar">
+                    </form>
+                  </td>
+                  <td>
+                    <form method="post" action="../Modelo/editareliminar.php">
+                      
+                      <input type="submit" value="Eliminar" class="eliminar">
+                    </form>
+                  </td>
                 </tr>
                 <?php 
                  }
@@ -73,10 +89,10 @@ session_start();
 
         <?php 
             if (isset ($_POST["aa-3"])){
-                $ci_usuario = $_POST ["cedula"];
-                $nombre = $_POST ["nombre"];
-                $apellido = $_POST ["apellido"];
-                $grupo = $_POST ["grupo"];
+                $ci_usuario = $_POST ["txtci"];
+                $nombre = $_POST ["txtnombre"];
+                $apellido = $_POST ["txtape"];
+                $grupo = $_POST ["txtgrupo"];
                 $telefono = $_POST ["telefono"];
 
                 $insertar = "INSERT INTO usuarios (cedula, nombre, apellido, grupo, telefono) VALUES (' $ci_usuario', '$nombre', '$apellido', '$grupo', '$telefono')";

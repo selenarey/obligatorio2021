@@ -64,6 +64,7 @@ p {
     color: white;
     font-family: 'Raleway', sans-serif;
     box-shadow: 5px 5px 5px #0000001c;
+    font-weight: 600;
 }
 
 #boton:hover {

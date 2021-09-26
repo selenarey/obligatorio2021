@@ -45,7 +45,7 @@ h1 {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 40%;
-    left: 58%;
+    left: 54%;
     height: 350px;
     width: 670px;
 }
@@ -66,7 +66,8 @@ table {
     border-radius: 15px; 
 }
 td {
-    height: 40px;
+    height:45px;
+    width: 120px;
 }
 .columnas-2:hover {
     background-color: rgb(209, 208, 208);
@@ -155,6 +156,19 @@ nav ul li .usuarios {
 h3 {
     color: #444444; 
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Raleway', sans-serif;
+}
+.eliminar, .editar {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+.editar {
+    background-color:#c3a0db ;
 }

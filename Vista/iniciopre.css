@@ -29,7 +29,7 @@ html {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 30%;
-    left: 42%;
+    left: 40%;
     width: 870px;
 
 }
@@ -51,8 +51,8 @@ table {
     height: 100px;
 }
 td {
-    height: 40px;
-    width: 118px;
+    height:45px;
+    width: 120px;
 }
 .columnas-2:hover {
     background-color: rgb(209, 208, 208);
@@ -109,6 +109,7 @@ nav ul li .inicio {
     cursor: pointer;
     color: white;
     font-family: 'Raleway', sans-serif;
+    font-weight: 600;
 }
 .editar {
     background-color:#c3a0db ;

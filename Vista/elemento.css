@@ -18,22 +18,22 @@ html {
     -o-background-size: fixed left;
     background-size: fixed left;
     text-align: center;
-  
+    display: block;
 }
 
 .container-1{   
     margin: 0 auto;
     position: absolute;
-    top: 45%;
-    right: 65%;
+    top: 37%;
+    right: 68%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 1em;   
     background-color: rgba(255, 255, 255, 0.575); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px;
-    height: 350px;
-    width: 250px;
+    height:230px;
+    width: 230px;
 }
 
 h1 {
@@ -41,36 +41,55 @@ h1 {
     color: #444444; 
 }
 .container-3{   
-    margin: 0;
     position: absolute;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding: 25px; 
-    top: 40%;
-    left: 58%;
-    height: 350px;
-    width: 670px;
+    top: 30%;
+    left: 62%;
+    width: 870px;
+    background-color: rgba(255, 255, 255, 0);
 }
 
+.container-4{   
+    margin: 0 auto;
+    position: absolute;
+    top: 77%;
+    right: 59%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 1em;   
+    background-color: rgba(255, 255, 255, 0.815); 
+    box-shadow: 10px 10px 10px #00000015;
+    border-radius: 15px;
+    height: 240px;
+    width: 350px;
+    
+}
 .columnas {
     background-color:#333;
     color: #fff;
-    margin-bottom: 1em;
+
+    
 }
 
 table {
-    border-collapse: collapse;
+    margin: 0 auto;
+    border-collapse:collapse;
     font-family: 'Raleway', sans-serif;
-    width: 620px;
+    width: 760px;
     font-size: 15px;
     table-layout: fixed;
     background-color: rgba(255, 255, 255, 0.842); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
+    height: 100px;
+    
 }
 td {
-    height: 40px;
+    height:45px;
+    width: 120px;
 }
+
 .columnas-2:hover {
     background-color: rgb(209, 208, 208);
 }
@@ -120,7 +139,7 @@ nav ul li .elementos {
     font-weight: 600;
 }
 
-#aa, #aa-2, #aa-3 {
+#aa-3 {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
@@ -133,25 +152,45 @@ nav ul li .elementos {
     width: 110px;
     font-family: 'Raleway', sans-serif;
     box-shadow: 5px 5px 5px #0000001c;
-    left: 67%;
-    top: 40%;
     font-weight: 600;
-}
-
-#aa-2 {
-    background-color: #c3a0db;
 }
 
 #aa-3 {
     background-color: #ebd576;
 }
-#aa:hover {
-    background-color: #6da896;
-}
-#aa-2:hover {
-    background-color: #ba98d1; 
-}
 #aa-3:hover {
     background-color: rgb(223, 204, 119);
 }
 
+.eliminar, .editar {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+.editar {
+    background-color:#c3a0db ;
+}
+
+#id, #estado, #desc, #nroserie {
+    background-color: #e4e4e4;
+    border-width: 0ch;
+    border-radius: 5px;
+    color: #444444; 
+    font-size: 14px;
+    height: 15px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 2px 2px 2px #0000001c;
+    text-align: left;
+}
+
+h3 {
+    color: #444444; 
+    text-align: left;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+}
