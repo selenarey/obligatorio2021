@@ -6,8 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/iniciopre.css">
+    <link rel="stylesheet" href="../Vista/iniciopres.css">
     <link rel="stylesheet" href="../Vista/popup2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Inicio</title>
@@ -34,6 +33,8 @@ session_start();
                   <td>Fecha del préstamo</td>
                   <td>Plazo</td>
                   <td>Fecha de devolución</td> 
+                  <td></td>
+                  <td></td>
                 </tr>
                 
                 <?php  
@@ -53,32 +54,24 @@ session_start();
                   <td><?php echo $mostrar['fecha_prestamo']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td><?php echo $mostrar['fecha_devolucion']?></td>
+                  <td>
+                    <form method="post" action="../Modelo/editareliminar.php">
+                      <?php 
+                       ?>
+                      <input type="submit" value="Editar" class="editar">
+                    </form>
+                  </td>
+                  <td>
+                    <form method="post" action="../Modelo/editareliminar.php">
+                      
+                      <input type="submit" value="Eliminar" class="eliminar">
+                    </form>
+                  </td>
                 </tr>
                 <?php 
                  }
                 ?>
-              </table>
-              <form action="#popup">
-            <p> <input type="submit" value="Editar" name="aa" id="aa" /></p>
-                <div id="popup" class="overlay">
-                    <a id="cerrar-2" href="#">&times;</a> 
-                    <div id="popupBody">
-                                <div class="popupContent">   
-                                </div>
-                    </div>
-                </div>
-              </form>  
-              <br>  
-              <form action="#popup">
-            <p> <input type="submit" value="Borrar" name="aa-2" id="aa-2" /></p>
-                <div id="popup" class="overlay">
-                    <a id="cerrar-2" href="#">&times;</a> 
-                    <div id="popupBody">
-                                <div class="popupContent">   
-                                </div>
-                    </div>
-                </div>
-              </form>
+              </table>        
       </div>   
 </body>
 </html>

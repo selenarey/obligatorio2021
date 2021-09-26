@@ -6,8 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/usuarios.css">
+    <link rel="stylesheet" href="../Vista/usuario.css">
     <link rel="stylesheet" href="../Vista/popup.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
@@ -25,7 +24,20 @@ session_start();
             </ul>
         </nav> 
         <div class="container-1">
-            <h1>Información del usuario</h1>
+        <h1>Información del usuario</h1>
+        <form action="../Controlador/usuarios.php" method="post">
+            <br>
+            <h3>Documento:<input type="text" name="txtci" class="cedula" id="cedula"></h3>
+            <br>
+            <h3>Nombre:<input type="text" name="txtnombre" class="nombre" id="nombre"></h3>
+            <br>
+            <h3>Apellido:<input type="text" name="txtape" class="apellido" id="apellido"></h3>
+            <br>
+            <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
+            <br>
+            <h3>Telefono:<input type="text" name="telefono" class="telefono" id="telefono"></h3>
+            <br>
+            <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar
         </div>
         <div class="container-3">
             <table class="default">
@@ -57,44 +69,27 @@ session_start();
                  }
                 ?>
               </table>
-        <form action="#popup">
-            <p> <input type="submit" value="Editar" name="aa" id="aa" /></p>
-                <div id="popup" class="overlay">
-                    <div id="popupBody">
-                        <h2>Título de la ventana</h2>
-                            <a id="cerrar" href="#">&times;</a>
-                                <div class="popupContent">
-                                     <p>Este es el contenido</p>
-                                </div>
-                    </div>
-                </div>
-                  <br>
-        <form action="#popup2">
-            <p> <input type="submit" value="Borrar" name="aa-2" id="aa-2" /></p>
-                <div id="popup" class="overlay">
-                    <div id="popupBody">
-                        <h2>Título de la ventana</h2>
-                            <a id="cerrar" href="#">&times;</a>
-                                <div class="popupContent">
-                                     <p>Este es el contenido</p>
-                                </div>
-                    </div>           
-                </div>
-                    <br>
-        <form action="#popup3">
-            <p> <input type="submit" value="Agregar" name="aa-3" id="aa-3" /></p>
-                <div id="popup" class="overlay">
-                    <div id="popupBody">
-                        <h2>Título de la ventana</h2>
-                            <a id="cerrar" href="#">&times;</a>
-                                <div class="popupContent">
-                                     <p>Este es el contenido</p>
-                                </div>
-                    </div>           
-                </div>                   
-        </form>
-        </form>
-        </form>
         </div>
+
+        <?php 
+            if (isset ($_POST["aa-3"])){
+                $ci_usuario = $_POST ["cedula"];
+                $nombre = $_POST ["nombre"];
+                $apellido = $_POST ["apellido"];
+                $grupo = $_POST ["grupo"];
+                $telefono = $_POST ["telefono"];
+
+                $insertar = "INSERT INTO usuarios (cedula, nombre, apellido, grupo, telefono) VALUES (' $ci_usuario', '$nombre', '$apellido', '$grupo', '$telefono')";
+                $ejecutar = mysqli_query($conectar, $insertar);
+                
+
+                if ($ejecutar == true) {
+                    echo "<script>alert('Usuario ingresado correctamente');window.location='../Controlador/usuarios.php';</script>";
+                }
+                else if ($ejecutar == false) {
+                    echo "<script>alert('Error');window.location='../Controlador/usuarios.php';</script>";
+                }
+            }
+        ?>
 </body>
 </html>

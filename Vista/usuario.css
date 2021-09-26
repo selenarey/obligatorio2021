@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-
-* {
+*{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
     margin:0px;
 	padding:0px;
 	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
-	
+
+
 html {
     background: url(../Vista/img/fondo3.png) no-repeat bottom fixed; 
     background-size: 400px 400px;
@@ -17,38 +17,53 @@ html {
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
-    text-align: center;
-  
 }
 
+.container-1{   
+    margin: 0;
+    position: absolute;
+    top: 47%;
+    right: 65%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 30px;   
+    background-color: rgba(255, 255, 255, 0.575); 
+    box-shadow: 10px 10px 10px #00000015;
+    border-radius: 15px;
+    height: 390px;
+    width: 250px;
+}
 
+h1 {
+    font-size: 16px;
+    color: #444444; 
+}
 .container-3{   
     margin: 0;
     position: absolute;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 25px; 
-    top: 28%;
-    left: 49%;
-    width: 870px;
-
+    top: 40%;
+    left: 58%;
+    height: 350px;
+    width: 670px;
 }
 
 .columnas {
     background-color:#333;
     color: #fff;
-    
 }
+
 table {
     border-collapse: collapse;
     font-family: 'Raleway', sans-serif;
-    width: 820px;
+    width: 620px;
     font-size: 15px;
     table-layout: fixed;
     background-color: rgba(255, 255, 255, 0.842); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
-    height: 100px;
 }
 td {
     height: 40px;
@@ -96,11 +111,11 @@ nav ul li a:hover{
     
 }
 
-nav ul li .inicio {
+nav ul li .usuarios {
     font-weight: 600;
 }
 
-#aa, #aa-2 {
+#aa-3 {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
@@ -113,22 +128,33 @@ nav ul li .inicio {
     width: 110px;
     font-family: 'Raleway', sans-serif;
     box-shadow: 5px 5px 5px #0000001c;
-    left: 68%;
-    top: 40%;
     font-weight: 600;
 }
 
-#aa-2 {
-    background-color: #c3a0db;
+#aa-3 {
+    background-color: #ebd576;
+}
+#aa-3:hover {
+    background-color: rgb(223, 204, 119);
 }
 
-#aa:hover {
-    background-color: #6da896;
-   
-}
-#aa-2:hover {
-    background-color: #ba98d1; 
+#cedula, #nombre, #apellido, #grupo, #telefono {
+    background-color: #e4e4e4;
+    border-width: 0ch;
+    border-radius: 5px;
+    text-align: left;
+    color: #444444; 
+    font-size: 14px;
+    height: 20px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 2px 2px 2px #0000001c;
+    
     
 }
 
-
+h3 {
+    color: #444444; 
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}

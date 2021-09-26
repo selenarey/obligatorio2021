@@ -6,7 +6,6 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/prestamos.css">
     <link rel="stylesheet" href="../Vista/cajas2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
@@ -34,9 +33,8 @@ session_start();
             <h3>Apellido: <input type="text" name="txtape" class="apellido" id="apellido"></h3>
             <br>
             <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
-            <br>
+            <br>     
             <h3> Telefono: <input type="text" name="telefono" class="telefono" id="telefono"></h3>
-           
     </div>
     <div class="container-2">
         <h1>Información del elemento</h1>
