@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/elemento.css">
+    <link rel="stylesheet" href="../Vista/elementos.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
@@ -50,7 +50,13 @@ session_start();
                   <td>Descripción</td>
                   <td>Nro de serie</td>
                   <td>Tipo</td>
-                  <td></td>
+                  <td>
+                    <form method="post" action="../Modelo/eliminarele.php">
+                      <?php 
+                       ?>
+                      <input type="submit" value="Eliminar todo" class="eliminar2">
+                    </form>
+                  </td>
                   <td></td>
                 </tr>
 
@@ -93,8 +99,9 @@ session_start();
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
                 $nroserie = $_POST ["nroserie"];
+                $tipo = $_POST ["tipo"];
 
-                $insertar = "INSERT INTO elemento (id, estado, descripcion, nro_serie) VALUES (' $id', '$estado', '$desc', '$nroserie')";
+                $insertar = "INSERT INTO elemento (id, estado, descripcion, nro_serie, tipo) VALUES (' $id', '$estado', '$desc', '$nroserie','$tipo')";
                 $ejecutar = mysqli_query($conectar, $insertar);
                 
 

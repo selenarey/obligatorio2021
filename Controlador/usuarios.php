@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/usuarios.css">
+    <link rel="stylesheet" href="../Vista/usuario.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
 </head>
@@ -48,7 +48,13 @@ session_start();
                   <td>Apellido</td>
                   <td>Grupo</td>
                   <td>Teléfono</td>
-                  <td></td>
+                  <td>
+                    <form method="post" action="../Modelo/eliminarusu.php">
+                      <?php 
+                       ?>
+                      <input type="submit" value="Eliminar todo" class="eliminar2">
+                    </form>
+                  </td>
                   <td></td>
                 </tr>
 

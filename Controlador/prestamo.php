@@ -47,7 +47,7 @@ session_start();
         <br>
         <h3>Nro_serie: <input type="text" name="txtgrupo" class="nroserie" id="nroserie"></h3>
         <br>
-        <h3>Tipo: <input type="text" name="txttipo" class="tipo" id="tipo"></h3>
+        <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo"></h3>
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>

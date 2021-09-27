@@ -84,7 +84,7 @@ table {
 }
 td {
     height:45px;
-    width: 120px;
+    width: 125px;
 }
 
 .columnas-2:hover {
@@ -161,25 +161,22 @@ nav ul li .elementos {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
-    padding: 10px 30px;
+    padding: 8px 30px;
     cursor: pointer;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    transition: 0.5s ease;
     
 }
 .editar {
     background-color:#c3a0db;
 }
 .eliminar:hover {
-    transform: scale(1.1);
     background-color:  rgb(105, 173, 153);
 
 }
 .editar:hover{
     background-color:#af8ec5;
-    transform: scale(1.1);
 }
 #id, #estado, #desc, #nroserie, #tipo {
     background-color: #e4e4e4;
@@ -199,4 +196,20 @@ h3 {
     text-align: left;
     font-size: 13px;
     font-family: 'Raleway', sans-serif;
+}
+
+.eliminar2 {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 8px 30px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    transition: 0.5s ease;
+    }
+.eliminar2:hover {
+        background-color:  rgb(105, 173, 153);
+        transform: scale(1.1);
 }

@@ -1,44 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-*{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
     margin:0px;
 	padding:0px;
 	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
-
-
+	
 html {
-    background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; 
+    background: url(../Vista/img/fondo2.jpg) no-repeat left fixed; 
     background-size: 1366px 768px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
-    display: block;
+    text-align: center;
+  
 }
 
-.container-1{   
-    margin: 0;
-    position: absolute;
-    top: 47%;
-    right: 65%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: 30px;   
-    background-color: rgba(255, 255, 255, 0.575); 
-    box-shadow: 10px 10px 10px #00000015;
-    border-radius: 15px;
-    height: 390px;
-    width: 250px;
-}
 
-h1 {
-    font-size: 16px;
-    color: #444444; 
-}
 .container-3{   
     margin: 0;
     position: absolute;
@@ -46,7 +29,7 @@ h1 {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 40%;
-    left: 54%;
+    left: 33%;
     height: 350px;
     width: 670px;
 }
@@ -54,21 +37,22 @@ h1 {
 .columnas {
     background-color:#333;
     color: #fff;
+    
 }
-
 table {
     border-collapse: collapse;
     font-family: 'Raleway', sans-serif;
-    width: 620px;
+    width: 860px;
     font-size: 15px;
     table-layout: fixed;
-    background-color: rgba(255, 255, 255, 0.842); 
+    background-color: rgba(255, 255, 255, 0.747); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
+    height: 15px;
 }
 td {
     height:45px;
-    width: 120px;
+    width: 125px;
 }
 .columnas-2:hover {
     background-color: rgb(209, 208, 208);
@@ -113,73 +97,45 @@ nav ul li a:hover{
     
 }
 
-nav ul li .usuarios {
+nav ul li .inicio {
     font-weight: 600;
 }
 
-#aa-3 {
-    background-color: #ebd576;
-    border-width: 0ch;
-    border-radius: 10px;
-    padding: 10px 30px;
-    cursor: pointer;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    height: 35px;
-    width: 110px;
-    font-family: 'Raleway', sans-serif;
-    box-shadow: 5px 5px 5px #0000001c;
-    font-weight: 600;
-    transition: 0.5s ease;
-}
 
-#aa-3:hover {
-    background-color: rgb(223, 204, 119);
-    transform: scale(1.1);
-}
 
-#cedula, #nombre, #apellido, #grupo, #telefono {
-    background-color: #e4e4e4;
-    border-width: 0ch;
-    border-radius: 5px;
-    text-align: left;
-    color: #444444; 
-    font-size: 14px;
-    height: 20px;
-    font-family: 'Raleway', sans-serif;
-    box-shadow: 2px 2px 2px #0000001c;
-    
-    
-}
-
-h3 {
-    color: #444444; 
-    text-align: left;
-    font-size: 13px;
-    font-family: 'Raleway', sans-serif;
-}
 .eliminar, .editar {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
-    padding: 10px 30px;
+    padding: 8px 30px;
     cursor: pointer;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    transition: 0.5s ease;
 }
 .editar {
     background-color:#c3a0db ;
 }
 
 .eliminar:hover {
-    transform: scale(1.1);
     background-color:  rgb(105, 173, 153);
 
 }
 .editar:hover{
     background-color:#af8ec5;
-    transform: scale(1.1);
 }
+.eliminar2 {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 8px 30px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    transition: 0.5s ease;
+    }
+    .eliminar2:hover {
+        background-color:  rgb(105, 173, 153);
+        transform: scale(1.1);
+    }

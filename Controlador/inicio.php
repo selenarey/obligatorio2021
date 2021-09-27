@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/iniciopres.css">
+    <link rel="stylesheet" href="../Vista/iniciopre.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Inicio</title>
 </head>
@@ -32,7 +32,13 @@ session_start();
                   <td>Fecha del préstamo</td>
                   <td>Plazo</td>
                   <td>Fecha de devolución</td> 
-                  <td></td>
+                  <td>
+                    <form method="post" action="../Modelo/eliminarpres.php">
+                      <?php 
+                       ?>
+                      <input type="submit" value="Eliminar todo" class="eliminar2">
+                    </form>
+                  </td>
                   <td></td>
                 </tr>
                 
