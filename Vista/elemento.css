@@ -2,38 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
 
 * {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
     margin:0px;
 	padding:0px;
 	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
 	
 html {
-    background: url(../Vista/img/fondo3.png) no-repeat bottom fixed; 
-    background-size: 400px 400px;
+    background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; 
+    background-size: 1366px 768px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
-    text-align: center;
     display: block;
 }
 
 .container-1{   
-    margin: 0 auto;
+    margin: 0;
     position: absolute;
-    top: 37%;
+    top: 33%;
     right: 68%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding: 1em;   
+    padding: 30px;   
     background-color: rgba(255, 255, 255, 0.575); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px;
-    height:230px;
-    width: 230px;
+    height:210px;
+    width: 210px;
 }
 
 h1 {
@@ -41,29 +41,30 @@ h1 {
     color: #444444; 
 }
 .container-3{   
+    margin: 0;
     position: absolute;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    top: 30%;
-    left: 62%;
-    width: 870px;
-    background-color: rgba(255, 255, 255, 0);
+    padding: 25px; 
+    top: 40%;
+    left: 58%;
+    height: 350px;
+    width: 670px;
 }
 
 .container-4{   
-    margin: 0 auto;
+    margin: 0;
     position: absolute;
     top: 77%;
-    right: 59%;
+    right: 57%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 1em;   
     background-color: rgba(255, 255, 255, 0.815); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px;
-    height: 240px;
+    height: 275px;
     width: 350px;
-    
 }
 .columnas {
     background-color:#333;
@@ -73,23 +74,17 @@ h1 {
 }
 
 table {
-    margin: 0 auto;
     font-family: 'Raleway', sans-serif;
     width: 760px;
     font-size: 15px;
     background-color: rgba(255, 255, 255, 0.842); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
-    height: 100px;
-    border-spacing: 0;
     border-collapse: collapse;
-    border: none;
-  
 }
 td {
     height:45px;
     width: 120px;
-    padding: 0;
 }
 
 .columnas-2:hover {
@@ -104,8 +99,6 @@ nav{
     padding: 0px 100px;
     position: fixed;
     z-index: 1;
-    margin: 0 auto;
-    
 }
 nav .logo{
 	font-size: 18px;
@@ -139,10 +132,11 @@ nav ul li a:hover{
 
 nav ul li .elementos {
     font-weight: 600;
+    
 }
 
 #aa-3 {
-    background-color:  #7cbfab;
+    background-color: #ebd576;
     border-width: 0ch;
     border-radius: 10px;
     padding: 10px 30px;
@@ -155,13 +149,12 @@ nav ul li .elementos {
     font-family: 'Raleway', sans-serif;
     box-shadow: 5px 5px 5px #0000001c;
     font-weight: 600;
+    transition: 0.5s ease;
 }
 
-#aa-3 {
-    background-color: #ebd576;
-}
 #aa-3:hover {
     background-color: rgb(223, 204, 119);
+    transform: scale(1.1);
 }
 
 .eliminar, .editar {
@@ -173,12 +166,22 @@ nav ul li .elementos {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    transition: 0.5s ease;
+    
 }
 .editar {
-    background-color:#c3a0db ;
+    background-color:#c3a0db;
 }
+.eliminar:hover {
+    transform: scale(1.1);
+    background-color:  rgb(105, 173, 153);
 
-#id, #estado, #desc, #nroserie {
+}
+.editar:hover{
+    background-color:#af8ec5;
+    transform: scale(1.1);
+}
+#id, #estado, #desc, #nroserie, #tipo {
     background-color: #e4e4e4;
     border-width: 0ch;
     border-radius: 5px;
@@ -188,6 +191,7 @@ nav ul li .elementos {
     font-family: 'Raleway', sans-serif;
     box-shadow: 2px 2px 2px #0000001c;
     text-align: left;
+    
 }
 
 h3 {

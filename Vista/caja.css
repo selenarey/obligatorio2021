@@ -7,8 +7,8 @@
 }
 
 html {
-    background: url(../Vista/img/fondo2.png) no-repeat left fixed; 
-    background-size: 400px 400px;
+    background: url(../Vista/img/fondo2.jpg) no-repeat left fixed; 
+    background-size: 1366px 768px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
@@ -84,14 +84,28 @@ h5 {
     font-family: 'Raleway', sans-serif;
     box-shadow: 5px 5px 5px #0000001c;
     font-weight: 600;
+    transition: 0.5s ease;
 }
 
 #aa:hover {
     background-color: #c3a0db;
     text-align: center;
+    transform: scale(1.1);
+    
 }
 
 #cedula, #nombre, #apellido, #grupo, #telefono {
+    background-color: #00000000;
+    border-width: 0ch;
+    border-radius: 10px;
+    text-align: left;
+    color: #444444; 
+    font-size: 13px;
+    height: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#id, #estado, #desc, #nroserie, #tipo {
     background-color: #00000000;
     border-width: 0ch;
     border-radius: 10px;

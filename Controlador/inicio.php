@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/iniciopre.css">
+    <link rel="stylesheet" href="../Vista/iniciopres.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Inicio</title>
 </head>
@@ -18,7 +18,7 @@ session_start();
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php" class="prestamos">Préstamos</a></li>
+                <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
             </ul>
         </nav> 
@@ -54,15 +54,11 @@ session_start();
                   <td><?php echo $mostrar['plazo']?></td>
                   <td><?php echo $mostrar['fecha_devolucion']?></td>
                   <td>
-                    <form method="post" action="../Modelo/editareliminar.php">
-                      <?php 
-                       ?>
+                    <form method="post" action="../Modelo/eliminarpres.php" method="POST">
                       <input type="submit" value="Editar" class="editar">
                     </form>
                   </td>
                   <td>
-                    <form method="post" action="../Modelo/editareliminar.php">
-                      
                       <input type="submit" value="Eliminar" class="eliminar">
                     </form>
                   </td>

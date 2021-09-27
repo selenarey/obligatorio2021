@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/elementos.css">
+    <link rel="stylesheet" href="../Vista/elemento.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
@@ -18,7 +18,7 @@ session_start();
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php" class="prestamos">Préstamos</a></li>
+                <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
             </ul>
         </nav> 
@@ -29,13 +29,15 @@ session_start();
         <h1>Agregar elemento</h1>
         <form action="../Controlador/elementos.php" method="post">
             <br>
-            <h3>ID: <input type="text" name="id" class="id" id="id"></h3>
+            <h3>ID: <input type="text" name="id" class="id" id="id" maxlength="5"></h3>
             <br>
-            <h3>Estado: <input type="text" name="estado" class="estado" id="estado"></h3>
+            <h3>Estado: <input type="text" name="estado" class="estado" id="estado" maxlength="15"></h3>
             <br>
-            <h3>Descripción: <input type="text" name="desc" class="desc" id="desc"></h3>
+            <h3>Descripción: <input type="text" name="desc" class="desc" id="desc" maxlength="40"></h3>
             <br>
-            <h3>Nro serie: <input type="text" name="nroserie" class="nroserie" id="nroserie"></h3>
+            <h3>Nro serie: <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="15"></h3>
+            <br>
+            <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20"></h3>
             <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
         </form>
@@ -47,6 +49,7 @@ session_start();
                   <td>Estado</td>
                   <td>Descripción</td>
                   <td>Nro de serie</td>
+                  <td>Tipo</td>
                   <td></td>
                   <td></td>
                 </tr>
@@ -65,6 +68,7 @@ session_start();
                   <td><?php echo $mostrar['estado']?></td>
                   <td><?php echo $mostrar['descripcion']?></td>
                   <td><?php echo $mostrar['nro_serie']?></td>
+                  <td><?php echo $mostrar['tipo']?></td>
                   <td>
                     <form method="post" action="../Modelo/editareliminar.php">
                       <?php 

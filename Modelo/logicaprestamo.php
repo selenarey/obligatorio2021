@@ -10,8 +10,9 @@
  $fprestamo = $_POST["fechapres"];
  $plazo= $_POST ["plazo"];
  $fdevolucion = $_POST["fechadevo"];
+ $tipo = $_POST ["txttipo"];
  
-    $insertar = "INSERT INTO prestamos (ci_usuario,id_elemento,fecha,hora,fecha_prestamo,plazo,fecha_devolucion) VALUES ('".$cedula."', '".$id_elemento."', '".$fecha."', '".$hora."', '".$fprestamo."','".$plazo."', '".$fdevolucion."')";
+    $insertar = "INSERT INTO prestamos (ci_usuario,id_elemento,fecha,hora,fecha_prestamo,plazo,fecha_devolucion,tipo) VALUES ('".$cedula."', '".$id_elemento."', '".$fecha."', '".$hora."', '".$fprestamo."','".$plazo."', '".$fdevolucion."', '". $tipo."')";
     $ejecutar = mysqli_query($conectar, $insertar);
 
     if ($ejecutar == true) {

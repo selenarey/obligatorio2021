@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/prestamos.css">
-    <link rel="stylesheet" href="../Vista/cajas2.css">
+    <link rel="stylesheet" href="../Vista/caja.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -19,7 +19,7 @@ session_start();
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php" class="prestamos">Préstamos</a></li>
+                <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
             </ul>
         </nav> 
@@ -39,14 +39,15 @@ session_start();
     <div class="container-2">
         <h1>Información del elemento</h1>
         <br>
-        <h3>ID del elemento:<input type="text" name="idele" class="cedula" id="cedula"></h3>
+        <h3>ID del elemento:<input type="text" name="idele" class="id" id="id"></h3>
         <br>
-        <h3>Estado: <input type="text" name="txtnombre" class="nombre" id="nombre"></h3>
+        <h3>Estado: <input type="text" name="txtnombre" class="estado" id="estado"></h3>
         <br>
-        <h3>Descripción: <input type="text" name="txtape" class="apellido" id="apellido"></h3>
+        <h3>Descripción: <input type="text" name="txtape" class="desc" id="desc"></h3>
         <br>
-        <h3>Nro_serie: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
+        <h3>Nro_serie: <input type="text" name="txtgrupo" class="nroserie" id="nroserie"></h3>
         <br>
+        <h3>Tipo: <input type="text" name="txttipo" class="tipo" id="tipo"></h3>
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>
