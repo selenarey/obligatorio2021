@@ -31,7 +31,13 @@ session_start();
             <br>
             <h3>ID: <input type="text" name="id" class="id" id="id" maxlength="5"></h3>
             <br>
-            <h3>Estado: <input type="text" name="estado" class="estado" id="estado" maxlength="15"></h3>
+            <h3>Estado:<select name="estado" class="estado" id="estado"></h3>
+            <option value="Nuevo">Nuevo</option>
+            <option value="Bueno">Bueno</option>
+            <option value="Malo">Malo</option>
+            <option value="No funciona">No funciona</option>
+            </select>
+            <br>
             <br>
             <h3>Descripción: <input type="text" name="desc" class="desc" id="desc" maxlength="40"></h3>
             <br>

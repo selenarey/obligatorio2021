@@ -55,8 +55,26 @@ session_start();
                     <br>
                     <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
                     <br>
-                    <br>
-                    <input type="text" name="idele" class="ele" id="elemento" placeholder="ID del elemento" required>
+                    <h5>ID del elemento</h5>
+                    <select name="idele" class="ele" id="elemento">
+                    <?php 
+                            include ("../Modelo/conexion.php");
+                            $getElemento1 = "SELECT * FROM elemento ORDER BY id";
+                            $getElemento2 = mysqli_query($conectar,$getElemento1);
+
+                            while ($row = mysqli_fetch_array ($getElemento2)) 
+                            {
+                                $id = $row['id'];
+                                $estado = $row['estado'];
+                                $descripcion = $row['descripcion'];
+                                $nroserie = $row['nro_serie'];
+                                $tipo = $row['tipo'];      
+                    ?>
+                    <option value="<?php echo $id; ?>"><?php echo $id;?></option>
+                    <?php 
+                    }
+                    ?>
+                    </select>
                     <br> 
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
@@ -68,7 +86,13 @@ session_start();
                     <input type="date" name="fechapres" class="fecha" id="fecha" required>
                     <br>
                     <br>
-                    <input type="text" name="plazo" class="plazo" id="plzao" placeholder="Plazo" required>
+                    <h5>Plazo</h5>
+                    <select name="plazo" class="plazo" id="plzao" required>
+                    <option value="Por el día">Por el día</option>
+                    <option value="1 día">1 día</option>
+                    <option value="2 días">2 días</option>
+                    <option value="3 día">3 días</option>
+                    </select>
                     <br>
                     <br>
                     <br>
