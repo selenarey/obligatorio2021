@@ -16,7 +16,7 @@ session_start();
         <p><?php echo $_SESSION ['documento']?></p>
     </div>
             <ul>
-                <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
+                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
