@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="../Vista/prestamos.css">
     <link rel="stylesheet" href="../Vista/caja.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
-    <title>Préstamos</title>
+    <title>Nuevo Préstamo</title>
 </head>
 <body>
     <nav>

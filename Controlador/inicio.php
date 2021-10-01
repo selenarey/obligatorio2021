@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
-    <title>Inicio</title>
+    <title>Préstamos</title>
 </head>
 <body>
 <nav>
