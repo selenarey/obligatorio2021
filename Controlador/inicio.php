@@ -36,7 +36,7 @@ session_start();
                     <form method="post" action="../Modelo/eliminarpres.php">
                       <?php 
                        ?>
-                      <input type="submit" value="Eliminar todo" class="eliminar2">
+                      <input type="submit" value="Eliminar todo" onclick="return ConfirmDelete()" class="eliminar2">
                     </form>
                   </td>
                   <td></td>
@@ -74,5 +74,19 @@ session_start();
                 ?>
               </table>        
       </div>   
+<script type="text/javascript">
+        function ConfirmDelete ()
+        {
+           var respuesta = confirm ("¿Estás seguro de eliminar todos los registros?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
 </body>
 </html>
