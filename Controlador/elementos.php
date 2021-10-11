@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/elementos.css">
+    <link rel="stylesheet" href="../Vista/elemento.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
@@ -82,16 +82,16 @@ session_start();
                   <td><?php echo $mostrar['nro_serie']?></td>
                   <td><?php echo $mostrar['tipo']?></td>
                   <td>
-                    <form method="post" action="../Modelo/editareliminar.php">
+                  <form action="../Controlador/elementos.php" method="post">
                       <?php 
                        ?>
                       <input type="submit" value="Editar" class="editar">
                     </form>
                   </td>
                   <td>
-                    <form method="post" action="../Modelo/editareliminar.php">
+                  <form action="../Controlador/elementos.php" method="post">
                       
-                      <input type="submit" value="Eliminar" class="eliminar">
+                      <input type="submit" value="Eliminar" class="eliminar" name="eliminar" id="eliminar">
                     </form>
                   </td>
                 </tr>
@@ -109,7 +109,6 @@ session_start();
 
                 $insertar = "INSERT INTO elemento (id, estado, descripcion, nro_serie, tipo) VALUES (' $id', '$estado', '$desc', '$nroserie','$tipo')";
                 $ejecutar = mysqli_query($conectar, $insertar);
-                
 
                 if ($ejecutar == true) {
                     echo "<script>alert('Elemento ingresado correctamente');window.location='../Controlador/elementos.php';</script>";
