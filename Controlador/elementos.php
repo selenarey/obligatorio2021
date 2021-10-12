@@ -23,28 +23,30 @@ session_start();
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
             </ul>
         </nav> 
-        <div class="container-1">
-            <h1>img</h1>
-        </div>
         <div class="container-4">
         <h1>Agregar elemento</h1>
         <form action="../Controlador/elementos.php" method="post">
             <br>
-            <h3>ID: <input type="text" name="id" class="id" id="id" maxlength="5"></h3>
+            <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento" required>
             <br>
-            <h3>Estado:<select name="estado" class="estado" id="estado"></h3>
-            <option value="Nuevo">Nuevo</option>
-            <option value="Bueno">Bueno</option>
-            <option value="Malo">Malo</option>
-            <option value="No funciona">No funciona</option>
+            <br>
+            <h5>Estado</h5>
+            <select name="estado" class="estado" id="estado">
+            <option value="Excelente">Excelente</option>
+            <option value="Bien">Bien</option>
+            <option value="Dañado">Dañado</option>
+            <option value="En Reparación">En Reparación</option>
             </select>
             <br>
             <br>
-            <h3>Descripción: <input type="text" name="desc" class="desc" id="desc" maxlength="40"></h3>
+            <input type="text" name="desc" class="desc" id="desc" maxlength="40" placeholder="Descripción">
             <br>
-            <h3>Nro serie: <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="15"></h3>
             <br>
-            <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20"></h3>
+            <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="15" placeholder="Número de Serie">
+            <br>
+            <br>
+            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo" required>
+            <br>
             <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
         </form>
