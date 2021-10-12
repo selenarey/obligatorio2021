@@ -125,7 +125,7 @@ nav ul li .inicio {
     background-color:#af8ec5;
 }
 .eliminar2 {
-    background-color:  #7cbfab;
+    background-color:  rgb(71, 71, 71);
     border-width: 0ch;
     border-radius: 10px;
     padding: 8px 30px;
@@ -133,9 +133,7 @@ nav ul li .inicio {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    transition: 0.5s ease;
     }
-    .eliminar2:hover {
-        background-color:  rgb(105, 173, 153);
-        transform: scale(1.1);
-    }
+.eliminar2:hover {
+            background-color:  rgb(77, 75, 75);
+}
