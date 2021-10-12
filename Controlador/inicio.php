@@ -20,6 +20,7 @@ session_start();
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
+                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
             </ul>
         </nav> 
         <div class="container-3">
