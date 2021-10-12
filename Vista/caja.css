@@ -46,6 +46,7 @@ html {
     padding: 25px;   
     background-color: rgba(255, 255, 255, 0); 
     border-radius: 15px;
+    text-align: center;
 }
 
 h1, h2 {
@@ -71,6 +72,7 @@ h5 {
     height: 35px;
     width: 340px;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 #aa {
