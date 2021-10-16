@@ -65,7 +65,7 @@ h5 {
     text-align: left;
     font-family: 'Raleway', sans-serif;
 }
-#documento, #elemento, #fecha, #hora, #plzao, #fechadevo {
+#documento, #elemento, #fecha, #hora, #plazo, #fechadevo {
     border-width: 0px;
     background-color: #e4e4e4;
     border-radius: 10px;
@@ -108,7 +108,7 @@ h5 {
     font-family: 'Raleway', sans-serif;
 }
 
-#id, #estado, #desc, #nroserie, #tipo {
+#id, #estado, #desc, #cant, #tipo {
     background-color: #00000000;
     border-width: 0ch;
     border-radius: 10px;

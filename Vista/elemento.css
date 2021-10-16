@@ -159,7 +159,7 @@ nav ul li .elementos {
 .editar:hover{
     background-color:#af8ec5;
 }
-#id, #estado, #desc, #nroserie, #tipo {
+#id, #estado, #desc, #cant, #tipo {
     background-color: #e4e4e4;
     border-width: 0ch;
     border-radius: 5px;
