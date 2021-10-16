@@ -6,14 +6,14 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/iniciopre.css">
+    <link rel="stylesheet" href="../Vista/iniciopres.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
 <body>
 <nav>
     <div class="logo">
-        <p><?php echo $_SESSION ['documento']?></p>
+        <p><?php echo $_SESSION ['CI_lab']?></p>
     </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
@@ -45,7 +45,7 @@ session_start();
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from prestamos";
+                    $sql = "SELECT * from toma_prestado";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -53,8 +53,8 @@ session_start();
                 ?>
 
                 <tr class="columnas-2"> 
-                  <td><?php echo $mostrar['ci_usuario']?></td>
-                  <td><?php echo $mostrar['id_elemento']?></td>
+                  <td><?php echo $mostrar['CI_user']?></td>
+                  <td><?php echo $mostrar['ID_elemento']?></td>
                   <td><?php echo $mostrar['fecha']?></td>
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['fecha_prestamo']?></td>

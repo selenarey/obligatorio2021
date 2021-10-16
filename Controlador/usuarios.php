@@ -13,7 +13,7 @@ session_start();
 <body>
 <nav>
     <div class="logo">
-        <a href="../Controlador/elementos.php"><p><?php echo $_SESSION ['documento']?></p></a>
+        <a href="../Controlador/elementos.php"><p><?php echo $_SESSION ['CI_lab']?></p></a>
     </div>
             <ul>
                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
@@ -27,7 +27,7 @@ session_start();
         <h1>Agregar usuario</h1>
         <form action="../Controlador/usuarios.php" method="post">
             <br>
-            <input type="text" name="txtci" class="cedula" id="cedula" maxlength="8" placeholder="Documento" required>
+            <input type="text" name="txtci" class="cedula" id="cedula" maxlength="8" placeholder="Cédula" required>
             <br>
             <br>
             <input type="text" name="txtnombre" class="nombre" id="nombre" maxlength="20" placeholder="Nombre" required>
@@ -67,7 +67,7 @@ session_start();
 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from usuarios";
+                    $sql = "SELECT * from usuario";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -75,7 +75,7 @@ session_start();
                 ?>
 
                 <tr class="columnas-2"> 
-                  <td><?php echo $mostrar['cedula']?></td>
+                  <td><?php echo $mostrar['CI']?></td>
                   <td><?php echo $mostrar['nombre']?></td>
                   <td><?php echo $mostrar['apellido']?></td>
                   <td><?php echo $mostrar['grupo']?></td>
@@ -108,7 +108,7 @@ session_start();
                 $grupo = $_POST ["txtgrupo"];
                 $telefono = $_POST ["telefono"];
 
-                $insertar = "INSERT INTO usuarios (cedula, nombre, apellido, grupo, telefono) VALUES (' $ci_usuario', '$nombre', '$apellido', '$grupo', '$telefono')";
+                $insertar = "INSERT INTO usuario (CI, nombre, apellido, grupo, telefono) VALUES (' $ci_usuario', '$nombre', '$apellido', '$grupo', '$telefono')";
                 $ejecutar = mysqli_query($conectar, $insertar);
                 
 

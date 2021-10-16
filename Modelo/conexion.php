@@ -2,7 +2,7 @@
 $bdhost = "localhost";
 $bdusuario ="root";
 $bdpass ="";
-$bdnombre = "obligatorio";
+$bdnombre = "bee";
 
 $conectar = mysqli_connect($bdhost,$bdusuario,$bdpass,$bdnombre);
 

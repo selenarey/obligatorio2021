@@ -14,7 +14,7 @@ session_start();
 <body>
     <nav>
     <div class="logo">
-        <p><?php echo $_SESSION ['documento']?></p>
+        <p><?php echo $_SESSION ['CI_lab']?></p>
     </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
@@ -42,11 +42,11 @@ session_start();
         <br>
         <h3>ID del elemento:<input type="text" name="idele" class="id" id="id"></h3>
         <br>
-        <h3>Estado: <input type="text" name="txtnombre" class="estado" id="estado"></h3>
+        <h3>Estado: <input type="text" name="txtestado" class="estado" id="estado"></h3>
         <br>
-        <h3>Descripción: <input type="text" name="txtape" class="desc" id="desc"></h3>
+        <h3>Descripción: <input type="text" name="txtdesc" class="desc" id="desc"></h3>
         <br>
-        <h3>Nro_serie: <input type="text" name="txtgrupo" class="nroserie" id="nroserie"></h3>
+        <h3>Cantidad: <input type="text" name="txtcant" class="cant" id="cant"></h3>
         <br>
         <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo"></h3>
     </div>
@@ -60,15 +60,15 @@ session_start();
                     <select name="idele" class="ele" id="elemento">
                     <?php 
                             include ("../Modelo/conexion.php");
-                            $getElemento1 = "SELECT * FROM elemento ORDER BY id";
+                            $getElemento1 = "SELECT * FROM elemento ORDER BY ID";
                             $getElemento2 = mysqli_query($conectar,$getElemento1);
 
                             while ($row = mysqli_fetch_array ($getElemento2)) 
                             {
-                                $id = $row['id'];
+                                $id = $row['ID'];
                                 $estado = $row['estado'];
-                                $descripcion = $row['descripcion'];
-                                $nroserie = $row['nro_serie'];
+                                $descripcion = $row['descripcion_estado'];
+                                $cantidad = $row['cantidad'];
                                 $tipo = $row['tipo'];      
                     ?>
                     <option value="<?php echo $id; ?>"><?php echo $id;?></option>
@@ -88,7 +88,7 @@ session_start();
                     <br>
                     <br>
                     <h5>Plazo</h5>
-                    <select name="plazo" class="plazo" id="plzao" required>
+                    <select name="plazo" class="plazo" id="plazo" required>
                     <option value="Por el día">Por el día</option>
                     <option value="1 día">1 día</option>
                     <option value="2 días">2 días</option>

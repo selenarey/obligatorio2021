@@ -12,7 +12,7 @@
  $fdevolucion = $_POST["fechadevo"];
 
  
-    $insertar = "INSERT INTO prestamos (ci_usuario,id_elemento,fecha,hora,fecha_prestamo,plazo,fecha_devolucion) VALUES ('".$cedula."', '".$id_elemento."', '".$fecha."', '".$hora."', '".$fprestamo."','".$plazo."', '".$fdevolucion."')";
+    $insertar = "INSERT INTO toma_prestado (CI_user,ID_elemento,fecha,hora,fecha_prestamo,plazo,fecha_devolucion) VALUES ('".$cedula."', '".$id_elemento."', '".$fecha."', '".$hora."', '".$fprestamo."','".$plazo."', '".$fdevolucion."')";
     $ejecutar = mysqli_query($conectar, $insertar);
 
     if ($ejecutar == true) {

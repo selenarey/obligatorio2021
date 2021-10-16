@@ -8,13 +8,13 @@ $pass = $_POST["txtpass"];
 
     
 
-    $query = mysqli_query($conectar,"SELECT * FROM laboratorista WHERE documento = '".$doc."' and password = '".$pass."'");
+    $query = mysqli_query($conectar,"SELECT * FROM laboratorista WHERE CI_lab = '".$doc."' and contraseña = '".$pass."'");
     $fila = mysqli_num_rows($query);
 
 
    if ($fila == true){
     session_start();
-    $_SESSION['documento']= $doc;
+    $_SESSION['CI_lab']= $doc;
     header("Location: ../Controlador/prestamo.php");
   
 }

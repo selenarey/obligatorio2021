@@ -2,8 +2,8 @@
 include ("../Modelo/conexion.php");
 
 
-$id = $_POST["id"];
-$eliminar = "DELETE FROM elemento WHERE id = '$id'";
+$id = $_POST["ID"];
+$eliminar = "DELETE FROM elemento WHERE ID = '$id'";
 $rta = mysqli_query($conectar, $eliminar);
 if ($rta == true) {
     echo "<script>alert('Se ha eliminado el elemento correctamente');window.location='../Controlador/elementos.php';</script>";

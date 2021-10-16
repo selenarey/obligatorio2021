@@ -13,7 +13,7 @@ session_start();
 <body>
 <nav>
 <div class="logo">
-            <p><?php echo $_SESSION ['documento']?></p>
+            <p><?php echo $_SESSION ['CI_lab']?></p>
 </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
@@ -39,10 +39,10 @@ session_start();
             </select>
             <br>
             <br>
-            <input type="text" name="desc" class="desc" id="desc" maxlength="40" placeholder="Descripción">
+            <input type="text" name="desc" class="desc" id="desc" maxlength="40" placeholder="Descripción del estado">
             <br>
             <br>
-            <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="15" placeholder="Número de Serie">
+            <input type="text" name="cant" class="cant" id="cant" maxlength="5" placeholder="Cantidad">
             <br>
             <br>
             <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo" required>
@@ -57,7 +57,7 @@ session_start();
                   <td>ID</td>
                   <td>Estado</td>
                   <td>Descripción</td>
-                  <td>Nro de serie</td>
+                  <td>Cantidad</td>
                   <td>Tipo</td>
                   <td>
                     <form method="post" action="../Modelo/eliminarele.php">
@@ -79,10 +79,10 @@ session_start();
                 ?>
 
                 <tr class="columnas-2"> 
-                  <td><?php echo $mostrar['id']?></td>
+                  <td><?php echo $mostrar['ID']?></td>
                   <td><?php echo $mostrar['estado']?></td>
-                  <td><?php echo $mostrar['descripcion']?></td>
-                  <td><?php echo $mostrar['nro_serie']?></td>
+                  <td><?php echo $mostrar['descripcion_estado']?></td>
+                  <td><?php echo $mostrar['cantidad']?></td>
                   <td><?php echo $mostrar['tipo']?></td>
                   <td>
                   <form action="../Controlador/elementos.php" method="post">
@@ -107,10 +107,10 @@ session_start();
                 $id = $_POST ["id"];
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
-                $nroserie = $_POST ["nroserie"];
+                $cant = $_POST ["cant"];
                 $tipo = $_POST ["tipo"];
 
-                $insertar = "INSERT INTO elemento (id, estado, descripcion, nro_serie, tipo) VALUES (' $id', '$estado', '$desc', '$nroserie','$tipo')";
+                $insertar = "INSERT INTO elemento (ID, estado, descripcion_estado, cantidad, tipo) VALUES (' $id', '$estado', '$desc', '$cant','$tipo')";
                 $ejecutar = mysqli_query($conectar, $insertar);
 
                 if ($ejecutar == true) {
