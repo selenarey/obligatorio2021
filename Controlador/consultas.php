@@ -13,7 +13,7 @@ session_start();
 <body>
 <nav>
 <div class="logo">
-            <p><?php echo $_SESSION ['documento']?></p>
+            <p><?php echo $_SESSION ['CI_lab']?></p>
 </div>
             <ul>
                 <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
