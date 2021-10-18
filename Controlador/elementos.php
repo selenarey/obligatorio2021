@@ -30,8 +30,8 @@ session_start();
             <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento" required>
             <br>
             <br>
-            <h5>Estado</h5>
             <select name="estado" class="estado" id="estado">
+            <option value="--">Estado</option>
             <option value="Excelente">Excelente</option>
             <option value="Bien">Bien</option>
             <option value="Dañado">Dañado</option>

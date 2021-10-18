@@ -26,13 +26,14 @@ session_start();
         <div class="container-3">
             <table class="default">
                 <tr class="columnas">
-                  <td>Cédula del usuario</td>
-                  <td>ID del elemento</td>
+                  <td>Cédula</td>
+                  <td>Nombre</td>
+                  <td>Apellido</td>
+                  <td>ID</td>
                   <td>Fecha</td>
                   <td>Hora</td>
                   <td>Fecha del préstamo</td>
                   <td>Plazo</td>
-                  <td>Fecha de devolución</td> 
                   <td>
                     <form method="post" action="../Modelo/eliminarpres.php">
                       <?php 
@@ -45,7 +46,7 @@ session_start();
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from toma_prestado";
+                    $sql = "SELECT CI_user, nombre, apellido, ID_elemento, fecha, hora, fecha_prestamo, plazo from usuario JOIN toma_prestado ON usuario.CI = toma_prestado.CI_user";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -54,12 +55,13 @@ session_start();
 
                 <tr class="columnas-2"> 
                   <td><?php echo $mostrar['CI_user']?></td>
+                  <td><?php echo $mostrar['nombre']?></td>
+                  <td><?php echo $mostrar['apellido']?></td>
                   <td><?php echo $mostrar['ID_elemento']?></td>
                   <td><?php echo $mostrar['fecha']?></td>
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['fecha_prestamo']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
-                  <td><?php echo $mostrar['fecha_devolucion']?></td>
                   <td>
                     <form method="post" action="../Modelo/eliminarpres.php" method="POST">
                       <input type="submit" value="Editar" class="editar">

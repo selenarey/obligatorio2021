@@ -13,7 +13,7 @@ session_start();
 <body>
 <nav>
     <div class="logo">
-        <a href="../Controlador/elementos.php"><p><?php echo $_SESSION ['CI_lab']?></p></a>
+        <p><?php echo $_SESSION ['CI_lab']?></p></a>
     </div>
             <ul>
                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
@@ -50,7 +50,7 @@ session_start();
         <div class="container-3">
             <table class="default">
                 <tr class="columnas">
-                  <td>Documento</td>
+                  <td>Cédula</td>
                   <td>Nombre</td>
                   <td>Apellido</td>
                   <td>Grupo</td>

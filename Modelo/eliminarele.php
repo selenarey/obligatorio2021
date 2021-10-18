@@ -1,7 +1,7 @@
 <?php 
     include ("../Modelo/conexion.php");
 
-$eliminar= mysqli_query($conectar, "DELETE FROM elemento WHERE ID > 0");
+$eliminar= mysqli_query($conectar, "DELETE FROM elemento WHERE ID => 0");
 
 if ($eliminar == true) {
     echo "<script>alert('Se han eliminado todos los elementos correctamente');window.location='../Controlador/elementos.php';</script>";
