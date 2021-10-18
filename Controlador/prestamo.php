@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/prestamos.css">
-    <link rel="stylesheet" href="../Vista/cajas.css">
+    <link rel="stylesheet" href="../Vista/caja.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -87,13 +87,7 @@ session_start();
                     <input type="date" name="fechapres" class="fecha" id="fecha" required>
                     <br>
                     <br>
-                    <h5>Plazo</h5>
-                    <select name="plazo" class="plazo" id="plazo" required>
-                    <option value="Por el día">Por el día</option>
-                    <option value="1 día">1 día</option>
-                    <option value="2 días">2 días</option>
-                    <option value="3 día">3 días</option>
-                    </select>
+                    <input type="text" name="plazo" class="plazo" id="plazo" required placeholder="Plazo" maxlength="30">
                     <br>
                     <br>
                     <br>

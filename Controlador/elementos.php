@@ -45,7 +45,13 @@ session_start();
             <input type="text" name="cant" class="cant" id="cant" maxlength="5" placeholder="Cantidad">
             <br>
             <br>
-            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo" required>
+            <select name="tipo" class="tipo" id="tipo">
+            <option>Tipo</option>
+            <option value="Mouse">Mouse</option>
+            <option value="Monitor">Monitor</option>
+            <option value="Teclado">Teclado</option>
+            <option value="Cargador">Cargador</option>
+            </select>
             <br>
             <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
