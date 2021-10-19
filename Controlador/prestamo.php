@@ -42,13 +42,13 @@ session_start();
         <br>
         <h3>ID del elemento:<input type="text" name="idele" class="id" id="id"></h3>
         <br>
+        <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo"></h3>
+        <br>
         <h3>Estado: <input type="text" name="txtestado" class="estado" id="estado"></h3>
         <br>
         <h3>Descripción: <input type="text" name="txtdesc" class="desc" id="desc"></h3>
         <br>
         <h3>Cantidad: <input type="text" name="txtcant" class="cant" id="cant"></h3>
-        <br>
-        <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo"></h3>
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>

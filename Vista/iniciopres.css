@@ -29,7 +29,7 @@ html {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 40%;
-    left: 32%;
+    left: 28%;
     height: 350px;
     width: 670px;
 }
@@ -49,6 +49,7 @@ table {
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
     height: 15px;
+    overflow: auto;
 }
 td {
     height:45px;

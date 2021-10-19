@@ -30,6 +30,15 @@ session_start();
             <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento" required>
             <br>
             <br>
+            <select name="tipo" class="tipo" id="tipo">
+            <option>Tipo</option>
+            <option value="Mouse">Mouse</option>
+            <option value="Monitor">Monitor</option>
+            <option value="Teclado">Teclado</option>
+            <option value="Cargador">Cargador</option>
+            </select>
+            <br>
+            <br>
             <select name="estado" class="estado" id="estado">
             <option value="--">Estado</option>
             <option value="Excelente">Excelente</option>
@@ -45,15 +54,6 @@ session_start();
             <input type="text" name="cant" class="cant" id="cant" maxlength="5" placeholder="Cantidad">
             <br>
             <br>
-            <select name="tipo" class="tipo" id="tipo">
-            <option>Tipo</option>
-            <option value="Mouse">Mouse</option>
-            <option value="Monitor">Monitor</option>
-            <option value="Teclado">Teclado</option>
-            <option value="Cargador">Cargador</option>
-            </select>
-            <br>
-            <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
         </form>
         </div>
@@ -61,10 +61,10 @@ session_start();
             <table class="default">
                 <tr class="columnas">
                   <td>ID</td>
+                  <td>Tipo</td>
                   <td>Estado</td>
                   <td>Descripción</td>
                   <td>Cantidad</td>
-                  <td>Tipo</td>
                   <td>
                     <form method="post" action="../Modelo/eliminarele.php">
                       <?php 
@@ -86,10 +86,10 @@ session_start();
 
                 <tr class="columnas-2"> 
                   <td><?php echo $mostrar['ID']?></td>
+                  <td><?php echo $mostrar['tipo']?></td>
                   <td><?php echo $mostrar['estado']?></td>
                   <td><?php echo $mostrar['descripcion_estado']?></td>
                   <td><?php echo $mostrar['cantidad']?></td>
-                  <td><?php echo $mostrar['tipo']?></td>
                   <td>
                   <form action="../Controlador/elementos.php" method="post">
                       <?php 
@@ -111,12 +111,13 @@ session_start();
               <?php 
             if (isset ($_POST["aa-3"])){
                 $id = $_POST ["id"];
+                $tipo = $_POST ["tipo"];
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
                 $cant = $_POST ["cant"];
                 $tipo = $_POST ["tipo"];
 
-                $insertar = "INSERT INTO elemento (ID, estado, descripcion_estado, cantidad, tipo) VALUES (' $id', '$estado', '$desc', '$cant','$tipo')";
+                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado, cantidad) VALUES (' $id','$tipo','$estado','$desc', '$cant')";
                 $ejecutar = mysqli_query($conectar, $insertar);
 
                 if ($ejecutar == true) {
