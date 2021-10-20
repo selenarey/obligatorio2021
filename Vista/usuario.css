@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-*{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+* {
     margin:0px;
 	padding:0px;
 	box-sizing: border-box;
-    text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+    text-decoration: none;  
 }
-
 
 html {
     background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; 
@@ -18,6 +16,7 @@ html {
     -o-background-size: fixed left;
     background-size: fixed left;
     display: block;
+
 }
 
 .container-1{   
