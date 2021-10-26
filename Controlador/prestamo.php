@@ -5,9 +5,8 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/prestamos.css">
-    <link rel="stylesheet" href="../Vista/caja.css">
+    <link rel="stylesheet" href="../Vista/cajas.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -35,7 +34,7 @@ session_start();
             <br>
             <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
             <br>     
-            <h3> Telefono: <input type="text" name="telefono" class="telefono" id="telefono"></h3>
+            <h3> Teléfono: <input type="text" name="telefono" class="telefono" id="telefono"></h3>
     </div>
     <div class="container-2">
         <h1>Información del elemento</h1>
@@ -66,10 +65,10 @@ session_start();
                             while ($row = mysqli_fetch_array ($getElemento2)) 
                             {
                                 $id = $row['ID'];
+                                $tipo = $row['tipo']; 
                                 $estado = $row['estado'];
                                 $descripcion = $row['descripcion_estado'];
-                                $cantidad = $row['cantidad'];
-                                $tipo = $row['tipo'];      
+                                $cantidad = $row['cantidad'];     
                     ?>
                     <option value="<?php echo $id; ?>"><?php echo $id;?></option>
                     <?php 
@@ -95,7 +94,7 @@ session_start();
                     <input type="date" name="fechadevo" class="fechadevo" id="fechadevo" placeholder="Fecha de devolución">
                     <br>
                     <br>
-                    <button input type="submit" value="Guardar" name="aa" id=aa> Guardar        
+                    <input type="submit" value="Guardar" name="aa" id=aa> </input>       
                 </div>
 </body>
 </html>

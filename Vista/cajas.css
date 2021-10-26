@@ -76,7 +76,7 @@ h5 {
     color: #7F7A78; 
 }
 
-#aa {
+#aa{
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
@@ -96,6 +96,27 @@ h5 {
     transform: scale(1.1);
     
 }
+
+#aaa {
+    background-color:  #7cbfab;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 9px 18px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px 5px #0000001c;
+    font-weight: 600;
+    transition: 0.5s ease;
+    float: right;
+}
+
+#aaa:hover {
+    background-color: #c3a0db;
+    transform: scale(1.1);
+    
+}
+
 
 #cedula, #nombre, #apellido, #grupo, #telefono {
     background-color: #00000000;
