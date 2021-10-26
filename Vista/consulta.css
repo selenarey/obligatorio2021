@@ -1,26 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
 
-*{
-	font-family: 'Raleway', sans-serif;
+* {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+    text-decoration: none;
 }
-
-body {
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-	line-height: 1.5em;
-	text-decoration: none;
-
-}
-html{
-	background: url(../Vista/img/fondo2.jpg) no-repeat bottom fixed; 
+html {
+    background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; 
     background-size: 1366px 768px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
+    display: block;
 }
+
 
 
 #main-header {

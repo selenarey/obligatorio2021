@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/elementos.css">
+    <link rel="stylesheet" href="../Vista/estiloele.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
