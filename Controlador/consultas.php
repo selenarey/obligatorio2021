@@ -6,24 +6,28 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/consultas.css">
+    <link rel="stylesheet" href="../Vista/consulta.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
 </head>
 <body>
-<nav>
-<div class="logo">
-            <p><?php echo $_SESSION ['CI_lab']?></p>
-</div>
-            <ul>
-                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
+            <header id="main-header">
+		
+		<a id="logo-header" href="#">
+			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+		</a> <!-- / #logo-header -->
+
+		<nav>
+			<ul>
+            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
-            </ul>
-        </nav>
-        
-        
+			</ul>
+		</nav><!-- / nav -->
+	</header><!-- / #main-header -->
+
+	<section id="main-content">
 </body>
 </html>   
