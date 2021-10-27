@@ -5,24 +5,30 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Vista/prestamos.css">
-    <link rel="stylesheet" href="../Vista/cajas.css">
+    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/caja.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
 <body>
-    <nav>
-    <div class="logo">
-        <p><?php echo $_SESSION ['CI_lab']?></p>
-    </div>
-            <ul>
-                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
+            <header id="main-header">
+		
+		<a id="logo-header" href="#">
+			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+		</a> 
+
+		<nav>
+			<ul>
+            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
-            </ul>
-        </nav> 
+			</ul>
+		</nav>
+	</header>
+
+	<section id="main-content">
     <div class="container">
         <h1>Información del usuario</h1>
             <br>

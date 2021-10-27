@@ -16,7 +16,7 @@ session_start();
 		
 		<a id="logo-header" href="#">
 			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
-		</a> <!-- / #logo-header -->
+		</a> 
 
 		<nav>
 			<ul>
@@ -26,9 +26,8 @@ session_start();
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
 			</ul>
-		</nav><!-- / nav -->
-	</header><!-- / #main-header -->
-
+		</nav>
+	</header>
 	<section id="main-content">
         <div class="container-4">
         <h1>Agregar elemento</h1>
@@ -105,9 +104,8 @@ session_start();
                     </form>
                   </td>
                   <td>
-                  <form action="../Controlador/elementos.php" method="post">
-                      
-                      <input type="submit" value="Eliminar" class="eliminar" name="eliminar" id="eliminar">
+
+                      <a href="../Modelo/eliminarElemen.php?borrar=<?php echo $mostrar; ?>">Eliminar
                     </form>
                   </td>
                 </tr>

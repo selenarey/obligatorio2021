@@ -9,16 +9,15 @@
     text-decoration: none;
 }
 html {
-    background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; 
+    background: url(../Vista/img/fondo2.jpg) no-repeat left fixed; 
     background-size: 1366px 768px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
     -o-background-size: fixed left;
     background-size: fixed left;
-    display: block;
+    font-family: 'Raleway', sans-serif;
 }
-
 
 
 #main-header {

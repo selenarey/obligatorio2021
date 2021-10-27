@@ -32,6 +32,11 @@ html {
     font-size: 10px;
 }
 
+
+nav ul li .prestamos {
+	font-weight: 600;			
+}
+
 .container-2 {   
     top: 75%;
     right: 45%;  

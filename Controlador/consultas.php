@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/consulta.css">
+    <link rel="stylesheet" href="../Vista/consultas.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
 </head>
@@ -15,7 +15,7 @@ session_start();
 		
 		<a id="logo-header" href="#">
 			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
-		</a> <!-- / #logo-header -->
+		</a>
 
 		<nav>
 			<ul>
@@ -25,8 +25,8 @@ session_start();
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
 			</ul>
-		</nav><!-- / nav -->
-	</header><!-- / #main-header -->
+		</nav>
+	</header>
 
 	<section id="main-content">
 </body>
