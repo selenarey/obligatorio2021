@@ -42,7 +42,7 @@ session_start();
                   <td>Hora</td>
                   <td>Plazo</td>
                   <td>
-                    <form method="post" action="../Modelo/eliminarpres.php">
+                    
                       <?php 
                        ?>
                       <input type="submit" value="Devolver todo" onclick="return ConfirmDelete()" class="eliminar2">
@@ -70,8 +70,7 @@ session_start();
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td>
-                    <form method="post" action="../Modelo/eliminarpres.php" method="POST">
-                      <input type="submit" value="Devolver" class="editar">
+                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento'] ?>" class="eliminar">Eliminar </a>
                     </form>
                   </td>
                 </tr>

@@ -88,17 +88,11 @@ session_start();
                   <td><?php echo $mostrar['grupo']?></td>
                   <td><?php echo $mostrar['telefono']?></td> 
                   <td>
-                    <form method="post" action="../Modelo/editareliminar.php">
-                      <?php 
-                       ?>
                       <input type="submit" value="Editar" class="editar">
                     </form>
                   </td>
                   <td>
-                    <form method="post" action="../Modelo/editareliminar.php">
-                      
-                      <input type="submit" value="Eliminar" class="eliminar">
-                    </form>
+                  <a href="../Modelo/eliminarUser.php?id=<?php echo $mostrar['CI'] ?>" class="eliminar">Eliminar </a>
                   </td>
                 </tr>
                 <?php 

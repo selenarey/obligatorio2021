@@ -1,22 +1,13 @@
 <?php 
 
-include ("../Modelo/conexion.php");
-include ("../Controlador/elementos.php");
+require ("../Modelo/conexion.php");
 
-if (isset($_GET['borrar'])){
-$borrar_id = $_GET['borrar'];
-$borrar = "DELETE FROM elemento WHERE ID = '$borrar_id'";
-$ejecutar = mysqli_query($conectar, $borrar);
+$ID =$_GET['id'];
+$eliminar = "DELETE FROM elemento WHERE ID = '$ID'";
+$resultado = mysqli_query($conectar, $eliminar);
 
-if ($ejecutar){
-    echo "<script>alert('buena');window.location='../Controlador/elementos.php';</script>";
-
+if ($resultado) {
+    header('Location: ../Controlador/elementos.php');
 }
-else {
-    echo "<script>alert('Error');window.location='../Controlador/elementos.php';</script>";
-
-}
-}
-
 
 ?>

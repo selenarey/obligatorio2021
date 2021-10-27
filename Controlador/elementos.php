@@ -97,16 +97,12 @@ session_start();
                   <td><?php echo $mostrar['descripcion_estado']?></td>
                   <td><?php echo $mostrar['cantidad']?></td>
                   <td>
-                  <form action="../Controlador/elementos.php" method="post">
                       <?php 
                        ?>
                       <input type="submit" value="Editar" class="editar">
-                    </form>
                   </td>
                   <td>
-
-                      <a href="../Modelo/eliminarElemen.php?borrar=<?php echo $mostrar; ?>">Eliminar
-                    </form>
+                      <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID'] ?>" class="eliminar">Eliminar </a>
                   </td>
                 </tr>
                 <?php 

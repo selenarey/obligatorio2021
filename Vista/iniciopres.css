@@ -114,7 +114,7 @@ nav ul li a:hover{
 }
 
 
-.eliminar, .editar {
+.eliminar {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
@@ -124,16 +124,10 @@ nav ul li a:hover{
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
 }
-.editar {
-    background-color:#c3a0db ;
-}
 
 .eliminar:hover {
     background-color:  rgb(105, 173, 153);
 
-}
-.editar:hover{
-    background-color:#af8ec5;
 }
 .eliminar2 {
     background-color:  rgb(71, 71, 71);
