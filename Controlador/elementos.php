@@ -8,6 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/estiloele.css">
     <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../ejemplo2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
@@ -99,7 +100,8 @@ session_start();
                   <td>
                       <?php 
                        ?>
-                      <input type="submit" value="Editar" class="editar">
+            <a href="#" class="editar">Editar</a>
+    
                   </td>
                   <td>
                       <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID'] ?>" class="eliminar">Eliminar </a>
@@ -116,7 +118,6 @@ session_start();
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
                 $cant = $_POST ["cant"];
-                $tipo = $_POST ["tipo"];
 
                 $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado, cantidad) VALUES (' $id','$tipo','$estado','$desc', '$cant')";
                 $ejecutar = mysqli_query($conectar, $insertar);
