@@ -8,7 +8,6 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/estiloele.css">
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../ejemplo2.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
@@ -100,11 +99,11 @@ session_start();
                   <td>
                       <?php 
                        ?>
-            <a href="#" class="editar">Editar</a>
+            <a href="../Controlador/editarElementos.php?id=<?php echo $mostrar['ID']?> & tipo=<?php echo $mostrar['tipo']?> & estado=<?php echo $mostrar['estado']?> & descripcion_estado=<?php echo $mostrar['descripcion_estado']?> & cantidad=<?php echo $mostrar['cantidad']?>" class="editar">Editar</a>
     
                   </td>
                   <td>
-                      <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID'] ?>" class="eliminar">Eliminar </a>
+                      <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID']?>" class="eliminar">Eliminar </a>
                   </td>
                 </tr>
                 <?php 

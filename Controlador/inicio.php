@@ -52,7 +52,7 @@ session_start();
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT CI_user, nombre, apellido, grupo, ID_elemento, tipo, fecha, hora, fecha_prestamo, plazo from usuario AS u JOIN toma_prestado AS t ON u.CI = t.CI_user JOIN elemento AS e ON e.ID = t.ID_elemento where fecha_prestamo = 0000-00-00";
+                    $sql = "SELECT CI_user, nombre, apellido, grupo, ID_elemento, tipo, fecha, hora, fecha_prestamo, plazo from usuario AS u JOIN toma_prestado AS t ON u.CI = t.CI_user JOIN elemento AS e ON e.ID = t.ID_elemento where fecha_prestamo = null";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
