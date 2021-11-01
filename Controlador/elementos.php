@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estiloeles.css">
+    <link rel="stylesheet" href="../Vista/estiloeless.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
@@ -36,21 +36,16 @@ session_start();
             <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento" required>
             <br>
             <br>
-            <select name="tipo" class="tipo" id="tipo">
-            <option>Tipo</option>
-            <option value="Mouse">Mouse</option>
-            <option value="Monitor">Monitor</option>
-            <option value="Teclado">Teclado</option>
-            <option value="Cargador">Cargador</option>
-            </select>
+            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo de elemento" required>
             <br>
             <br>
-            <select name="estado" class="estado" id="estado">
-            <option value="--">Estado</option>
+            <select name="estado" id="estado" class="estado">
+            <optgroup label="Estado">
             <option value="Excelente">Excelente</option>
             <option value="Bien">Bien</option>
             <option value="Dañado">Dañado</option>
             <option value="En Reparación">En Reparación</option>
+            </optgroup>
             </select>
             <br>
             <br>
@@ -99,8 +94,7 @@ session_start();
                   <td>
                       <?php 
                        ?>
-            <a href="../Controlador/editarElementos.php?id=<?php echo $mostrar['ID']?> & tipo=<?php echo $mostrar['tipo']?> & estado=<?php echo $mostrar['estado']?> & descripcion_estado=<?php echo $mostrar['descripcion_estado']?> & cantidad=<?php echo $mostrar['cantidad']?>" class="editar">Editar</a>
-    
+                       <a href="../Controlador/editarElementos.php?id=<?php echo $mostrar['ID']?> & tipo=<?php echo $mostrar['tipo']?> & estado=<?php echo $mostrar['estado']?> & descripcion_estado=<?php echo $mostrar['descripcion_estado']?> & cantidad=<?php echo $mostrar['cantidad']?>" class="editar">Editar</a>
                   </td>
                   <td>
                       <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID']?>" onclick="return ConfirmarDelete()" class="eliminar">Eliminar </a>
@@ -128,6 +122,7 @@ session_start();
                     echo "<script>alert('Error');window.location='../Controlador/elementos.php';</script>";
                 }
             }
+            
         ?>
         </div>
       

@@ -41,14 +41,14 @@ h1 {
     margin: 20px;
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 16%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 37px 45px;  
-    background-color: rgba(255, 255, 255, 0.747); 
+    background-color: rgba(255, 255, 255, 0); 
     border-radius: 15px;
     text-align: center;
-    box-shadow: 10px 10px 10px #00000015;
+    box-shadow: 10px 10px 10px #00000000;
 }
 
 
@@ -76,7 +76,7 @@ td {
 }
 
 #aa-3 {
-    background-color: #ebd576;
+    background-color: #c3a0db;
     border-width: 0ch;
     border-radius: 10px;
     padding: 10px 30px;
@@ -90,7 +90,7 @@ td {
     transition: 0.5s ease;
 }
 #aa-3:hover {
-    background-color: rgb(223, 204, 119);
+    background-color: #7cbfab;
     transform: scale(1.1);
 }
 
@@ -98,7 +98,7 @@ td {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
-    padding: 8px 30px;
+    padding: 8px 25px;
     cursor: pointer;
     color: white;
     font-family: 'Raleway', sans-serif;
@@ -106,14 +106,15 @@ td {
     
 }
 .editar {
-    background-color:#c3a0db;
+    background-color: #ebd576;
+    
 }
 .eliminar:hover {
     background-color:  rgb(105, 173, 153);
 
 }
 .editar:hover{
-    background-color:#af8ec5;
+    background-color:rgb(223, 204, 119);
 }
 #id, #estado, #desc, #cant, #tipo {
     background-color: #e4e4e4;
@@ -125,7 +126,7 @@ td {
     height: 30px;
     width: 240px;
     font-family: 'Raleway', sans-serif;
-    box-shadow: 2px 2px 2px #0000001c;  
+    box-shadow: 2px 2px 2px #00000000;  
 }
 
 h3 {

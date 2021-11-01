@@ -46,10 +46,10 @@ session_start();
         ?>
             <br>
             <h5>ID</h5>
-            <input type="text" name="id" class="id" id="id" maxlength="5" value="<?=$id?>" required>
+            <input type="text" readonly="readonly" name="id" class="id" id="id" maxlength="5" value="<?=$id?>">
             <br>
             <br>
-            <h5>Tipo</h5>
+            <h5>Tipo de elemento</h5>
             <input type="text" name="tipo" class="tipo" id="tipo" value="<?=$tipo?>">
             <br>
             <br>
