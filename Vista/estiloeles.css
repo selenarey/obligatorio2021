@@ -155,3 +155,6 @@ h5 {
     text-align: left;
     font-family: 'Raleway', sans-serif;
 }
+nav ul li .elementos {
+	font-weight: 600;			
+}

@@ -7,7 +7,7 @@
     $grupo= $_POST["txtgrupo"];
     $telefono= $_POST["telefono"];
 
-    $actualizar ="UPDATE usuario SET CI='$ci', nombre='$nombre', apellido='$apellido', grupo='$grupo', telefono='$telefono' WHERE CI= $ci";
+    $actualizar ="UPDATE usuario SET nombre='$nombre', apellido='$apellido', grupo='$grupo', telefono='$telefono' WHERE CI= $ci";
     $resultado = mysqli_query($conectar, $actualizar);
     
     if($resultado== true){

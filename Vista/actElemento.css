@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+    text-decoration: none;
+}
+	
+html {
+    /*background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; */
+    background-size: 1366px 768px;
+    background-color: #F0F0F0;
+    -webkit-background-size: fixed left;
+    -moz-background-size: fixed left;
+    -o-background-size: fixed left;
+    background-size: fixed left;
+    display: block;
+}
+
 .container-5{   
     margin: 0;
     position: absolute;
@@ -33,6 +55,25 @@
     transform: scale(1.1);
 }
 
+#aa-3 {
+    background-color: #ebd576;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px 5px #0000001c;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+#aa-3:hover {
+    background-color: rgb(223, 204, 119);
+    transform: scale(1.1);
+}
+
 
 #id, #estado, #desc, #cant, #tipo {
     background-color: #e0e0e0;
@@ -52,4 +93,7 @@ h5 {
     font-size: 12px;
     text-align: left;
     font-family: 'Raleway', sans-serif;
+}
+nav ul li .elementos {
+	font-weight: 600;			
 }

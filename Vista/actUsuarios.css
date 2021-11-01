@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+    text-decoration: none;
+}
+	
+html {
+    /*background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; */
+    background-size: 1366px 768px;
+    background-color: #F0F0F0;
+    -webkit-background-size: fixed left;
+    -moz-background-size: fixed left;
+    -o-background-size: fixed left;
+    background-size: fixed left;
+    display: block;
+}
+
+
 .container-5{   
     margin: 0;
     position: absolute;
@@ -69,4 +92,11 @@ h5 {
     width: 240px;
     font-family: 'Raleway', sans-serif;
     box-shadow: 2px 2px 2px #0000001c;  
+}
+
+#cedula {
+    background-color: #cccccc;
+}
+nav ul li .usuarios {
+	font-weight: 600;			
 }

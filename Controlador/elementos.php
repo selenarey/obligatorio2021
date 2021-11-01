@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estiloele.css">
+    <link rel="stylesheet" href="../Vista/estiloeles.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
@@ -103,7 +103,7 @@ session_start();
     
                   </td>
                   <td>
-                      <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID']?>" class="eliminar">Eliminar </a>
+                      <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID']?>" onclick="return ConfirmarDelete()" class="eliminar">Eliminar </a>
                   </td>
                 </tr>
                 <?php 
@@ -144,7 +144,20 @@ session_start();
                return false;
            }
         }
-     
+</script>
+<script type="text/javascript">
+        function ConfirmarDelete ()
+        {
+           var respuesta = confirm ("¿Estás seguro de que quiere eliminar este registro?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
 </script>
 </body>
 </html>          

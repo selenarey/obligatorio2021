@@ -6,9 +6,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estiloele.css">
+   
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../Vista/actUsuario.css">
+    <link rel="stylesheet" href="../Vista/actUsuarios.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
 </head>
@@ -46,7 +46,7 @@ session_start();
         ?>
             <br>
             <h5>Cédula</h5>
-            <input type="text" name="txtci" class="cedula" id="cedula" maxlength="8" value="<?=$ci?>">
+            <input type="text" readonly="readonly" name="txtci" class="cedula" id="cedula" maxlength="8" value="<?=$ci?>">
             <br>
             <br>
             <h5>Nombre</h5>

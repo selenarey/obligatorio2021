@@ -91,7 +91,7 @@ session_start();
                   <a href="../Controlador/editarUsuario.php?ci=<?php echo $mostrar['CI']?> & nombre=<?php echo $mostrar['nombre']?> & apellido=<?php echo $mostrar['apellido']?> & grupo=<?php echo $mostrar['grupo']?> & telefono=<?php echo $mostrar['telefono']?>" class="editar">Editar</a>
                   </td>
                   <td>
-                  <a href="../Modelo/eliminarUser.php?id=<?php echo $mostrar['CI'] ?>" class="eliminar">Eliminar </a>
+                  <a href="../Modelo/eliminarUser.php?id=<?php echo $mostrar['CI'] ?>" class="eliminar" onclick="return ConfirmarDelete()">Eliminar </a>
                   </td>
                 </tr>
                 <?php 
@@ -121,9 +121,23 @@ session_start();
             }
         ?>
 <script type="text/javascript">
-        function ConfirmDelete ()
+        function ConfirmDelete()
         {
-           var respuesta = confirm ("¿Estás seguro de eliminar todos los registros?");
+           var respuesta = confirm ("¿Estás seguro de que quiere eliminar todos los registros?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
+<script type="text/javascript">
+        function ConfirmarDelete ()
+        {
+           var respuesta = confirm ("¿Estás seguro de que quiere eliminar este registro?");
            if (respuesta == true) 
            {
                return true;
