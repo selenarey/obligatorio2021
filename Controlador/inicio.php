@@ -7,6 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopres.css">
+    <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -52,7 +53,7 @@ session_start();
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT CI_user, nombre, apellido, grupo, ID_elemento, tipo, fecha, hora, fecha_prestamo, plazo from usuario AS u JOIN toma_prestado AS t ON u.CI = t.CI_user JOIN elemento AS e ON e.ID = t.ID_elemento where fecha_prestamo = null";
+                    $sql = "SELECT CI_user, nombre, apellido, grupo, ID_elemento, tipo, fecha, hora, fecha_prestamo, plazo from usuario AS u JOIN toma_prestado AS t ON u.CI = t.CI_user JOIN elemento AS e ON e.ID = t.ID_elemento where `fecha_devolucion` = date(0000-00-00)";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -70,7 +71,7 @@ session_start();
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td>
-                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento'] ?>" class="eliminar">Eliminar </a>
+                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento'] ?>" onclick="return ConfirmarDelete()" class="eliminar">Eliminar </a>
                     </form>
                   </td>
                 </tr>
@@ -79,10 +80,24 @@ session_start();
                 ?>
               </table>        
       </div>   
-<script type="text/javascript">
-        function ConfirmDelete ()
+      <script type="text/javascript">
+        function ConfirmDelete()
         {
-           var respuesta = confirm ("¿Estás seguro de eliminar todos los registros?");
+           var respuesta = confirm ("¿Está seguro de que quiere eliminar todos los registros?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
+<script type="text/javascript">
+        function ConfirmarDelete ()
+        {
+           var respuesta = confirm ("¿Está seguro de que quiere eliminar este registro?");
            if (respuesta == true) 
            {
                return true;

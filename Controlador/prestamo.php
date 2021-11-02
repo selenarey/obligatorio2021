@@ -98,6 +98,7 @@ session_start();
                     <br>
                     <h5>Fecha de devolución</h5>
                     <input type="date" name="fechadevo" class="fechadevo" id="fechadevo" placeholder="Fecha de devolución">
+                    <input type="hidden" name="ci_labo" class="ci_labo" id="ci_labo" value="<?php echo $_SESSION ['CI_lab']?>" >
                     <br>
                     <br>
                     <input type="submit" value="Guardar" name="aa" id=aa> </input>       

@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/usuario.css">
+    <link rel="stylesheet" href="../Vista/usuarios.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Usuarios</title>
@@ -47,7 +47,6 @@ session_start();
             <br>
             <br>
             <input type="text" name="telefono" class="telefono" id="telefono" maxlength="9" placeholder="Teléfono" required>
-            <br>
             <br>
             <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
@@ -123,7 +122,7 @@ session_start();
 <script type="text/javascript">
         function ConfirmDelete()
         {
-           var respuesta = confirm ("¿Estás seguro de que quiere eliminar todos los registros?");
+           var respuesta = confirm ("¿Está seguro de que quiere eliminar todos los registros?");
            if (respuesta == true) 
            {
                return true;
@@ -137,7 +136,7 @@ session_start();
 <script type="text/javascript">
         function ConfirmarDelete ()
         {
-           var respuesta = confirm ("¿Estás seguro de que quiere eliminar este registro?");
+           var respuesta = confirm ("¿Está seguro de que quiere eliminar este registro?");
            if (respuesta == true) 
            {
                return true;

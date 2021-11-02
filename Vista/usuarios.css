@@ -10,7 +10,7 @@
 
 
 html {
-    background: url(../Vista/img/fondo3.jpg) no-repeat bottom fixed; 
+    background: url(../Vista/img/b.jpg) no-repeat bottom fixed; 
     background-size: 1366px 768px;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
@@ -24,14 +24,14 @@ html {
     margin: 20px;
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 16%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 37px 45px;  
-    background-color: rgba(255, 255, 255, 0.747); 
+    background-color: rgba(255, 255, 255, 0); 
     border-radius: 15px;
     text-align: center;
-    box-shadow: 10px 10px 10px #00000015;
+    box-shadow: 10px 10px 10px #00000000;
 }
 
 nav ul li .usuarios {
@@ -50,7 +50,7 @@ h1 {
     transform: translate(-50%, -50%);
     padding: 25px; 
     top: 40%;
-    left: 54%;
+    left: 55%;
     height: 350px;
     width: 670px;
 }
@@ -72,7 +72,7 @@ table {
 }
 td {
     height:45px;
-    width: 125px;
+    width: 118px;
 }
 .columnas-2:hover {
     background-color: rgb(209, 208, 208);
@@ -80,7 +80,7 @@ td {
 
 
 #aa-3 {
-    background-color: #ebd576;
+    background-color: #c3a0db;
     border-width: 0ch;
     border-radius: 10px;
     padding: 10px 30px;
@@ -95,7 +95,7 @@ td {
 }
 
 #aa-3:hover {
-    background-color: rgb(223, 204, 119);
+    background-color: #7cbfab;
     transform: scale(1.1);
 }
 
@@ -104,34 +104,36 @@ td {
     border-width: 0ch;
     border-radius: 5px;
     text-align: center;
-    color: #7F7A78; 
+    color: #7F7A78;  
     font-size: 14px;
     height: 30px;
     width: 240px;
     font-family: 'Raleway', sans-serif;
-    box-shadow: 2px 2px 2px #0000001c;  
+    box-shadow: 2px 2px 2px #00000000;  
 }
-
 
 .eliminar, .editar {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
-    padding: 8px 30px;
+    padding: 8px 20px;
     cursor: pointer;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    
 }
 .editar {
-    background-color:#c3a0db ;
+    background-color: #ebd576;
+    padding: 8px 25px;
+    
 }
-
 .eliminar:hover {
     background-color:  rgb(105, 173, 153);
+
 }
 .editar:hover{
-    background-color:#af8ec5;
+    background-color:rgb(223, 204, 119);
 }
 .eliminar2 {
 background-color:  rgb(71, 71, 71);

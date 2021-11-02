@@ -3,7 +3,7 @@
 
 $eliminar= mysqli_query($conectar, "DELETE FROM toma_prestado WHERE ID_elemento => 0");
 
-if ($resultado) {
+if ($eliminar) {
     header('Location: ../Controlador/inicio.php');
 }
 ?>

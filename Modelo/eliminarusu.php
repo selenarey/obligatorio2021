@@ -3,7 +3,7 @@
 
 $eliminar= mysqli_query($conectar, "DELETE FROM usuario WHERE CI => 0");
 
-if ($resultado) {
+if ($eliminar) {
     header('Location: ../Controlador/usuarios.php');
 }
 ?>
