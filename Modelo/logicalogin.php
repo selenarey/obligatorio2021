@@ -20,9 +20,7 @@ $pass = $_POST["txtpass"];
 }
 else if ($fila== false)
 {
-
     echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Controlador/login.html';</script>";
-
 }
 
 ?>
