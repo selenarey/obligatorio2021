@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/iniciopres.css">
+    <link rel="stylesheet" href="../Vista/iniciopre.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
@@ -71,7 +71,7 @@ session_start();
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td>
-                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento'] ?>" onclick="return ConfirmarDelete()" class="eliminar">Eliminar </a>
+                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento'] ?>" onclick="return ConfirmarDelete()" class="eliminar">Devolver </a>
                     </form>
                   </td>
                 </tr>

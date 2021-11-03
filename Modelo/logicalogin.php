@@ -22,10 +22,10 @@ else if ($fila== false)
 {
     echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Controlador/login.html';</script>";
 }
-if ($doc = '12345' AND $pass ='12345') {
+/*if ($doc = '12345' AND $pass ='12345') {
 
     header("Location: ../Controlador/ventanaAdmin.php");
   
-}
+}*/
 ?>
 
