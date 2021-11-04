@@ -115,8 +115,8 @@ h5 {
 
 
 
-#cedula, #nombre, #apellido, #grupo, #telefono {
-    background-color: #00000000;
+#cedula, #nombre, #apellido, #grupo, #telefono, #id, #estado, #desc, #cant, #tipo {
+    background-color: #df151500;
     border-width: 0ch;
     border-radius: 10px;
     text-align: left;
@@ -124,18 +124,8 @@ h5 {
     font-size: 13px;
     height: 18px;
     font-family: 'Raleway', sans-serif;
+    
    
-}
-
-#id, #estado, #desc, #cant, #tipo {
-    background-color: #00000000;
-    border-width: 0ch;
-    border-radius: 10px;
-    text-align: left;
-    color: #444444; 
-    font-size: 13px;
-    height: 18px;
-    font-family: 'Raleway', sans-serif;
 }
 
 h3 {
@@ -143,4 +133,22 @@ h3 {
     text-align: left;
     font-size: 13px;
     font-family: 'Raleway', sans-serif;
+}
+
+#busqueda, #busq{
+    background-color: #df151500;
+    border-width: 1px;
+    border-radius: 3px;
+    text-align: left;
+    color: #444444; 
+    font-size: 13px;
+    height: 18px;
+    font-family: 'Raleway', sans-serif;
+    border-color: #44444444;
+}
+#enviar, #env{
+    background-color:  #7cbfab00;
+    border-width: 0ch;
+    border-radius: 3px;
+    cursor: pointer;
 }

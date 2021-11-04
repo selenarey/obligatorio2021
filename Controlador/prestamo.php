@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../Vista/cajaaas.css">
+    <link rel="stylesheet" href="../Vista/cajas.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -28,35 +28,68 @@ session_start();
 		</nav>
 	</header>
 
-	<section id="main-content">
-        <form action="../Controlador/prestamo.php" method="POST">
-    <div class="container">
+	<section id="main-content"> 
+<div class="container">
+        <form action="" method="get"> 
         <h1>Información del usuario</h1>
-            <br>
-            <h3>Cédula de identidad: <input type="text" name="txtci" class="cedula" id="cedula" ></h3>
-            <br>
-            <h3>Nombre: <input type="text" name="txtnombre" class="nombre" id="nombre" ></h3>
-            <br>
-            <h3>Apellido: <input type="text" name="txtape" class="apellido" id="apellido" ></h3>
-            <br>
-            <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo" ></h3>
-            <br>     
-            <h3> Teléfono: <input type="text" name="telefono" class="telefono" id="telefono" ></h3>
-            
+        <input type="text" name="busqueda" id="busqueda" minlength="8" required>
+        <input type="submit" name="enviar" id="enviar" value="🔎">
+    </form>
+    <?php 
+    include ("../Modelo/conexion.php");
+    if(isset($_GET['enviar'])){
+        $busqueda= $_GET['busqueda'];
+
+        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '%$busqueda%'");
+        
+        while ($row= $sql->fetch_array()){
+
+            ?> 
+        <h3>Cédula de identidad:<input type="text" name="txtci" class="cedula" id="cedula" value=" <?php echo $row['CI'];?>"></h3> 
+           <br>
+           <h3>Nombre:<input type="text" name="txtnombre" class="nombre" id="nombre" value=" <?php echo $row['nombre'];?>"></h3>
+           <br>
+           <h3>Apellido:<input type="text" name="txtape" class="apellido" id="apellido" value=" <?php echo $row['apellido'];?>"></h3>
+           <br>
+           <h3>Grupo:<input type="text" name="txtgrupo" class="grupo" id="grupo" value=" <?php echo $row['grupo'];?>"></h3>
+           <br>
+           <h3>Teléfono:<input type="text" name="telefono" class="telefono" id="telefono" value=" <?php echo $row['telefono'];?>"></h3>
+        
+    <?php 
+    }
+    } 
+    ?>
         </div>
-</form>
     <div class="container-2">
+    <form action="" method="get"> 
         <h1>Información del elemento</h1>
-        <br>
-        <h3>ID del elemento:<input type="text" name="idele" class="id" id="id"></h3>
-        <br>
-        <h3>Tipo: <input type="text" name="tipo" class="tipo" id="tipo"></h3>
-        <br>
-        <h3>Estado: <input type="text" name="txtestado" class="estado" id="estado"></h3>
-        <br>
-        <h3>Descripción: <input type="text" name="txtdesc" class="desc" id="desc"></h3>
-        <br>
-        <h3>Cantidad: <input type="text" name="txtcant" class="cant" id="cant"></h3>
+        <input type="text" name="busq" id="busq" required>
+        <input type="submit" name="env" id="env" value="🔎">
+    </form>
+    <?php 
+    include ("../Modelo/conexion.php");
+    if(isset($_GET['env'])){
+        $busq= $_GET['busq'];
+
+        $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '%$busq%'");
+        
+        while ($row= $sql->fetch_array()){
+
+            ?> 
+        <h3>ID del elemento:<input type="text" name="idele" class="id" id="id" value=" <?php echo $row['ID'];?>"></h3> 
+           <br>
+           <h3>Tipo:<input type="text" name="tipo" class="tipo" id="tipo" value=" <?php echo $row['tipo'];?>"></h3>
+           <br>
+           <h3>Estado:<input type="text" name="txtestado" class="estado" id="estado" value=" <?php echo $row['estado'];?>"></h3>
+           <br>
+           <h3>Descripción:<input type="text" name="txtdesc" class="desc" id="desc" value=" <?php echo $row['descripcion_estado'];?>"></h3>
+           <br>
+           <h3>Cantidad:<input type="text" name="txtcant" class="cant" id="cant" value=" <?php echo $row['cantidad'];?>"></h3>
+   
+    <?php 
+    }
+    } 
+    ?> 
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>

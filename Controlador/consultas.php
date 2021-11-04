@@ -27,7 +27,36 @@ session_start();
 			</ul>
 		</nav>
 	</header>
+    <form action="" method="get">
+        <input type="text" name="busqueda" required> <br>
+        <input type="submit" name="enviar" value="Buscar">
+    </form>
+    <br><br><br>
 
-	<section id="main-content">
+    <?php 
+    include ("../Modelo/conexion.php");
+    if(isset($_GET['enviar'])){
+        $busqueda= $_GET['busqueda'];
+
+        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '%$busqueda%'");
+        
+        while ($row= $sql->fetch_array()){
+
+            ?> 
+           <?php  echo $row['CI'];?>
+           <br>
+           <?php  echo $row['nombre'];?>
+           <br>
+           <?php  echo $row['apellido'];?>
+           <br>
+           <?php  echo $row['grupo'];?>
+           <br>
+           <?php  echo $row['telefono'];?>
+        
+    <?php 
+    }
+    } 
+    ?>
+   
 </body>
-</html>   
+</html>
