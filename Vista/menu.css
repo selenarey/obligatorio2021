@@ -12,7 +12,6 @@
 #main-header {
 	background-color: #333;
 	color: #fff;
-
 	height: 60px;
 }	
 	#main-header a {
@@ -31,8 +30,7 @@
 	
 #logo-header .site-name {
 	display: block;
-	font-weight: 700;
-		
+	font-weight: 700;	
 }
 
 nav {

@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estiloeless.css">
+    <link rel="stylesheet" href="../Vista/estiloelemento.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
@@ -14,7 +14,7 @@ session_start();
 <body>
             <header id="main-header">
 		
-		<a id="logo-header" href="#">
+			<a id="logo-header" href="#">
 			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
 		</a> 
 
