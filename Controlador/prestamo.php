@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../Vista/cajas.css">
+    <link rel="stylesheet" href="../Vista/cajaaas.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -29,19 +29,22 @@ session_start();
 	</header>
 
 	<section id="main-content">
+        <form action="../Controlador/prestamo.php" method="POST">
     <div class="container">
         <h1>Información del usuario</h1>
             <br>
-            <h3>Cédula de identidad: <input type="text" name="txtci" class="cedula" id="cedula"></h3>
+            <h3>Cédula de identidad: <input type="text" name="txtci" class="cedula" id="cedula" ></h3>
             <br>
-            <h3>Nombre: <input type="text" name="txtnombre" class="nombre" id="nombre"></h3>
+            <h3>Nombre: <input type="text" name="txtnombre" class="nombre" id="nombre" ></h3>
             <br>
-            <h3>Apellido: <input type="text" name="txtape" class="apellido" id="apellido"></h3>
+            <h3>Apellido: <input type="text" name="txtape" class="apellido" id="apellido" ></h3>
             <br>
-            <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo"></h3>
+            <h3>Grupo: <input type="text" name="txtgrupo" class="grupo" id="grupo" ></h3>
             <br>     
-            <h3> Teléfono: <input type="text" name="telefono" class="telefono" id="telefono"></h3>
-    </div>
+            <h3> Teléfono: <input type="text" name="telefono" class="telefono" id="telefono" ></h3>
+            
+        </div>
+</form>
     <div class="container-2">
         <h1>Información del elemento</h1>
         <br>
@@ -59,9 +62,10 @@ session_start();
         <h2>Nuevo Préstamo</h2>
         <form action="../Modelo/logicaprestamo.php" method="post">
                     <br>
-                    <div class="container-3">
-                    <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required><input type="submit" value="🔎" name="aa-6" id="aa-6"> </input> 
-                </div>      
+                    <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
+                     
+                    <br>
+                    <br>     
                     <h5>ID del elemento</h5>
                     <select name="idele" class="ele" id="elemento">
                     <?php 
@@ -102,7 +106,9 @@ session_start();
                     <input type="hidden" name="ci_labo" class="ci_labo" id="ci_labo" value="<?php echo $_SESSION ['CI_lab']?>" >
                     <br>
                     <br>
-                    <input type="submit" value="Guardar" name="aa" id=aa> </input>       
+                    <input type="submit" value="Guardar" name="aa" id=aa></input>      
                 </div>
+    
+            
 </body>
 </html>

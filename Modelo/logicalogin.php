@@ -26,6 +26,6 @@ else if ($fila== false)
 
     header("Location: ../Controlador/ventanaAdmin.php");
   
-}/*
+}*/
 ?>
 

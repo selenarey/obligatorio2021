@@ -89,7 +89,7 @@
                 
 
                 if ($ejecutar == true) {
-                    echo "<script>alert('Usuario ingresado correctamente');window.location='../Controlador/ventanaAdmin.php';</script>";
+                    header('Location: ../Controlador/ventanaAdmin.php');
                 }
                 else if ($ejecutar == false) {
                     echo "<script>alert('Error');window.location='../Controlador/ventanaAdmin.php';</script>";
