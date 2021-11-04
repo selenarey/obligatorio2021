@@ -163,3 +163,8 @@ h3 {
     font-size: 13px;
     font-family: 'Raleway', sans-serif;
 }
+
+.container-3 input {
+    display: inline-block;
+    margin: auto;
+}
