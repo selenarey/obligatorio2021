@@ -51,7 +51,6 @@ session_start();
             <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
         </form>
-           
         </div>
         <div class="container-3">
             <table class="default">

@@ -14,7 +14,7 @@ $pass = $_POST["txtpass"];
 
    if ($fila == true){
     session_start();
-    $_SESSION['contraseña']= $pass;
+    $_SESSION['CI_lab']= $doc;
     header("Location: ../Controlador/inicio.php");
   
 }
@@ -26,6 +26,6 @@ else if ($fila== false)
 
     header("Location: ../Controlador/ventanaAdmin.php");
   
-}*/
+}/*
 ?>
 

@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../Vista/caja.css">
+    <link rel="stylesheet" href="../Vista/cajas.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -59,7 +59,7 @@ session_start();
         <h2>Nuevo Préstamo</h2>
         <form action="../Modelo/logicaprestamo.php" method="post">
                     <br>
-                    <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
+                    <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required><input type="submit" value="Guardar" name="aa-6" id="aa-6"> </input>       
                     <br>
                     <h5>ID del elemento</h5>
                     <select name="idele" class="ele" id="elemento">

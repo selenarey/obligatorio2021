@@ -1,12 +1,9 @@
-<?php 
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../Vista/adminVent.css">
+    <link rel="stylesheet" href="../Vista/adminVentan.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Administador</title>
 </head>
@@ -14,16 +11,12 @@ session_start();
             <header id="main-header">
 		
 		<a id="logo-header" href="#">
-			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+			<span class="site-name"></span>
 		</a> 
 
 		<nav>
 			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
-                <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
-                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
+            <li><a href="../Controlador/ventanaAdmin.php" class="inicio">Nuevo Laboratorista</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -31,22 +24,17 @@ session_start();
 	<section id="main-content">
     <div class="container-3">
             <table class="default">
-                <tr class="columnas">
+            <tr class="columnas">
                   <td>Cédula</td>
-                  <td>Contraseña</td>
+                  <td>Nombre</td>
+                  <td>Apellido</td>
+                  <td>Teléfono</td>
                   <td>
-                    <form method="post" action="../Modelo/eliminarLabo.php">
-                      <?php 
-                       ?>
-                      <input type="submit" value="Eliminar todo" onclick="return ConfirmDelete()" class="eliminar2">
-                    </form>
                   </td>
-                  <td></td>
                 </tr>
-
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from laboratorista";
+                    $sql = "SELECT * from usuario";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -54,33 +42,49 @@ session_start();
                 ?>
 
                 <tr class="columnas-2"> 
-                  <td><?php echo $mostrar['CI_lab']?></td>
-                  <td><?php echo $mostrar['contraseña']?></td>
+                  <td><?php echo $mostrar['CI']?></td>
+                  <td><?php echo $mostrar['nombre']?></td>
+                  <td><?php echo $mostrar['apellido']?></td>
+                  <td><?php echo $mostrar['telefono']?></td> 
                   <td>
-                  <a href="../Controlador/editarLabo.php?ci=<?php echo $mostrar['CI_lab']?> & contraseña=<?php echo $mostrar['contraseña']?>"class="editar">Editar</a>
-                  </td>
-                  <td>
-                  <a href="../Modelo/eliminarLabora.php?ci=<?php echo $mostrar['CI_lab'] ?>" class="eliminar" onclick="return ConfirmarDelete()">Eliminar </a>
+                  <a href="../Modelo/eliminarLabora.php?ci=<?php echo $mostrar['CI'] ?>" class="eliminar" onclick="return ConfirmarDelete()">Eliminar </a>
                   </td>
                 </tr>
                 <?php 
                  }
                 ?>
               </table>
-              <input type="text" name="documento" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
-              <br>
-              <br>
-              <input type="password" name="contra" class="contra" id="contra" placeholder="Contraseña" maxlength="20" required>
-              <br>
-              <br>
+            </div>
+            <div class="agr">
+            <h1>Nuevo Laboratorista</h1>
+            <form action="../Controlador/ventanaAdmin.php" method="post">
+            <br>
+            <br>
+            <input type="text" name="txtci" class="cedula" id="cedula" maxlength="8" placeholder="Cédula" required>
+            <br>
+            <br>
+            <input type="text" name="txtnombre" class="nombre" id="nombre" maxlength="20" placeholder="Nombre" required>
+            <br>
+            <br>
+            <input type="text" name="txtape" class="apellido" id="apellido" maxlength="20" placeholder="Apellido" required>
+            <br>
+            <br>
+            <input type="hidden" name="txtgrupo" class="grupo" id="grupo" maxlength="5" placeholder="Grupo">
+            <input type="text" name="telefono" class="telefono" id="telefono" maxlength="9" placeholder="Teléfono" required>
+            <br>
+            <br>
+            <br>
               <input type="submit" value="Agregar" name="aa-5" id="aa-5"></input>
-        </div>
+              </div>
         <?php 
             if (isset ($_POST["aa-5"])){
-                $ci_lab = $_POST ["documento"];
-                $contraseña = $_POST ["contra"];
+                $ci_usuario = $_POST ["txtci"];
+                $nombre = $_POST ["txtnombre"];
+                $apellido = $_POST ["txtape"];
+                $grupo = $_POST ["txtgrupo"];
+                $telefono = $_POST ["telefono"];
 
-                $insertar = "INSERT INTO laboratorista (CI_lab, contraseña) VALUES (' $ci_lab', '$contraseña')";
+                $insertar = "INSERT INTO usuario (CI, nombre, apellido, grupo, telefono) VALUES (' $ci_usuario', '$nombre', '$apellido', '$grupo', '$telefono')";
                 $ejecutar = mysqli_query($conectar, $insertar);
                 
 
