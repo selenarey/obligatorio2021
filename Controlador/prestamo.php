@@ -5,7 +5,7 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="stylesheet" href="../Vista/estiloPrestamo.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
@@ -13,8 +13,8 @@ session_start();
 <body>
             <header id="main-header">
 		
-		<a id="logo-header" href="../Modelo/cerrarsesion.php">
-			<span class="cerrar-sesion">Cerrar Sesión</span>
+		<a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
+			<span class="cerrar">Cerrar Sesión</span>
 		</a> 
 
 		<nav>
@@ -155,7 +155,19 @@ session_start();
                     <br>
                     <input type="submit" value="Guardar" name="aa" id=aa></input>      
                 </div>
-    
-            
+<script type="text/javascript">
+        function ConfirmarSalida ()
+        {
+           var respuesta = confirm ("¿Está seguro de cerrar sesión?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
 </body>
 </html>

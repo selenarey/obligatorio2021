@@ -16,7 +16,7 @@
 }	
 	#main-header a {
 		color: #fff;
-
+		
 	}
 
 #logo-header {
@@ -25,12 +25,14 @@
 	text-decoration: none;
 	line-height: 5px;
 	font-size: 18px;
+	font-weight: 600;
 }
 
 	
-#logo-header .cerrar-sesion {
+#logo-header .cerrar {
 	display: block;
-	font-weight: bold;	
+	font-weight: 600;	
+	
 }
 
 nav {
@@ -55,6 +57,5 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-	color:rgb(231, 229, 229);
     font-weight: 600;
 }
