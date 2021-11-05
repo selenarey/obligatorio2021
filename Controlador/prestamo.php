@@ -14,7 +14,7 @@ session_start();
             <header id="main-header">
 		
 		<a id="logo-header" href="#">
-			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+			<span class="cerrar-sesion">Cerrar Sesión</span>
 		</a> 
 
 		<nav>
