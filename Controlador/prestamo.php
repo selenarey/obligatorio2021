@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Vista/menu.css">
-    <link rel="stylesheet" href="../Vista/cajas.css">
+    <link rel="stylesheet" href="../Vista/estiloPrestamo.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -34,7 +34,15 @@ session_start();
         <h1>Información del usuario</h1>
         <input type="text" name="busqueda" id="busqueda" minlength="8" required>
         <input type="submit" name="enviar" id="enviar" value="🔎">
-    </form>
+    </form> 
+    <table class="default">
+            <tr class="columnas-1">
+            <td>Cédula</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Grupo</td>
+            <td>Teléfono</td> 
+            </tr>
     <?php 
     include ("../Modelo/conexion.php");
     if(isset($_GET['enviar'])){
@@ -42,23 +50,22 @@ session_start();
 
         $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '%$busqueda%'");
         
+      
         while ($row= $sql->fetch_array()){
 
-            ?> 
-        <h3>Cédula de identidad:<input type="text" name="txtci" class="cedula" id="cedula" value=" <?php echo $row['CI'];?>"></h3> 
-           <br>
-           <h3>Nombre:<input type="text" name="txtnombre" class="nombre" id="nombre" value=" <?php echo $row['nombre'];?>"></h3>
-           <br>
-           <h3>Apellido:<input type="text" name="txtape" class="apellido" id="apellido" value=" <?php echo $row['apellido'];?>"></h3>
-           <br>
-           <h3>Grupo:<input type="text" name="txtgrupo" class="grupo" id="grupo" value=" <?php echo $row['grupo'];?>"></h3>
-           <br>
-           <h3>Teléfono:<input type="text" name="telefono" class="telefono" id="telefono" value=" <?php echo $row['telefono'];?>"></h3>
-        
+            ?>
+            <tr class="columnas-2">
+              <td><?php echo $row['CI'];?></td>
+              <td><?php echo $row['nombre'];?></td>
+              <td><?php echo $row['apellido'];?></td>
+              <td><?php echo $row['grupo'];?></td>
+              <td><?php echo $row['telefono'];?></td>
+            </tr>
     <?php 
     }
     } 
-    ?>
+    ?> 
+    </table>
         </div>
     <div class="container-2">
     <form action="" method="get"> 
@@ -66,6 +73,14 @@ session_start();
         <input type="text" name="busq" id="busq" required>
         <input type="submit" name="env" id="env" value="🔎">
     </form>
+    <table class="default">
+            <tr class="columnas-1">
+            <td>ID</td>
+            <td>Tipo</td>
+            <td>Estado</td>
+            <td>Descripción</td>
+            <td>Cantidad</td> 
+            </tr>
     <?php 
     include ("../Modelo/conexion.php");
     if(isset($_GET['env'])){
@@ -76,20 +91,19 @@ session_start();
         while ($row= $sql->fetch_array()){
 
             ?> 
-        <h3>ID del elemento:<input type="text" name="idele" class="id" id="id" value=" <?php echo $row['ID'];?>"></h3> 
-           <br>
-           <h3>Tipo:<input type="text" name="tipo" class="tipo" id="tipo" value=" <?php echo $row['tipo'];?>"></h3>
-           <br>
-           <h3>Estado:<input type="text" name="txtestado" class="estado" id="estado" value=" <?php echo $row['estado'];?>"></h3>
-           <br>
-           <h3>Descripción:<input type="text" name="txtdesc" class="desc" id="desc" value=" <?php echo $row['descripcion_estado'];?>"></h3>
-           <br>
-           <h3>Cantidad:<input type="text" name="txtcant" class="cant" id="cant" value=" <?php echo $row['cantidad'];?>"></h3>
-   
+          <tr class="columnas-2">
+              <td><?php echo $row['ID'];?></td>
+              <td><?php echo $row['tipo'];?></td>
+              <td><?php echo $row['estado'];?></td>
+              <td><?php echo $row['descripcion_estado'];?></td>
+              <td><?php echo $row['cantidad'];?></td>
+            </tr>
     <?php 
     }
     } 
     ?> 
+    </table>
+
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>

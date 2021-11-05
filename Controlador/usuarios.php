@@ -62,8 +62,6 @@ session_start();
                   <td>Teléfono</td>
                   <td>
                     <form method="post" action="../Modelo/eliminarusu.php">
-                      <?php 
-                       ?>
                       <input type="submit" value="Eliminar todo" onclick="return ConfirmDelete()" class="eliminar2">
                     </form>
                   </td>
