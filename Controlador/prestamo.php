@@ -13,7 +13,7 @@ session_start();
 <body>
             <header id="main-header">
 		
-		<a id="logo-header" href="#">
+		<a id="logo-header" href="../Modelo/cerrarsesion.php">
 			<span class="cerrar-sesion">Cerrar Sesión</span>
 		</a> 
 
