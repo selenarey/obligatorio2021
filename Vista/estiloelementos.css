@@ -2,22 +2,34 @@
 
 * {
     font-family: 'Raleway', sans-serif;
-    text-align: center;
-    margin:0px;
-	padding:0px;
-	box-sizing: border-box;
+    margin: 0;
+	padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 	
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+header{
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 html {
     background: url(../Vista/img/b.jpg) no-repeat bottom fixed; 
-    background-size: 1366px 768px;
+    background-size: cover;
     background-color: #F0F0F0;
-    -webkit-background-size: fixed left;
-    -moz-background-size: fixed left;
-    -o-background-size: fixed left;
-    background-size: fixed left;
-    display: block;
 }
 
 h1 {

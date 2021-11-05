@@ -5,15 +5,15 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estiloelemento.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Vista/estiloelementos.css">
     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
 <body>
-            <header id="main-header">
-		
+<section>
+        <header id="main-header">
 			<a id="logo-header" href="#">
 			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
 		</a> 
@@ -26,9 +26,10 @@ session_start();
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
 			</ul>
-		</nav>
-	</header>
-	<section id="main-content">
+		</header>
+        </nav>
+</section>
+<div class="content">
         <div class="container-4">
         <h1>Agregar elemento</h1>
         <form action="../Controlador/elementos.php" method="post">
@@ -58,6 +59,7 @@ session_start();
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
         </form>
         </div>
+    </div>
         <div class="container-3">
             <table class="default">
                 <tr class="columnas">
