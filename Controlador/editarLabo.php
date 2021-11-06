@@ -6,8 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
-    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="stylesheet" href="../Vista/adminEditar.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Editar Laboratorista</title>
@@ -15,8 +14,8 @@ session_start();
 <body>
             <header id="main-header">
 		
-		<a id="logo-header" href="#">
-			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+        <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
+			<span class="cerrar">Cerrar Sesión</span>
 		</a> 
 
 		<nav>
@@ -58,5 +57,19 @@ session_start();
             </form>
             </div>
     </section>
+    <script type="text/javascript">
+        function ConfirmarSalida ()
+        {
+           var respuesta = confirm ("¿Está seguro de cerrar sesión?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
 </body>
 </html>

@@ -33,7 +33,7 @@ session_start();
         <form action="" method="get"> 
         <h1>Información del usuario</h1>
         <input type="text" name="busqueda" id="busqueda" minlength="8" required>
-        <input type="submit" name="enviar" id="enviar" value="🔎">
+        <input type="submit" name="enviar" id="enviar" value="🔎"></input>
     </form> 
     <table class="default">
             <tr class="columnas-1">
@@ -71,7 +71,7 @@ session_start();
     <form action="" method="get"> 
         <h1>Información del elemento</h1>
         <input type="text" name="busq" id="busq" required>
-        <input type="submit" name="env" id="env" value="🔎">
+        <input type="submit" name="env" id="env" value="🔎"></input>
     </form>
     <table class="default">
             <tr class="columnas-1">

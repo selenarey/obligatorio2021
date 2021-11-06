@@ -6,29 +6,28 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/estiloelementos.css">
-    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/estiloelemento.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
 <body>
-<section>
-        <header id="main-header">
-			<a id="logo-header" href="#">
-			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+<header id="main-header">
+		
+    <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
+			<span class="cerrar">Cerrar Sesión</span>
 		</a> 
 
 		<nav>
 			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
+                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
 			</ul>
-		</header>
-        </nav>
-</section>
+		</nav>
+	</header>
 <div class="content">
         <div class="container-4">
         <h1>Agregar elemento</h1>
@@ -146,6 +145,20 @@ session_start();
         function ConfirmarDelete ()
         {
            var respuesta = confirm ("¿Estás seguro de que quiere eliminar este registro?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
+<script type="text/javascript">
+        function ConfirmarSalida ()
+        {
+           var respuesta = confirm ("¿Está seguro de cerrar sesión?");
            if (respuesta == true) 
            {
                return true;

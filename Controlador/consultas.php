@@ -7,15 +7,16 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/consultas.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
 </head>
 <body>
             <header id="main-header">
 		
-		<a id="logo-header" href="#">
-			Salir
-		</a>
+        <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
+			<span class="cerrar">Cerrar Sesión</span>
+		</a> 
 
 		<nav>
 			<ul>
@@ -57,6 +58,19 @@ session_start();
     }
     } 
     ?>
-   
+   <script type="text/javascript">
+        function ConfirmarSalida ()
+        {
+           var respuesta = confirm ("¿Está seguro de cerrar sesión?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
 </body>
 </html>

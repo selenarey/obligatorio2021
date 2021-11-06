@@ -7,15 +7,15 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
-    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
 <body>
-            <header id="main-header">
+<header id="main-header">
 		
-		<a id="logo-header" href="#">
-			<span class="site-name"><?php echo $_SESSION ['CI_lab']?></span>
+    <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
+			<span class="cerrar">Cerrar Sesión</span>
 		</a> 
 
 		<nav>
@@ -43,7 +43,6 @@ session_start();
                   <td>Hora</td>
                   <td>Plazo</td>
                   <td>
-                    
                       <?php 
                        ?>
                       <input type="submit" value="Devolver todo" onclick="return ConfirmDelete()" class="eliminar2">
@@ -98,6 +97,20 @@ session_start();
         function ConfirmarDelete ()
         {
            var respuesta = confirm ("¿Está seguro de que quiere eliminar este registro?");
+           if (respuesta == true) 
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+</script>
+<script type="text/javascript">
+        function ConfirmarSalida ()
+        {
+           var respuesta = confirm ("¿Está seguro de cerrar sesión?");
            if (respuesta == true) 
            {
                return true;
