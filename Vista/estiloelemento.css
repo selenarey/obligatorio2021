@@ -119,7 +119,7 @@ td {
 .editar:hover{
     background-color:rgb(223, 204, 119);
 }
-#id, #estado, #desc, #cant, #tipo {
+#id, #estado, #desc, #cant, #tipo, #nroserie {
     background-color: #e4e4e4;
     border-width: 0ch;
     border-radius: 5px;

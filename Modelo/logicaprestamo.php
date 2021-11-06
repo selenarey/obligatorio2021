@@ -18,6 +18,7 @@
 
     if ($ejecutar == true) {
         header('Location: ../Controlador/prestamo.php');
+        
     }
     else {
         echo "<script>alert('Error');window.location='../Controlador/prestamo.php';</script>";

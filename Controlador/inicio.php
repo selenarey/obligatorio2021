@@ -82,7 +82,7 @@ session_start();
       <script type="text/javascript">
         function ConfirmDelete()
         {
-           var respuesta = confirm ("¿Está seguro de que quiere eliminar todos los registros?");
+           var respuesta = confirm ("¿Está seguro de que quiere devolver todos los registros?");
            if (respuesta == true) 
            {
                return true;
@@ -96,7 +96,7 @@ session_start();
 <script type="text/javascript">
         function ConfirmarDelete ()
         {
-           var respuesta = confirm ("¿Está seguro de que quiere eliminar este registro?");
+           var respuesta = confirm ("¿Está seguro de que quiere devolver este registro?");
            if (respuesta == true) 
            {
                return true;

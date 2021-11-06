@@ -36,7 +36,7 @@ session_start();
             <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento" required>
             <br>
             <br>
-            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo de elemento" required>
+            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo de elemento">
             <br>
             <br>
             <select name="estado" id="estado" class="estado">
@@ -53,6 +53,9 @@ session_start();
             <br>
             <br>
             <input type="text" name="cant" class="cant" id="cant" maxlength="5" placeholder="Cantidad">
+            <br>
+            <br>
+            <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="10" placeholder="Serie">
             <br>
             <br>
             <button input type="submit" value="Agregar" name="aa-3" id="aa-3"> Agregar </button>
@@ -106,22 +109,29 @@ session_start();
                 ?>
               </table>
               <?php 
+              
+
             if (isset ($_POST["aa-3"])){
                 $id = $_POST ["id"];
                 $tipo = $_POST ["tipo"];
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
                 $cant = $_POST ["cant"];
+                $nroserie = $_POST ["nroserie"];
 
-                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado, cantidad) VALUES (' $id','$tipo','$estado','$desc', '$cant')";
+                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado, cantidad) VALUES ('$id','$tipo','$estado','$desc', '$cant')";
                 $ejecutar = mysqli_query($conectar, $insertar);
 
                 if ($ejecutar == true) {
-                    echo "<script>alert('Elemento ingresado correctamente');window.location='../Controlador/elementos.php';</script>";
+                    $insertcompu = "INSERT INTO computadora (ID_compu, numero_serie) VALUES ('$id', '$nroserie')";
+                    $ejecutar = mysqli_query($conectar, $insertcompu);
+                    if ($insertcompu == true){
+                        echo "<script>alert('Elemento ingresado correctamente');window.location='../Controlador/elementos.php';</script>";
+                    }
+                    
                 }
-                else if ($ejecutar == false) {
-                    echo "<script>alert('Error');window.location='../Controlador/elementos.php';</script>";
-                }
+                
+                
             }
             
         ?>
