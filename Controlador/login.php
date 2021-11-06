@@ -27,11 +27,11 @@
                     <br>
                     <br>
                     <br>
+                    <input type="hidden" name="txtnombre" >
                     <button input type="submit" value="Ingresar" name="boton" id=boton>Ingresar
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

@@ -23,8 +23,8 @@
 	float: right;
 	padding: 25px 50px 25px 25px;
 	text-decoration: none;
-	line-height: 5px;
-	font-size: 18px;
+	line-height: 10px;
+	font-size: 15px;
 	font-weight: 600;
 }
 
@@ -51,9 +51,9 @@ nav ul li {
 			
 nav ul li a {
 	display: block;
-	padding: 0 0 0 45px;
+	padding: 0 0 0 40px;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 nav ul li a:hover{

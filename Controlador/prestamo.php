@@ -5,7 +5,7 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Vista/menuu.css">
+    <link rel="stylesheet" href="../Vista/menuuu.css">
     <link rel="stylesheet" href="../Vista/estiloPrestamo.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>

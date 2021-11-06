@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
-    <link rel="stylesheet" href="../Vista/menuu.css">
+    <link rel="stylesheet" href="../Vista/menuuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -15,7 +15,8 @@ session_start();
 <header id="main-header">
 		
     <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
-			<span class="cerrar">Cerrar Sesión</span>
+    
+			<span class="cerrar"><?php echo $_SESSION['nombre']?></span>
 		</a> 
 
 		<nav>
@@ -70,7 +71,7 @@ session_start();
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td>
-                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento'] ?>" onclick="return ConfirmarDelete()" class="eliminar">Devolver </a>
+                  <a href="../Modelo/eliminar_inicio.php?id=<?php echo $mostrar['ID_elemento']?>" onclick="return ConfirmarDelete()" class="eliminar">Devolver </a>
                     </form>
                   </td>
                 </tr>
