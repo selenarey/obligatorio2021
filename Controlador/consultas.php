@@ -39,20 +39,26 @@ session_start();
     if(isset($_GET['enviar'])){
         $busqueda= $_GET['busqueda'];
 
-        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '%$busqueda%'");
+        $sql= $conectar->query("SELECT * FROM toma_prestado WHERE ID_elemento LIKE '%$busqueda%'");
         
         while ($row= $sql->fetch_array()){
 
             ?> 
-           <?php  echo $row['CI'];?>
+           <?php  echo $row['CI_user'];?>
            <br>
-           <?php  echo $row['nombre'];?>
+           <?php  echo $row['ID_elemento'];?>
            <br>
-           <?php  echo $row['apellido'];?>
+           <?php  echo $row['fecha'];?>
            <br>
-           <?php  echo $row['grupo'];?>
+           <?php  echo $row['hora'];?>
            <br>
-           <?php  echo $row['telefono'];?>
+           <?php  echo $row['fecha_prestamo'];?>
+           <br>
+           <?php  echo $row['plazo'];?>
+           <br>
+           <?php  echo $row['fecha_devolucion'];?>
+           <br>
+           <?php  echo $row['CI_laboratorista'];?>
         
     <?php 
     }
