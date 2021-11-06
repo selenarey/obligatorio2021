@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    background: url(../Vista/img/fondo2.jpg) no-repeat left fixed; 
+    background-size: 1366px 768px;
+    background-color: #F0F0F0;
+    -webkit-background-size: fixed left;
+    -moz-background-size: fixed left;
+    -o-background-size: fixed left;
+    background-size: fixed left;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+nav ul li .consultas {
+	font-weight: 600;			
+}
+.container-3{   
+    margin: 0;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 25px; 
+    top: 40%;
+    left: 39%;
+    height: 350px;
+    width: 670px;
+}
+
+.columnas {
+    background-color:#333;
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: 'Raleway', sans-serif;
+    width: 620px;
+    font-size: 15px;
+    table-layout: fixed;
+    background-color: rgba(255, 255, 255, 0.842); 
+    box-shadow: 10px 10px 10px #00000015;
+    border-radius: 15px; 
+}
+td {
+    height:45px;
+    width: 118px;
+}
+.columnas-2:hover {
+    background-color: rgb(209, 208, 208);
+}

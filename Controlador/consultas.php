@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/consultas.css">
+    <link rel="stylesheet" href="../Vista/consulta.css">
     <link rel="stylesheet" href="../Vista/menuuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
@@ -28,42 +28,45 @@ session_start();
 			</ul>
 		</nav>
 	</header>
-    <form action="" method="get">
-        <input type="text" name="busqueda" required> <br>
-        <input type="submit" name="enviar" value="Buscar">
-    </form>
-    <br><br><br>
+   
+    <div class="container-3">
+            <table class="default">
+                <tr class="columnas">
+                  <td>Cédula</td>
+                  <td>ID del elemento</td>
+                  <td>Fecha</td>
+                  <td>Hora</td>
+                  <td>Fecha préstamo</td>
+                  <td>Plazo</td>
+                  <td>Fecha devolución</td>
+                  <td>Laboratorista</td>
+                </tr>
+                
+                <?php  
+                    require("../Modelo/conexion.php");
+                    $sql = "SELECT * from toma_prestado";
+                    $result = mysqli_query($conectar, $sql);
 
-    <?php 
-    include ("../Modelo/conexion.php");
-    if(isset($_GET['enviar'])){
-        $busqueda= $_GET['busqueda'];
+                    while ($mostrar = mysqli_fetch_array($result)) {
+               
+                ?>
 
-        $sql= $conectar->query("SELECT * FROM toma_prestado WHERE ID_elemento LIKE '%$busqueda%'");
-        
-        while ($row= $sql->fetch_array()){
+                <tr class="columnas-2"> 
+                  <td><?php echo $mostrar['CI_user']?></td>
+                  <td><?php echo $mostrar['ID_elemento']?></td>
+                  <td><?php echo $mostrar['fecha']?></td>
+                  <td><?php echo $mostrar['hora']?></td>
+                  <td><?php echo $mostrar['fecha_prestamo']?></td>
+                  <td><?php echo $mostrar['plazo']?></td>
+                  <td><?php echo $mostrar['fecha_devolucion']?></td>
+                  <td><?php echo $mostrar['CI_laboratorista']?></td>
+                </tr>
+                <?php 
+                 }
+                ?>
+              </table>        
+      </div>   
 
-            ?> 
-           <?php  echo $row['CI_user'];?>
-           <br>
-           <?php  echo $row['ID_elemento'];?>
-           <br>
-           <?php  echo $row['fecha'];?>
-           <br>
-           <?php  echo $row['hora'];?>
-           <br>
-           <?php  echo $row['fecha_prestamo'];?>
-           <br>
-           <?php  echo $row['plazo'];?>
-           <br>
-           <?php  echo $row['fecha_devolucion'];?>
-           <br>
-           <?php  echo $row['CI_laboratorista'];?>
-        
-    <?php 
-    }
-    } 
-    ?>
    <script type="text/javascript">
         function ConfirmarSalida ()
         {
