@@ -32,7 +32,7 @@ session_start();
 <div class="container">
         <form action="" method="get"> 
         <h1>Información del usuario</h1>
-        <input type="text" name="busqueda" id="busqueda" minlength="8" required>
+        <input type="text" name="busqueda" id="busqueda" required>
         <input type="submit" name="enviar" id="enviar" value="🔎"></input>
     </form> 
     <table class="default">
@@ -86,7 +86,7 @@ session_start();
     if(isset($_GET['env'])){
         $busq= $_GET['busq'];
 
-        $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '%$busq%'");
+        $sql= $conectar->query("SELECT * FROM elemento WHERE tipo LIKE '%$busq%'");
         
         while ($row= $sql->fetch_array()){
 

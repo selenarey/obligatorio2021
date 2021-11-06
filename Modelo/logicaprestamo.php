@@ -17,8 +17,8 @@
     $ejecutar = mysqli_query($conectar, $insertar);
 
     if ($ejecutar == true) {
-        header('Location: ../Controlador/prestamo.php');
-        
+
+        echo "<script>alert('Préstamo realizado con éxito');window.location='../Controlador/elementos.php';</script>";
     }
     else {
         echo "<script>alert('Error');window.location='../Controlador/prestamo.php';</script>";
