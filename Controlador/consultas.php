@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/consulta.css">
+    <link rel="stylesheet" href="../Vista/consultaa.css">
     <link rel="stylesheet" href="../Vista/menuuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
@@ -31,16 +31,16 @@ session_start();
    
     <div class="container-3">
             <table class="default">
-                <tr class="columnas">
+                <tr class="columnas-3">
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="text" name="busqueda" id="busqueda" placeholder="  Buscar" required></td>
+                <td><input type="submit" name="enviar" id="enviar" value=""></input></td>
                 </tr>
-                <tr class="columnas">
+                <tr class="columnas-1">
                   <td>Cédula</td>
                   <td>ID del elemento</td>
                   <td>Fecha</td>
@@ -48,11 +48,12 @@ session_start();
                   <td>Plazo</td>
                   <td>Fecha devolución</td>
                   <td>Laboratorista</td>
+                  
                 </tr>
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from toma_prestado order by fecha desc";
+                    $sql = "SELECT CI_user, ID_elemento, fecha, hora, plazo, fecha_devolucion, nombre from toma_prestado AS t JOIN usuario AS u ON t.CI_laboratorista = u.CI order by fecha desc";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -66,7 +67,7 @@ session_start();
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td><?php echo $mostrar['fecha_devolucion']?></td>
-                  <td><?php echo $mostrar['CI_laboratorista']?></td>
+                  <td><?php echo $mostrar['nombre']?></td>
                 </tr>
                 <?php 
                  }

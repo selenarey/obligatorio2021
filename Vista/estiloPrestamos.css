@@ -173,3 +173,11 @@ td {
     color: #444444; 
 }
 
+#busqueda, #busq {
+    text-align: left;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 24px;
+    background-color:#f1efef ;
+    font-size: 13px;
+}

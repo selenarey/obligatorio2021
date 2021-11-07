@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Vista/menuuu.css">
-    <link rel="stylesheet" href="../Vista/estiloPrestamo.css">
+    <link rel="stylesheet" href="../Vista/estiloPrestamos.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
@@ -32,8 +32,8 @@ session_start();
 <div class="container">
         <form action="" method="get"> 
         <h1>Información del usuario</h1>
-        <input type="text" name="busqueda" id="busqueda" required>
-        <input type="submit" name="enviar" id="enviar" value="🔎"></input>
+        <input type="text" name="busqueda" id="busqueda" placeholder="  Buscar" required>
+        <input type="submit" name="enviar" id="enviar" value=""></input>
     </form> 
     <table class="default">
             <tr class="columnas-1">
@@ -70,8 +70,8 @@ session_start();
     <div class="container-2">
     <form action="" method="get"> 
         <h1>Información del elemento</h1>
-        <input type="text" name="busq" id="busq" required>
-        <input type="submit" name="env" id="env" value="🔎"></input>
+        <input type="text" name="busq" id="busq" placeholder="  Buscar" required>
+        <input type="submit" name="env" id="env" value=""></input>
     </form>
     <table class="default">
             <tr class="columnas-1">
@@ -132,15 +132,28 @@ session_start();
                     ?>
                     </select>
                     <br> 
+                    <br> 
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
                     <br>
+                    <br>  
                     <h5>Hora</h5>
                     <input type="time" name="hora" class="hora" id="hora" required> 
+                    <?php 
+                            include ("../Modelo/conexion.php");
+                            $getFecha1 = "SELECT fecha FROM toma_prestado";
+                            $getFecha2 = mysqli_query($conectar,$getFecha1);
+
+                            while ($row = mysqli_fetch_array ($getFecha2)) 
+                            {
+                                $fecha = $row['fecha'];
+                                ?>
+                    
+                    <input type="hidden" name="fprestamo" class="fecha" id="fecha" value="<?php echo $fecha;?>">
+                    <?php } ?>
                     <br>
                     <br>
                     <input type="text" name="plazo" class="plazo" id="plazo" required placeholder="Plazo" maxlength="30">
-                    <br>
                     <br>
                     <br>
                     <h5>Fecha de devolución</h5>

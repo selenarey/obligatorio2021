@@ -10,7 +10,7 @@
 }
 html {
     background: url(../Vista/img/fondo2.jpg) no-repeat left fixed; 
-    background-size: 1366px 768px;
+    background-size: cover;
     background-color: #F0F0F0;
     -webkit-background-size: fixed left;
     -moz-background-size: fixed left;
@@ -35,15 +35,18 @@ nav ul li .consultas {
     width: 670px;
 }
 
-.columnas {
+.columnas-1 {
     background-color:#333;
     color: #fff;
 }
-
+.columnas-3 {
+    background-color:rgba(177, 55, 55, 0);
+    color: #fff;
+}
 table {
     border-collapse: collapse;
     font-family: 'Raleway', sans-serif;
-    width: 620px;
+    width: 630px;
     font-size: 15px;
     table-layout: fixed;
     background-color: rgba(255, 255, 255, 0.842); 
@@ -52,8 +55,24 @@ table {
 }
 td {
     height:45px;
-    width: 118px;
+    width: 120px;
 }
 .columnas-2:hover {
     background-color: rgb(209, 208, 208);
+}
+
+#busqueda {
+    text-align: left;
+    border-width: 0ch;
+    border-radius: 5px;
+    height: 24px;
+    background-color:#f1efef ;
+    font-size: 15px;
+}
+
+#enviar{
+    background-color:  #7cbfab00;
+    border-width: 0ch;
+    border-radius: 3px;
+    cursor: pointer;
 }

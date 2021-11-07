@@ -53,7 +53,7 @@ session_start();
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT CI_user, nombre, apellido, grupo, ID_elemento, tipo, fecha, hora, plazo from usuario AS u JOIN toma_prestado AS t ON u.CI = t.CI_user JOIN elemento AS e ON e.ID = t.ID_elemento where `fecha_devolucion` = date(0000-00-00)";
+                    $sql = "SELECT CI_user, nombre, apellido, grupo, ID_elemento, tipo, fecha_prestamo, hora, plazo from usuario AS u JOIN toma_prestado AS t ON u.CI = t.CI_user JOIN elemento AS e ON e.ID = t.ID_elemento where `fecha_devolucion` = date(0000-00-00)";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -67,7 +67,7 @@ session_start();
                   <td><?php echo $mostrar['grupo']?></td>
                   <td><?php echo $mostrar['ID_elemento']?></td>
                   <td><?php echo $mostrar['tipo']?></td>
-                  <td><?php echo $mostrar['fecha']?></td>
+                  <td><?php echo $mostrar['fecha_prestamo']?></td>
                   <td><?php echo $mostrar['hora']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td>
