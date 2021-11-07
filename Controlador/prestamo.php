@@ -50,7 +50,6 @@ session_start();
 
         $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '$busqueda' '%' OR nombre LIKE '$busqueda' '%' order by CI");
         
-      
         while ($row= $sql->fetch_array()){
 
             ?>
@@ -60,6 +59,9 @@ session_start();
               <td><?php echo $row['apellido'];?></td>
               <td><?php echo $row['grupo'];?></td>
               <td><?php echo $row['telefono'];?></td>
+              <td>
+              <input type="checkbox" onChange="comprobar(this)" id="1" />
+                </td>
             </tr>
     <?php 
     }
@@ -79,7 +81,6 @@ session_start();
             <td>Tipo</td>
             <td>Estado</td>
             <td>Descripción</td>
-            <td>Cantidad</td> 
             </tr>
     <?php 
     include ("../Modelo/conexion.php");
@@ -96,7 +97,6 @@ session_start();
               <td><?php echo $row['tipo'];?></td>
               <td><?php echo $row['estado'];?></td>
               <td><?php echo $row['descripcion_estado'];?></td>
-              <td><?php echo $row['cantidad'];?></td>
             </tr>
     <?php 
     }
@@ -108,7 +108,7 @@ session_start();
         <h2>Nuevo Préstamo</h2>
         <form action="../Modelo/logicaprestamo.php" method="post">
                     <br>
-                    <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
+                    <input type="text" name="txtci" class="documento" id="textInput1" placeholder="Cédula de Identidad" maxlength="8" required>
                     <br>
                     <br>     
                     <h5>ID del elemento</h5>
@@ -177,5 +177,29 @@ session_start();
            }
         }
 </script>
+<?php 
+if(isset($_GET['enviar'])){
+        $busqueda= $_GET['busqueda'];
+
+        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '$busqueda' '%' OR nombre LIKE '$busqueda' '%' order by CI");
+        
+        while ($row= $sql->fetch_array()){
+
+ ?>                    
+<script type="text/javascript">
+function comprobar(target) {
+  var textInput = document.getElementById("textInput" + target.id);
+  if (target.checked) {
+    textInput.value = "<?php echo $row['CI'];?>";
+  } else {
+    textInput.value = "";
+  }
+}
+
+</script>
+<?php 
+} 
+}
+?>
 </body>
 </html>

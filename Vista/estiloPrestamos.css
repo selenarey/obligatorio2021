@@ -69,7 +69,7 @@ h5 {
     text-align: left;
     font-family: 'Raleway', sans-serif;
 }
-#documento, #elemento, #fecha, #hora, #plazo, #fechadevo {
+.documento, #elemento, #fecha, #hora, #plazo, #fechadevo {
     border-width: 0px;
     background-color: #e4e4e4;
     border-radius: 10px;
@@ -111,8 +111,6 @@ h5 {
     font-family: 'Raleway', sans-serif;
     box-shadow: 5px 5px 5px #0000001c;
 }
-
-
 
 
 #cedula, #nombre, #apellido, #grupo, #telefono, #id, #estado, #desc, #cant, #tipo {
@@ -169,7 +167,7 @@ table {
 }
 td {
     height:40px;
-    width: 75px;
+    width: 77px;
     color: #444444; 
 }
 

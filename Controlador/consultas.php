@@ -39,7 +39,30 @@ session_start();
                 <td></td>
                 <td><input type="text" name="busqueda" id="busqueda" placeholder="  Buscar" required></td>
                 <td><input type="submit" name="enviar" id="enviar" value=""></input></td>
-                </tr>
+
+
+        <?php 
+                if(isset($_GET['enviar'])){
+        $busqueda= $_GET['busqueda'];
+
+        $sql= $conectar->query("SELECT * FROM toma_prestado WHERE ID_elemento LIKE '$busqueda' '%' OR CI_user LIKE '$busqueda' '%' order by fecha desc");
+        
+        while ($row= $sql->fetch_array()){
+
+        ?>
+            <tr class="columnas-2">
+              <td><?php echo $row['CI_user'];?></td>
+              <td><?php echo $row['ID_elemento'];?></td>
+              <td><?php echo $row['fecha'];?></td>
+              <td><?php echo $row['hora'];?></td>
+              <td><?php echo $row['plazo'];?></td>
+              <td><?php echo $row['fecha_devolucion'];?></td>
+              <td><?php echo $row['nombre'];?></td>
+            </tr>
+    <?php 
+    }
+    } 
+    ?> 
                 <tr class="columnas-1">
                   <td>Cédula</td>
                   <td>ID del elemento</td>

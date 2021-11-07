@@ -44,8 +44,6 @@ session_start();
                   <td>Hora</td>
                   <td>Plazo</td>
                   <td>
-                      <?php 
-                       ?>
                       <input type="submit" value="Devolver todo" onclick="return ConfirmDelete()" class="eliminar2">
                     </form>
                   </td>
