@@ -41,7 +41,6 @@ session_start();
         $tipo= $_GET['tipo'];
         $estado= $_GET['estado'];
         $desc= $_GET['descripcion_estado'];
-        $cant= $_GET['cantidad'];
         ?>
             <br>
             <h5>ID</h5>
@@ -58,10 +57,6 @@ session_start();
             <br>
             <h5>Descripción del estado</h5>
             <input type="text" name="desc" class="desc" id="desc" maxlength="40" value="<?=$desc?>">
-            <br>
-            <br>
-            <h5>Cantidad</h5>
-            <input type="text" name="cant" class="cant" id="cant" maxlength="5" value="<?=$cant?>">
             <br>
             <br>
             <input type="submit" name="aa-3" id="aa-3" value="Actualizar"></input>

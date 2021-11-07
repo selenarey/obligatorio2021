@@ -5,9 +5,8 @@
     $tipo=$_POST["tipo"];
     $estado= $_POST["estado"];
     $desc= $_POST["desc"];
-    $cant= $_POST["cant"];
 
-    $actualizar ="UPDATE elemento SET ID='$id', tipo='$tipo', estado='$estado', descripcion_estado='$desc', cantidad='$cant' WHERE ID= $id";
+    $actualizar ="UPDATE elemento SET ID='$id', tipo='$tipo', estado='$estado', descripcion_estado='$desc' WHERE ID= $id";
     $resultado = mysqli_query($conectar, $actualizar);
     
     if($resultado== true){

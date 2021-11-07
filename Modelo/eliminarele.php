@@ -3,8 +3,8 @@
 
 $eliminar= mysqli_query($conectar, "DELETE FROM elemento WHERE ID => 0");
 
-if ($resultado) {
+if ($eliminar) {
     header('Location: ../Controlador/elementos.php');
-    
+
 }
 ?>

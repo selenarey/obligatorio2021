@@ -33,10 +33,10 @@ session_start();
         <h1>Agregar elemento</h1>
         <form action="../Controlador/elementos.php" method="post">
             <br>
-            <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento" required>
+            <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID del elemento">
             <br>
             <br>
-            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo de elemento">
+            <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo de elemento" required>
             <br>
             <br>
             <select name="estado" id="estado" class="estado">
@@ -50,9 +50,6 @@ session_start();
             <br>
             <br>
             <input type="text" name="desc" class="desc" id="desc" maxlength="40" placeholder="Descripción del estado">
-            <br>
-            <br>
-            <input type="text" name="cant" class="cant" id="cant" maxlength="5" placeholder="Cantidad">
             <br>
             <br>
             <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="10" placeholder="Serie">
@@ -69,11 +66,8 @@ session_start();
                   <td>Tipo</td>
                   <td>Estado</td>
                   <td>Descripción</td>
-                  <td>Cantidad</td>
                   <td>
                     <form method="post" action="../Modelo/eliminarele.php">
-                      <?php 
-                       ?>
                       <input type="submit" value="Eliminar todo" onclick="return ConfirmDelete()" class="eliminar2">
                     </form>
                   </td>
@@ -94,11 +88,10 @@ session_start();
                   <td><?php echo $mostrar['tipo']?></td>
                   <td><?php echo $mostrar['estado']?></td>
                   <td><?php echo $mostrar['descripcion_estado']?></td>
-                  <td><?php echo $mostrar['cantidad']?></td>
                   <td>
                       <?php 
                        ?>
-                       <a href="../Controlador/editarElementos.php?id=<?php echo $mostrar['ID']?> & tipo=<?php echo $mostrar['tipo']?> & estado=<?php echo $mostrar['estado']?> & descripcion_estado=<?php echo $mostrar['descripcion_estado']?> & cantidad=<?php echo $mostrar['cantidad']?>" class="editar">Editar</a>
+                       <a href="../Controlador/editarElementos.php?id=<?php echo $mostrar['ID']?> & tipo=<?php echo $mostrar['tipo']?> & estado=<?php echo $mostrar['estado']?> & descripcion_estado=<?php echo $mostrar['descripcion_estado']?>" class="editar">Editar</a>
                   </td>
                   <td>
                       <a href="../Modelo/eliminarElemen.php?id=<?php echo $mostrar['ID']?>" onclick="return ConfirmarDelete()" class="eliminar">Eliminar </a>
@@ -116,19 +109,18 @@ session_start();
                 $tipo = $_POST ["tipo"];
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
-                $cant = $_POST ["cant"];
                 $nroserie = $_POST ["nroserie"];
 
-                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado, cantidad) VALUES ('$id','$tipo','$estado','$desc', '$cant')";
+                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado) VALUES ('$id','$tipo','$estado','$desc')";
                 $ejecutar = mysqli_query($conectar, $insertar);
 
                 if ($ejecutar == true) {
-                    $insertcompu = "INSERT INTO computadora (ID_compu, numero_serie) VALUES ('$id', '$nroserie')";
-                    $ejecutar = mysqli_query($conectar, $insertcompu);
-                    if ($insertcompu == true){
                         echo "<script>alert('Elemento ingresado correctamente');window.location='../Controlador/elementos.php';</script>";
-                    }
-                    
+                
+                } if($tipo="Computadora"){
+                    $insertcompu = "INSERT INTO computadora (ID_compu, numero_serie) VALUES ('$id', '$nroserie')";
+                    $ejecutarC = mysqli_query($conectar, $insertcompu);
+
                 }
                 
                 

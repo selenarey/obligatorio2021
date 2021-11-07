@@ -3,14 +3,10 @@
 require ("../Modelo/conexion.php");
 
 $ID =$_GET['id'];
-$eliminar = "DELETE FROM elemento WHERE ID = '$ID'";
+$eliminar = "DELETE e, c FROM elemento AS e INNER JOIN computadora AS c ON c.ID_compu=e.ID WHERE e.ID= '$ID'";
 $resultado = mysqli_query($conectar, $eliminar);
 
-if ($resultado == true) {
-    $eliminarcompu = "DELETE FROM computadora WHERE ID_compu = '$ID'";
-    $resultadoc = mysqli_query($conectar, $eliminarcompu);
-    if ($resultadoc){
-        echo "<script>alert('BUENAS');window.location='../Controlador/elementos.php';</script>";
-    }
+if ($resultado) {
+    header('Location: ../Controlador/elementos.php');
 }
 ?>
