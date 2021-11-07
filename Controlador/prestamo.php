@@ -48,7 +48,7 @@ session_start();
     if(isset($_GET['enviar'])){
         $busqueda= $_GET['busqueda'];
 
-        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '%$busqueda%'");
+        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '$busqueda' '%' OR nombre LIKE '$busqueda' '%' order by CI");
         
       
         while ($row= $sql->fetch_array()){
@@ -86,7 +86,7 @@ session_start();
     if(isset($_GET['env'])){
         $busq= $_GET['busq'];
 
-        $sql= $conectar->query("SELECT * FROM elemento WHERE tipo LIKE '%$busq%'");
+        $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '$busq' '%' OR tipo LIKE '$busq' '%' order by ID");
         
         while ($row= $sql->fetch_array()){
 
@@ -103,14 +103,12 @@ session_start();
     } 
     ?> 
     </table>
-
     </div>
     <div class="prestamo">
         <h2>Nuevo Préstamo</h2>
         <form action="../Modelo/logicaprestamo.php" method="post">
                     <br>
                     <input type="text" name="txtci" class="documento" id="documento" placeholder="Cédula de identidad" maxlength="8" required>
-                     
                     <br>
                     <br>     
                     <h5>ID del elemento</h5>
@@ -128,7 +126,7 @@ session_start();
                                 $descripcion = $row['descripcion_estado'];
                                 $cantidad = $row['cantidad'];     
                     ?>
-                    <option value="<?php echo $id; ?>"><?php echo $id;?></option>
+                    <option value="<?php echo $id;?>"><?php echo $id;?></option>
                     <?php 
                     }
                     ?>
@@ -140,9 +138,6 @@ session_start();
                     <h5>Hora</h5>
                     <input type="time" name="hora" class="hora" id="hora" required> 
                     <br>
-                    <h5>Fecha del préstamo</h5>
-                    <input type="date" name="fechapres" class="fecha" id="fecha" required>
-                    <br>
                     <br>
                     <input type="text" name="plazo" class="plazo" id="plazo" required placeholder="Plazo" maxlength="30">
                     <br>
@@ -150,7 +145,7 @@ session_start();
                     <br>
                     <h5>Fecha de devolución</h5>
                     <input type="date" name="fechadevo" class="fechadevo" id="fechadevo" placeholder="Fecha de devolución">
-                    <input type="hidden" name="ci_labo" class="ci_labo" id="ci_labo" value="<?php echo $_SESSION ['CI_lab']?>" >
+                    <input type="hidden" name="ci_labo" class="ci_labo" id="ci_labo" value="<?php echo $_SESSION['CI_lab']?>" >
                     <br>
                     <br>
                     <input type="submit" value="Guardar" name="aa" id=aa></input>      

@@ -32,11 +32,19 @@ session_start();
     <div class="container-3">
             <table class="default">
                 <tr class="columnas">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr class="columnas">
                   <td>Cédula</td>
                   <td>ID del elemento</td>
                   <td>Fecha</td>
                   <td>Hora</td>
-                  <td>Fecha préstamo</td>
                   <td>Plazo</td>
                   <td>Fecha devolución</td>
                   <td>Laboratorista</td>
@@ -44,7 +52,7 @@ session_start();
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from toma_prestado";
+                    $sql = "SELECT * from toma_prestado order by fecha desc";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -56,7 +64,6 @@ session_start();
                   <td><?php echo $mostrar['ID_elemento']?></td>
                   <td><?php echo $mostrar['fecha']?></td>
                   <td><?php echo $mostrar['hora']?></td>
-                  <td><?php echo $mostrar['fecha_prestamo']?></td>
                   <td><?php echo $mostrar['plazo']?></td>
                   <td><?php echo $mostrar['fecha_devolucion']?></td>
                   <td><?php echo $mostrar['CI_laboratorista']?></td>
