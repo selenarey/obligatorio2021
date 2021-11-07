@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/consultaa.css">
+    <link rel="stylesheet" href="../Vista/consultaas.css">
     <link rel="stylesheet" href="../Vista/menuuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
