@@ -23,7 +23,7 @@ session_start();
             <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
-                <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
+                <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
 			</ul>
 		</nav>
@@ -43,7 +43,7 @@ session_start();
             <input type="text" name="txtape" class="apellido" id="apellido" maxlength="20" placeholder="Apellido" required>
             <br>
             <br>
-            <input type="text" name="txtgrupo" class="grupo" id="grupo" maxlength="5" placeholder="Grupo">
+            <input type="text" name="txtgrupo" class="grupo" id="grupo" maxlength="5" placeholder="Grupo (Opcional)">
             <br>
             <br>
             <input type="text" name="telefono" class="telefono" id="telefono" maxlength="9" placeholder="Teléfono" required>

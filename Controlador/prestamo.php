@@ -22,7 +22,7 @@ session_start();
             <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
-                <li><a href="../Controlador/elementos.php" class="elementos">Elementos</a></li>
+                <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
 			</ul>
 		</nav>
@@ -156,9 +156,10 @@ session_start();
                     <input type="text" name="plazo" class="plazo" id="plazo" required placeholder="Plazo" maxlength="30">
                     <br>
                     <br>
-                    <h5>Fecha de devolución</h5>
+                    <h5>Fecha de devolución (Opcional)</h5>
                     <input type="date" name="fechadevo" class="fechadevo" id="fechadevo" placeholder="Fecha de devolución">
-                    <input type="hidden" name="ci_labo" class="ci_labo" id="ci_labo" value="<?php echo $_SESSION['CI_lab']?>" >
+                    <input type="hidden" name="ci_labo" class="ci_labo" id="ci_labo" value="<?php echo $_SESSION['CI_lab']?>">
+                    <input type="hidden" name="disponibilidad" class="disponibilidad" id="disponibilidad" value="No">
                     <br>
                     <br>
                     <input type="submit" value="Guardar" name="aa" id=aa></input>      
