@@ -27,8 +27,18 @@
                     <br>
                     <br>
                     <br>
-                    <input type="hidden" name="txtnombre" >
-                    <button input type="submit" value="Ingresar" name="boton" id=boton>Ingresar
+                    <?php 
+                    require("../Modelo/conexion.php");
+                    $sql= "SELECT contraseña FROM laboratorista where CI_lab= contraseña";
+                    $resultado = mysqli_query($conectar, $sql);
+
+                    while ($mostrar = mysqli_fetch_array($resultado)) {
+                    ?>
+                    
+                    <a href="../Controlador/editarContra.php?contra=<?php echo $mostrar['contraseña']?>"></a>
+                    <?php } ?>
+                    <input type="submit" value="Ingresar" name="boton" id="boton">
+                    </form>
                 </div>
             </div>
         </div>

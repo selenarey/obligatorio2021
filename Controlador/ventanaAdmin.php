@@ -91,13 +91,13 @@ session_start();
                 $ejecutar = mysqli_query($conectar, $insertar);
                 
 
-                if ($ejecutar == true) {
-                    header('Location: ../Controlador/ventanaAdmin.php');
+                if ($ejecutar) {
+                    echo "<script>alert('uu');window.location='../Controlador/ventanaAdmin.php';</script>";
+                    $insertarlabo = "INSERT INTO laboratorista (CI_lab, contraseña) VALUES ('$ci_usuario', '$ci_usuario')";
+                    $ejecutarL = mysqli_query($conectar, $insertarlabo);
+                    }
                 }
-                else if ($ejecutar == false) {
-                    echo "<script>alert('Error');window.location='../Controlador/ventanaAdmin.php';</script>";
-                }
-            }
+                
         ?>
 
 <script type="text/javascript">

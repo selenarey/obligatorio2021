@@ -87,7 +87,7 @@ session_start();
     if(isset($_GET['env'])){
         $busq= $_GET['busq'];
 
-        $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '$busq' '%' OR tipo LIKE '$busq' '%' order by ID");
+        $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '$busq' '%' AND  disponibilidad = 'Si' OR tipo LIKE '$busq' '%' AND  disponibilidad = 'Si' order by ID");
         
         while ($row= $sql->fetch_array()){
 
@@ -109,13 +109,12 @@ session_start();
         <form action="../Modelo/logicaprestamo.php" method="post">
                     <br>
                     <input type="text" name="txtci" class="documento" id="textInput1" placeholder="Cédula de Identidad" maxlength="8" required>
-                    <br>
                     <br>     
                     <h5>ID del elemento</h5>
                     <select name="idele" class="ele" id="elemento">
                     <?php 
                             include ("../Modelo/conexion.php");
-                            $getElemento1 = "SELECT * FROM elemento ORDER BY ID";
+                            $getElemento1 = "SELECT * FROM `elemento` LEFT JOIN computadora ON id=id_compu WHERE disponibilidad = 'Si' ORDER BY ID";
                             $getElemento2 = mysqli_query($conectar,$getElemento1);
 
                             while ($row = mysqli_fetch_array ($getElemento2)) 
@@ -132,11 +131,10 @@ session_start();
                     ?>
                     </select>
                     <br> 
-                    <br> 
+                    
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
                     <br>
-                    <br>  
                     <h5>Hora</h5>
                     <input type="time" name="hora" class="hora" id="hora" required> 
                     <?php 
@@ -154,6 +152,7 @@ session_start();
                     <br>
                     <br>
                     <input type="text" name="plazo" class="plazo" id="plazo" required placeholder="Plazo" maxlength="30">
+                    <br>
                     <br>
                     <br>
                     <h5>Fecha de devolución (Opcional)</h5>

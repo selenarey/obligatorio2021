@@ -17,16 +17,6 @@ session_start();
         <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
 			<span class="cerrar">Cerrar Sesión</span>
 		</a> 
-
-		<nav>
-			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
-                <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
-                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
-			</ul>
-		</nav>
 	</header>
 	<section id="main-content">
 

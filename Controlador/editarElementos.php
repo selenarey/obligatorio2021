@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../Vista/menuuu.css">
-    <link rel="stylesheet" href="../Vista/actElemento.css">
+    <link rel="stylesheet" href="../Vista/actElementos.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos</title>
 </head>
@@ -18,15 +18,6 @@ session_start();
 			<span class="cerrar">Cerrar Sesión</span>
 		</a> 
 
-		<nav>
-			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
-                <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
-                <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
-                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
-			</ul>
-		</nav>
 	</header>
 	<section id="main-content">
 
