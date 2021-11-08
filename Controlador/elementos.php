@@ -78,7 +78,7 @@ session_start();
 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * FROM `elemento` LEFT JOIN computadora ON id=id_compu";
+                    $sql = "SELECT * FROM `elemento` LEFT JOIN computadora ON id=id_compu WHERE disponibilidad = 'Si'";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -113,8 +113,9 @@ session_start();
                 $estado = $_POST ["estado"];
                 $desc = $_POST ["desc"];
                 $nroserie = $_POST ["nroserie"];
+                $disponibilidad = $_POST ["disponibilidad"];
 
-                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado) VALUES ('$id','$tipo','$estado','$desc')";
+                $insertar = "INSERT INTO elemento (ID, tipo, estado, descripcion_estado, disponibilidad) VALUES ('$id','$tipo','$estado','$desc', '$disponibilidad')";
                 $ejecutar = mysqli_query($conectar, $insertar);
 
                 if ($ejecutar == true) {
