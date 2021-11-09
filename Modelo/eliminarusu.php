@@ -1,9 +1,7 @@
 <?php 
     include ("../Modelo/conexion.php");
 
-$eliminar= mysqli_query($conectar, "DELETE FROM usuario WHERE CI => 0");
+$eliminar= mysqli_query($conectar, "TRUNCATE TABLE usuario");
 
-if ($eliminar) {
-    header('Location: ../Controlador/usuarios.php');
-}
+
 ?>

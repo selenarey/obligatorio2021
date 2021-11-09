@@ -14,15 +14,16 @@ session_start();
 <body>
 <header id="main-header">
 		
-        <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
-			<span class="cerrar">Cerrar Sesión</span>
-		</a> 
+<span class="cerrar">
+    <b><a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">Salir</a></b>
+        <a id="logo-header" href="#"><?php echo $_SESSION['CI_lab']?></a>
+    	</span>
 
 		<nav>
 			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
+            <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
+                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>
@@ -60,17 +61,13 @@ session_start();
                   <td>Apellido</td>
                   <td>Grupo</td>
                   <td>Teléfono</td>
-                  <td>
-                    <form method="post" action="../Modelo/eliminarusu.php">
-                      <input type="submit" value="Eliminar todo" onclick="return ConfirmDelete()" class="eliminar2">
-                    </form>
-                  </td>
+                  <td></td>
                   <td></td>
                 </tr>
 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from usuario";
+                    $sql = "SELECT * from usuario AS u LEFT JOIN laboratorista AS l ON u.CI = l.CI_lab WHERE CI_lab IS NULL";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -116,20 +113,7 @@ session_start();
                 }
             }
         ?>
-<script type="text/javascript">
-        function ConfirmDelete()
-        {
-           var respuesta = confirm ("¿Está seguro de que quiere eliminar todos los registros?");
-           if (respuesta == true) 
-           {
-               return true;
-           }
-           else
-           {
-               return false;
-           }
-        }
-</script>
+
 <script type="text/javascript">
         function ConfirmarDelete ()
         {

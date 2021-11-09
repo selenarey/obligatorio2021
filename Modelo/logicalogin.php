@@ -24,7 +24,7 @@ $pass = $_POST["txtpass"];
     }
 
     if ($fila== false){
-    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../login.php';</script>";
+    echo "<script>alert('No fue posible ingresar. Usuario o Contraseña Incorrecto');window.location='../Controlador/login.php';</script>";
 }
 
 else if ($doc == '12345' AND $pass =='12345') {

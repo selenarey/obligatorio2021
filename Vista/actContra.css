@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+    text-decoration: none;
+}
+	
+html {
+    background: url(../Vista/img/ae.jpg) no-repeat bottom fixed;
+    background-size: cover;
+    background-color: #F0F0F0;
+    display: block;
+}
+
+.container-5{   
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 35px 45px;  
+    background-color: rgba(255, 255, 255, 0.836); 
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 10px 10px 10px #00000015;
+}
+
+#aa-4 {
+    background-color: #c3a0db;
+    border-width: 0ch;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px 5px #0000001c;
+    font-weight: 600;
+    transition: 0.5s ease;
+    margin: auto;
+}
+
+#aa-4:hover {
+    background-color: #af8ec5;
+    transform: scale(1.1);
+}
+
+
+#contra{
+    background-color: #e0e0e0;
+    border-width: 0ch;
+    border-radius: 5px;
+    text-align: center;
+    color: #7F7A78;  
+    font-size: 14px;
+    height: 32px;
+    width: 240px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 2px 2px 2px #0000001c;  
+}
+
+
+h5 {
+    color: #444444af;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}

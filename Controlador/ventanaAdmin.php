@@ -14,7 +14,7 @@ session_start();
             <header id="main-header">
 		
             <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
-			<span class="cerrar">Cerrar Sesión</span>
+			<b><span class="cerrar">Salir</span></b>
 		</a> 
 
 		<nav>
@@ -37,7 +37,7 @@ session_start();
                 </tr>
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from usuario";
+                    $sql = "SELECT * from usuario AS u RIGHT JOIN laboratorista AS l ON u.CI = l.CI_lab";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {

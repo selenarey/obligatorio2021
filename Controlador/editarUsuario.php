@@ -13,10 +13,9 @@ session_start();
 </head>
 <body>
             <header id="main-header">
-		
-        <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
-			<span class="cerrar">Cerrar Sesión</span>
-		</a> 
+            <span class="cerrar">
+        <a id="logo-header" href="#"><?php echo $_SESSION['CI_lab']?></a>
+    	</span>
 	</header>
 	<section id="main-content">
 

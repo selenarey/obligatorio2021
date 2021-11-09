@@ -13,16 +13,16 @@ session_start();
 </head>
 <body>
             <header id="main-header">
-		
-        <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
-			<span class="cerrar">Cerrar Sesión</span>
-		</a> 
+            <span class="cerrar">
+     <b><a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">Salir</a></b> 
+        <a id="logo-header" href="#"><?php echo $_SESSION['CI_lab']?></a>
+    	</span>
 
 		<nav>
 			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
+                <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
+                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>

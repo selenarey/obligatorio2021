@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
-    <link rel="stylesheet" href="../Vista/menu.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -15,14 +15,14 @@ session_start();
 <header id="main-header">
 		
     	<span class="cerrar">
-      <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()"> Salir</a>
+     <b><a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">Salir</a></b> 
         <a id="logo-header" href="#"><?php echo $_SESSION['CI_lab']?></a>
     	</span>
 		<nav>
 			<ul>
-                <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
+                <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
+                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>
@@ -43,6 +43,7 @@ session_start();
                   <td>Hora</td>
                   <td>Plazo</td>
                   <td>
+                    <form action="../Modelo/devolverPre.php">
                       <input type="submit" value="Devolver todo" onclick="return ConfirmDelete()" class="eliminar2">
                     </form>
                   </td>

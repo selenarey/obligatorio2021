@@ -4,24 +4,24 @@ session_start();
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Vista/menuu.css">
+    <meta charset="UTF-8">   
+     <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="stylesheet" href="../Vista/estiloPrestamos.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
 </head>
 <body>
             <header id="main-header">
-		
-		<a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
-			<span class="cerrar">Cerrar Sesión</span>
-		</a> 
+            <span class="cerrar">
+     <b> <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">Salir</a></b>
+        <a id="logo-header" href="#"><?php echo $_SESSION['CI_lab']?></a>
+    	</span>
 
 		<nav>
 			<ul>
-            <li><a href="../Controlador/inicio.php" class="inicio">Préstamos</a></li>
-                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
+            <li><a href="../Controlador/inicio.php" class="inicio">Inicio</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
+                <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
                 <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>
@@ -48,7 +48,7 @@ session_start();
     if(isset($_GET['enviar'])){
         $busqueda= $_GET['busqueda'];
 
-        $sql= $conectar->query("SELECT * FROM usuario WHERE CI LIKE '$busqueda' '%' OR nombre LIKE '$busqueda' '%' order by CI");
+        $sql= $conectar->query("SELECT * from usuario AS u LEFT JOIN laboratorista AS l ON u.CI = l.CI_lab WHERE CI_lab IS NULL AND CI LIKE '$busqueda' '%' OR nombre LIKE '$busqueda' '%' AND CI_lab IS NULL order by CI");
         
         while ($row= $sql->fetch_array()){
 
