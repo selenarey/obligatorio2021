@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/iniciopre.css">
-    <link rel="stylesheet" href="../Vista/menuuu.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Préstamos</title>
 </head>
@@ -16,8 +16,8 @@ session_start();
 		
     <a id="logo-header" href="../Modelo/cerrarsesion.php" onclick="return ConfirmarSalida()">
     
-			<span class="cerrar"><?php echo $_SESSION['CI_lab']?></span>
-		</a> 
+			<span class="cerrar"><img src="../Vista/img/exit.png" width="20px"></span>	</a>
+	 <?php echo $_SESSION['CI_lab']?>
 
 		<nav>
 			<ul>
@@ -25,7 +25,7 @@ session_start();
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
-                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
+                <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>
 		</nav>
 	</header>

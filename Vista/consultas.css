@@ -49,7 +49,7 @@ table {
     width: 630px;
     font-size: 15px;
     table-layout: fixed;
-    background-color: rgba(255, 255, 255, 0.842); 
+    background-color: rgba(255, 255, 255, 0); 
     box-shadow: 10px 10px 10px #00000015;
     border-radius: 15px; 
 }

@@ -18,11 +18,11 @@ session_start();
         <form action="../Modelo/actualizarContra.php" method="post">
         <?php 
         require ("../Modelo/conexion.php");
-        $contra= $_GET['contra'];
+       /* $contra= $_GET['contra'];*/
         ?>
             <br>
             <h5>Nueva contraseña</h5>
-            <input type="password" name="contra" class="contra" id="contra" maxlength="20" value="<?=$contra?>">
+            <input type="password" name="contra" class="contra" id="contra" maxlength="20">
             <input type="hidden" name="txtdoc" class="documento" id="documento" value="<?php echo $_SESSION['CI_lab']?>">
             <br>
             <input type="submit" name="aa-4" id="aa-4" value="Guardar"></input>

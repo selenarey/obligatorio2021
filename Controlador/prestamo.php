@@ -23,7 +23,7 @@ session_start();
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
-                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
+                <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -147,7 +147,7 @@ session_start();
                                 $fecha = $row['fecha'];
                                 ?>
                     
-                    <input type="hidden" name="fprestamo" class="fecha" id="fecha" value="<?php echo $fecha;?>">
+                    <input type="hidden" name="fprestamo" class="fprestamo" id="fprestamo" value="<?php echo $fecha?>">
                     <?php } ?>
                     <br>
                     <br>

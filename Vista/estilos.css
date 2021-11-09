@@ -51,7 +51,7 @@ h1{
     
 }
 
-.boton {
+#boton {
     background-color:  #7cbfab;
     border-width: 0ch;
     border-radius: 10px;
@@ -63,7 +63,7 @@ h1{
     transition: 0.5s ease;
 }
 
-.boton:hover {
+#boton:hover {
     background-color: #c3a0db;
     transform: scale(1.1);
 }

@@ -24,7 +24,7 @@ session_start();
                 <li><a href="../Controlador/usuarios.php" class="usuarios">Usuarios</a></li>
                 <li><a href="../Controlador/prestamo.php" class="prestamos">Nuevo Préstamo</a></li>
                 <li><a href="../Controlador/elementos.php" class="elementos">Elementos Disponibles</a></li>
-                <li><a href="../Controlador/consultas.php" class="consultas">Más Consultas</a></li>
+                <li><a href="../Controlador/consultas.php" class="consultas">Historial</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -49,7 +49,7 @@ session_start();
             </select>
             <br>
             <br>
-            <input type="text" name="desc" class="desc" id="desc" maxlength="40" placeholder="Descripción">
+            <input type="text" name="desc" class="desc" id="desc" maxlength="40" placeholder="Descripción (Opcional)">
             <br>
             <br>
             <input type="text" name="nroserie" class="nroserie" id="nroserie" maxlength="10" placeholder="Serie (Opcional)">

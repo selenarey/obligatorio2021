@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estilo.css">
+    <link rel="stylesheet" href="../Vista/estilos.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Inicio Sesión</title>
 </head>
@@ -27,16 +27,6 @@
                     <br>
                     <br>
                     <br>
-                    <?php 
-                    require("../Modelo/conexion.php");
-                    $sql= "SELECT contraseña FROM laboratorista where CI_lab= contraseña";
-                    $resultado = mysqli_query($conectar, $sql);
-
-                    while ($mostrar = mysqli_fetch_array($resultado)) {
-                    ?>
-                    
-                    <a href="../Controlador/editarContra.php?contra=<?php echo $mostrar['contraseña']?>"></a>
-                    <?php } ?>
                     <input type="submit" value="Ingresar" name="boton" id="boton">
                     </form>
                 </div>
