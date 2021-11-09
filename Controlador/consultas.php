@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/consulta.css">
+    <link rel="stylesheet" href="../Vista/inicio.css">
     <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Más Consultas</title>
@@ -31,38 +31,6 @@ session_start();
    
     <div class="container-3">
             <table class="default">
-                <tr class="columnas-3">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><input type="text" name="busqueda" id="busqueda" placeholder="  Buscar" required></td>
-                <td><input type="submit" name="enviar" id="enviar" value=""></input></td>
-
-
-        <?php 
-                if(isset($_GET['enviar'])){
-        $busqueda= $_GET['busqueda'];
-
-        $sql= $conectar->query("SELECT * FROM toma_prestado WHERE ID_elemento LIKE '$busqueda' '%' OR CI_user LIKE '$busqueda' '%' order by fecha desc");
-        
-        while ($row= $sql->fetch_array()){
-
-        ?>
-            <tr class="columnas-2">
-              <td><?php echo $row['CI_user'];?></td>
-              <td><?php echo $row['ID_elemento'];?></td>
-              <td><?php echo $row['fecha'];?></td>
-              <td><?php echo $row['hora'];?></td>
-              <td><?php echo $row['plazo'];?></td>
-              <td><?php echo $row['fecha_devolucion'];?></td>
-              <td><?php echo $row['nombre'];?></td>
-            </tr>
-    <?php 
-    }
-    } 
-    ?> 
                 <tr class="columnas-1">
                   <td>Cédula</td>
                   <td>ID del elemento</td>
@@ -71,12 +39,11 @@ session_start();
                   <td>Plazo</td>
                   <td>Fecha devolución</td>
                   <td>Laboratorista</td>
-                  
                 </tr>
                 
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT CI_user, ID_elemento, fecha, hora, plazo, fecha_devolucion, nombre from toma_prestado AS t JOIN usuario AS u ON t.CI_laboratorista = u.CI order by fecha desc";
+                    $sql = "SELECT CI_user, ID_elemento, fecha, hora, plazo, fecha_devolucion, nombre from toma_prestado AS t JOIN usuario AS u ON t.CI_laboratorista = u.CI order by fecha asc";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -95,7 +62,7 @@ session_start();
                 <?php 
                  }
                 ?>
-              </table>        
+                </table>
       </div>   
 
    <script type="text/javascript">

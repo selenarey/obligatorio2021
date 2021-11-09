@@ -11,12 +11,8 @@
 
 html {
     background: url(../Vista/img/b.jpg) no-repeat bottom fixed; 
-    background-size: 1366px 768px;
+    background-size: cover;
     background-color: #F0F0F0;
-    -webkit-background-size: fixed left;
-    -moz-background-size: fixed left;
-    -o-background-size: fixed left;
-    background-size: fixed left;
     display: block;
 }
 

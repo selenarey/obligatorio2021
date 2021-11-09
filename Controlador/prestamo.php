@@ -131,7 +131,6 @@ session_start();
                     ?>
                     </select>
                     <br> 
-                    
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
                     <br>
@@ -147,7 +146,7 @@ session_start();
                                 $fecha = $row['fecha'];
                                 ?>
                     
-                    <input type="hidden" name="fprestamo" class="fprestamo" id="fprestamo" value="<?php echo $fecha?>">
+                    <input type="hidden" name="fprestamo" class="fprestamo" id="fprestamo" value="<?php echo $fecha;?>">
                     <?php } ?>
                     <br>
                     <br>

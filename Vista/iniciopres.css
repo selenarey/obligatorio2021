@@ -10,13 +10,9 @@
 }
 	
 html {
-    background: url(../Vista/img/fondo2.jpg) no-repeat left fixed; 
-    background-size: 1366px 768px;
+    background: url(../Vista/img/ini.jpg) no-repeat; 
+    background-size: cover;
     background-color: #F0F0F0;
-    -webkit-background-size: fixed left;
-    -moz-background-size: fixed left;
-    -o-background-size: fixed left;
-    background-size: fixed left;
     text-align: center;
   
 }
