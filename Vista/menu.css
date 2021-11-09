@@ -21,20 +21,17 @@
 
 #logo-header {
 	float: right;
-	padding: 25px 50px 25px 25px;
+	padding: 25px 40px 25px 25px;
 	text-decoration: none;
-	line-height: 10px;
+	line-height: 8px;
 	font-size: 15px;
 	font-weight: 600;
 }
 
 	
-#logo-header .cerrar {
-	display: block;
-	font-weight: 600;	
-	
+#exit {
+	line-height: 8px;
 }
-
 nav {
 	float: left;
 }

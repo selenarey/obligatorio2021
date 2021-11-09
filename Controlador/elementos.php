@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Vista/estiloelemento.css">
-    <link rel="stylesheet" href="../Vista/menuuu.css">
+    <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Elementos Disponibles</title>
 </head>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../Vista/estilos.css">
+    <link rel="stylesheet" href="../Vista/estilo.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Inicio Sesión</title>
 </head>
