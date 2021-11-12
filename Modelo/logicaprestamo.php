@@ -18,7 +18,7 @@
            $ejecutar = mysqli_query($conectar, $insertar);
 
            if ($ejecutar == true){
-               $insertaru = "UPDATE elemento SET disponibilidad='$disponibilidad' WHERE ID = $id_elemento";
+               $insertaru = "UPDATE elemento SET disponibilidad='$disponibilidad' WHERE ID = '$id_elemento'";
                $ejecutaru = mysqli_query($conectar, $insertaru);
             
                echo "<script>alert('Préstamo realizado con éxito');window.location='../Controlador/prestamo.php';</script>";

@@ -50,7 +50,7 @@ session_start();
                   <td><?php echo $mostrar['apellido']?></td>
                   <td><?php echo $mostrar['telefono']?></td> 
                   <td>
-                  <a href="../Modelo/eliminarLabora.php?ci=<?php echo $mostrar['CI'] ?>" class="eliminar" onclick="return ConfirmarDelete()">Eliminar </a>
+                  <a href="../Modelo/eliminarLabora.php?ci=<?php echo $mostrar['CI']?>" class="eliminar" onclick="return ConfirmarDelete()">Eliminar </a>
                   </td>
                 </tr>
                 <?php 
