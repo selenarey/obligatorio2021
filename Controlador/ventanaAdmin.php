@@ -37,7 +37,7 @@ session_start();
                 </tr>
                 <?php  
                     require("../Modelo/conexion.php");
-                    $sql = "SELECT * from usuario AS u RIGHT JOIN laboratorista AS l ON u.CI = l.CI_lab";
+                    $sql = "SELECT * from usuario AS u RIGHT JOIN laboratorista AS l ON u.CI = l.CI_lab WHERE CI_lab != 12345";
                     $result = mysqli_query($conectar, $sql);
 
                     while ($mostrar = mysqli_fetch_array($result)) {
@@ -92,7 +92,7 @@ session_start();
                 
 
                 if ($ejecutar) {
-                    echo "<script>alert('uu');window.location='../Controlador/ventanaAdmin.php';</script>";
+                    echo "<script>alert('Nuevo laboratorista ingresado con éxito');window.location='../Controlador/ventanaAdmin.php';</script>";
                     $insertarlabo = "INSERT INTO laboratorista (CI_lab, contraseña) VALUES ('$ci_usuario', '$ci_usuario')";
                     $ejecutarL = mysqli_query($conectar, $insertarlabo);
                     }
