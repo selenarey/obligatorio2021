@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="../Vista/inicio.css">
     <link rel="stylesheet" href="../Vista/menuu.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
-    <title>Más Consultas</title>
+    <title>Historial</title>
 </head>
 <body>
             <header id="main-header">

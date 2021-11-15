@@ -34,10 +34,10 @@ session_start();
         <h1>Agregar elemento</h1>
         <form action="../Controlador/elementos.php" method="post">
             <br>
-            <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID" required>
-            <br>
-            <br>
             <input type="text" name="tipo" class="tipo" id="tipo" maxlength="20" placeholder="Tipo" required>
+            <br>
+            <br>
+            <input type="text" name="id" class="id" id="id" maxlength="5" placeholder="ID" required>
             <br>
             <br>
             <select name="estado" id="estado" class="estado">

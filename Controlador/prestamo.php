@@ -32,7 +32,7 @@ session_start();
 <div class="container">
         <form action="" method="get"> 
         <h1>Información del usuario</h1>
-        <input type="text" name="busqueda" id="busqueda" placeholder="  Buscar" required>
+        <input type="search" name="busqueda" id="busqueda" placeholder="  Buscar" required autofocus>
         <input type="submit" name="enviar" id="enviar" value=""></input>
     </form> 
     <table class="default">
@@ -72,7 +72,7 @@ session_start();
     <div class="container-2">
     <form action="" method="get"> 
         <h1>Información del elemento</h1>
-        <input type="text" name="busq" id="busq" placeholder="  Buscar" required>
+        <input type="search" name="busq" id="busq" placeholder="  Buscar" required autofocus> 
         <input type="submit" name="env" id="env" value=""></input>
     </form>
     <table class="default">
@@ -122,14 +122,16 @@ session_start();
                                 $id = $row['ID'];
                                 $tipo = $row['tipo']; 
                                 $estado = $row['estado'];
-                                $descripcion = $row['descripcion_estado'];
-                                $cantidad = $row['cantidad'];     
+                                $descripcion = $row['descripcion_estado'];   
                     ?>
                     <option value="<?php echo $id;?>"><?php echo $id;?></option>
-                    <?php 
+                     <?php 
                     }
                     ?>
                     </select>
+                    <br>
+                    <br>
+                    <input type="text" name="tipoele" id="tipoele" value="">
                     <br> 
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
