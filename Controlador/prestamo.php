@@ -32,7 +32,7 @@ session_start();
 <div class="container">
         <form action="" method="get"> 
         <h1>Información del usuario</h1>
-        <input type="search" name="busqueda" id="busqueda" placeholder="  Buscar" required autofocus>
+        <input type="search" name="busqueda" id="busqueda" placeholder="  Buscar" required>
         <input type="submit" name="enviar" id="enviar" value=""></input>
     </form> 
     <table class="default">
@@ -72,8 +72,7 @@ session_start();
     <div class="container-2">
     <form action="" method="get"> 
         <h1>Información del elemento</h1>
-        <input type="search" name="busq" id="busq" placeholder="  Buscar" required autofocus> 
-        <input type="submit" name="env" id="env" value=""></input>
+
     </form>
     <table class="default">
             <tr class="columnas-1">
@@ -84,8 +83,8 @@ session_start();
             </tr>
     <?php 
     include ("../Modelo/conexion.php");
-    if(isset($_GET['env'])){
-        $busq= $_GET['busq'];
+    if(isset($_GET['enviar'])){
+        $busq= $_GET['busqueda'];
 
         $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '$busq' '%' AND  disponibilidad = 'Si' OR tipo LIKE '$busq' '%' AND  disponibilidad = 'Si' order by ID");
         
@@ -129,9 +128,6 @@ session_start();
                     }
                     ?>
                     </select>
-                    <br>
-                    <br>
-                    <input type="text" name="tipoele" id="tipoele" value="">
                     <br> 
                     <h5>Fecha</h5>
                     <input type="date" name="fecha" class="fecha" id="fecha" required>
