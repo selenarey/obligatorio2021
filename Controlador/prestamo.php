@@ -5,7 +5,7 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">   
-     <link rel="stylesheet" href="../Vista/menuu.css">
+     <link rel="stylesheet" href="../Vista/menu.css">
     <link rel="stylesheet" href="../Vista/estiloPrestamos.css">
     <link rel="shortcut icon" href="../Vista/img/lowerlogo.png">
     <title>Nuevo Préstamo</title>
@@ -75,6 +75,8 @@ session_start();
 
     </form>
     <table class="default">
+    <input type="search" name="busq" id="busq" placeholder="  Buscar" required>
+        <input type="submit" name="env" id="env" value=""></input>
             <tr class="columnas-1">
             <td>ID</td>
             <td>Tipo</td>
@@ -83,8 +85,8 @@ session_start();
             </tr>
     <?php 
     include ("../Modelo/conexion.php");
-    if(isset($_GET['enviar'])){
-        $busq= $_GET['busqueda'];
+    if(isset($_GET['env'])){
+        $busq= $_GET['busq'];
 
         $sql= $conectar->query("SELECT * FROM elemento WHERE ID LIKE '$busq' '%' AND  disponibilidad = 'Si' OR tipo LIKE '$busq' '%' AND  disponibilidad = 'Si' order by ID");
         

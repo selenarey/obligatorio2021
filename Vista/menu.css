@@ -24,7 +24,7 @@
 	padding: 25px 40px 25px 25px;
 	text-decoration: none;
 	line-height: 8px;
-	font-size: 15px;
+	font-size: 13px;
 }
 
 nav {
@@ -45,7 +45,7 @@ nav ul li a {
 	display: block;
 	padding: 0 0 0 40px;
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 13px;
 }
 
 nav ul li a:hover{
